@@ -3,11 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alex O. Akinjiola | UI/UX & Product Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to My Portfolio</h1>
-    <p>Hello, I'm John Doe. Welcome to my portfolio!</p>
-    <p>I'm a passionate web developer with experience in creating responsive and user-friendly websites.</p>
+
+    <nav class="navbar">
+        <div class="logo">Alex<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about" class="active">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="btn-talk">Let's Talk</button>
+    </nav>
+
+    <main>
+        <section class="hero container">
+            <div class="hero-content">
+                <div class="status-pill">● Available for new opportunities</div>
+                <h1>UI/UX & Product Designer building <span class="highlight">scalable, user-centered</span> digital products</h1>
+                <p class="hero-subtext">4+ years crafting intuitive experiences for SaaS, Fintech, EdTech, and E-commerce products that users love.</p>
+                <div class="hero-btns">
+                    <button class="btn-primary">View Case Studies →</button>
+                    <button class="btn-outline">Let's Work Together</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="profile.jpg" alt="Alex O. Akinjiola">
+            </div>
+        </section>
+
+        <section class="expertise container">
+            <div class="expertise-header">
+                <span class="section-label">EXPERTISE</span>
+                <h2>What I Bring to the Table</h2>
+                <p>Research-driven design approach combined with a deep understanding of product strategy and user needs.</p>
+                <div class="expertise-tags">
+                    <span>User Research</span> <span>UI Design</span> <span>UX Strategy</span>
+                    <span>Design Systems</span> <span>Prototyping</span> <span>Product Design</span>
+                </div>
+                <a href="#" class="inline-link">Learn more about me →</a>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card"><h3>4+</h3><p>Years of Experience</p></div>
+                <div class="stat-card"><h3>50+</h3><p>Projects Delivered</p></div>
+                <div class="stat-card"><h3>6+</h3><p>Industries Served</p></div>
+            </div>
+        </section>
+
+        <section class="projects container">
+            <span class="section-label">FEATURED WORK</span>
+            <h2>Selected Projects</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <div class="project-thumb orange"><img src="mealflex.png" alt="Meal Flex"></div>
+                    <span class="category">FOOD TECH</span>
+                    <h3>Meal Flex</h3>
+                </div>
+                <div class="project-item">
+                    <div class="project-thumb"><img src="krent.jpg" alt="Krent"></div>
+                    <span class="category">REAL ESTATE</span>
+                    <h3>Krent</h3>
+                </div>
+                <div class="project-item">
+                    <div class="project-thumb"><img src="paytrackr.png" alt="Paytrackr"></div>
+                    <span class="category">FINTECH</span>
+                    <h3>Paytrackr</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-cta">
+            <h2>Ready to bring your <span class="highlight">product vision</span> to life?</h2>
+            <p>I'm currently available for freelance projects and full-time opportunities.</p>
+            <button class="btn-primary">Get in Touch →</button>
+        </div>
+        <div class="footer-details">
+            <div class="footer-brand">
+                <h3>Let's create something <span class="highlight">amazing together.</span></h3>
+                <p>Available for UI/UX & Product Design roles.</p>
+            </div>
+            <div class="footer-links">
+                <p>✉ tayoalex7@gmail.com</p>
+                <p>in LinkedIn</p>
+            </div>
+        </div>
+        <div class="legal">
+            <p>© 2026 Alex O. Akinjiola. All rights reserved.</p>
+            <p>Designed & built with passion in Lagos, Nigeria</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
