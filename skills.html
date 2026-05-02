@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex O. Akinjiola | UI/UX & Product Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+
+<body> 
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-logo">Alex O. Akinjiola</div>
+    <ul class="nav-links" id="navLinks">
+       <li><a href="index.html" >Home</a></li> 
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html" class="active">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-tag">Capabilities</div>
+  <h1 style="animation: fadeUp .7s .2s both">What I <em>Bring</em></h1>
+  <p style="animation: fadeUp .7s .4s both">A full-stack creative — blending design thinking with engineering precision to deliver experiences that are as functional as they are beautiful.</p>
+</div>
+
+<!-- TABS -->
+<div class="tabs-wrap">
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('design', this)">Design</button>
+    <button class="tab-btn" onclick="switchTab('development', this)">Development</button>
+    <button class="tab-btn" onclick="switchTab('strategy', this)">Strategy</button>
+    <button class="tab-btn" onclick="switchTab('tools', this)">Tools & Tech</button>
+  </div>
+</div>
+
+<!-- TAB CONTENT -->
+<div class="skills-content">
+
+  <!-- DESIGN TAB -->
+  <div class="tab-panel active" id="tab-design">
+    <div class="featured-panel" id="designFeatured">
+      <div>
+        <div class="featured-label">Core Discipline</div>
+        <h2>UI/UX <em>Design</em></h2>
+        <p>I design with empathy and intent. From early research sessions and low-fidelity wireframes through to pixel-perfect prototypes, I focus on clarity, usability, and moments of delight that make products truly memorable.</p>
+        <p>My design process always starts with understanding people — their needs, frustrations, and goals — before touching any tool.</p>
+        <div class="proficiency-list" id="designProf">
+          <div class="prof-item">
+            <div class="prof-header"><span class="prof-name">Visual Design</span><span class="prof-pct">95%</span></div>
+            <div class="prof-bar"><div class="prof-fill" data-width="95"></div></div>
+          </div>
+          <div class="prof-item">
+            <div class="prof-header"><span class="prof-name">Prototyping & Figma</span><span class="prof-pct">92%</span></div>
+            <div class="prof-bar"><div class="prof-fill" data-width="92"></div></div>
+          </div>
+          <div class="prof-item">
+            <div class="prof-header"><span class="prof-name">User Research</span><span class="prof-pct">85%</span></div>
+            <div class="prof-bar"><div class="prof-fill" data-width="85"></div></div>
+          </div>
+          <div class="prof-item">
+            <div class="prof-header"><span class="prof-name">Design Systems</span><span class="prof-pct">88%</span></div>
+            <div class="prof-bar"><div class="prof-fill" data-width="88"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="featured-visual">🎨</div>
+    </div>
+
+    <div class="skill-cards">
+      <div class="skill-card">
+        <div class="skill-card-icon">🔍</div>
+        <h3>User Research & Discovery</h3>
+        <p>Conducting interviews, surveys, usability testing, and competitive analysis to uncover real user needs before any pixel is drawn.</p>
+        <div class="skill-tags"><span class="skill-tag">User Interviews</span><span class="skill-tag">Usability Testing</span><span class="skill-tag">Competitive Analysis</span><span class="skill-tag">Personas</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">🗂️</div>
+        <h3>Information Architecture</h3>
+        <p>Organising content and navigation in ways that feel intuitive, reducing cognitive load and guiding users naturally through flows.</p>
+        <div class="skill-tags"><span class="skill-tag">Sitemaps</span><span class="skill-tag">Card Sorting</span><span class="skill-tag">User Flows</span><span class="skill-tag">Journey Maps</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">✏️</div>
+        <h3>Wireframing & Prototyping</h3>
+        <p>Rapid low-fidelity sketches to validate concepts early, then high-fidelity interactive prototypes for stakeholder sign-off and dev handoff.</p>
+        <div class="skill-tags"><span class="skill-tag">Figma</span><span class="skill-tag">Whimsical</span><span class="skill-tag">Miro</span><span class="skill-tag">ProtoPie</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">🎨</div>
+        <h3>Visual & Brand Design</h3>
+        <p>Crafting cohesive visual identities — typography, colour, iconography, and illustration — that communicate brand personality with precision.</p>
+        <div class="skill-tags"><span class="skill-tag">Typography</span><span class="skill-tag">Color Theory</span><span class="skill-tag">Iconography</span><span class="skill-tag">Illustration</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">🧩</div>
+        <h3>Design Systems</h3>
+        <p>Building scalable, token-based design systems that keep teams aligned and reduce design-dev friction across large product surfaces.</p>
+        <div class="skill-tags"><span class="skill-tag">Component Libraries</span><span class="skill-tag">Tokens</span><span class="skill-tag">Storybook</span><span class="skill-tag">Documentation</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">📱</div>
+        <h3>Mobile-First Design</h3>
+        <p>Designing for thumbs first — responsive layouts, touch targets, and native mobile patterns that feel at home on any device.</p>
+        <div class="skill-tags"><span class="skill-tag">iOS HIG</span><span class="skill-tag">Material Design</span><span class="skill-tag">Responsive</span><span class="skill-tag">Accessibility</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEVELOPMENT TAB -->
+  <div class="tab-panel" id="tab-development">
+    <div class="featured-panel" id="devFeatured">
+      <div>
+        <div class="featured-label">Engineering</div>
+        <h2>Front-End <em>Development</em></h2>
+        <p>I write production-grade code. My development work translates design intent directly into living, breathing interfaces — no "close enough" compromises between the design file and the browser.</p>
+        <p>I'm comfortable across the full front-end stack, with strong back-end knowledge to integrate APIs, databases, and serverless functions.</p>
+        <div class="proficiency-list" id="devProf">
+          <div class="prof-item">
+            <div class="prof-header"><span class="prof-name">React / TypeScript</span><span class="prof-pct">90%</span></div>
+            <div class="prof-bar"><div class="prof-fill" data-width="90"></div></div>
+          </div>
+          <div class="prof-item">
+            <div class="prof-header"><span class="prof-name">HTML / CSS / JS</span><span class="prof-pct">96%</span></div>
+            <div class="prof-bar"><div class="prof-fill" data-width="96"></div></div>
+          </div>
+          <div class="prof-item">
+            <div class="prof-header"><span class="prof-name">Node.js / APIs</span><span class="prof-pct">78%</span></div>
+            <div class="prof-bar"><div class="prof-fill" data-width="78"></div></div>
+          </div>
+          <div class="prof-item">
+            <div class="prof-header"><span class="prof-name">Supabase / Databases</span><span class="prof-pct">75%</span></div>
+            <div class="prof-bar"><div class="prof-fill" data-width="75"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="featured-visual">⚡</div>
+    </div>
+
+    <div class="skill-cards">
+      <div class="skill-card">
+        <div class="skill-card-icon">⚛️</div>
+        <h3>React Ecosystem</h3>
+        <p>Building component-driven UIs with React, including state management, routing, server components, and performance optimisation.</p>
+        <div class="skill-tags"><span class="skill-tag">React</span><span class="skill-tag">Next.js</span><span class="skill-tag">React Query</span><span class="skill-tag">Zustand</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">🎯</div>
+        <h3>HTML, CSS & Animation</h3>
+        <p>Deep command of semantic HTML, modern CSS (Grid, Flexbox, Custom Properties, animations) and JavaScript without relying on heavy frameworks.</p>
+        <div class="skill-tags"><span class="skill-tag">CSS Grid</span><span class="skill-tag">Animations</span><span class="skill-tag">GSAP</span><span class="skill-tag">Framer Motion</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">🔧</div>
+        <h3>TypeScript</h3>
+        <p>Writing type-safe, maintainable code that catches bugs at compile time and makes codebases easier to navigate and scale.</p>
+        <div class="skill-tags"><span class="skill-tag">TypeScript</span><span class="skill-tag">Zod</span><span class="skill-tag">ESLint</span><span class="skill-tag">Jest</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">🗄️</div>
+        <h3>Backend & Databases</h3>
+        <p>Node.js APIs, serverless functions, and database design with Supabase, PostgreSQL, and Firebase for full-stack product delivery.</p>
+        <div class="skill-tags"><span class="skill-tag">Node.js</span><span class="skill-tag">Supabase</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">Firebase</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">🚀</div>
+        <h3>DevOps & Deployment</h3>
+        <p>CI/CD pipelines, containerisation, and deploying to Vercel, Netlify, and cloud platforms with proper environment management.</p>
+        <div class="skill-tags"><span class="skill-tag">Vercel</span><span class="skill-tag">Git / GitHub</span><span class="skill-tag">Docker</span><span class="skill-tag">CI/CD</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">♿</div>
+        <h3>Accessibility & Performance</h3>
+        <p>Building inclusive products — WCAG compliance, screen reader support, Core Web Vitals optimisation, and semantic markup as first principles.</p>
+        <div class="skill-tags"><span class="skill-tag">WCAG 2.1</span><span class="skill-tag">ARIA</span><span class="skill-tag">Lighthouse</span><span class="skill-tag">Web Vitals</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STRATEGY TAB -->
+  <div class="tab-panel" id="tab-strategy">
+    <div class="featured-panel" id="stratFeatured">
+      <div>
+        <div class="featured-label">Product Thinking</div>
+        <h2>Strategy & <em>Leadership</em></h2>
+        <p>Great products don't happen by accident. I help teams move from fuzzy ideas to clear roadmaps — defining success metrics, aligning stakeholders, and making prioritisation decisions grounded in data and user insight.</p>
+        <p>Having shipped products across multiple industries, I bring a pragmatic, outcome-oriented perspective to every engagement.</p>
+        <div class="proficiency-list">
+          <div class="prof-item">
+            <div class="prof-header"><span class="prof-name">Product Roadmapping</span><span class="prof-pct">88%</span></div>
+            <div class="prof-bar"><div class="prof-fill" data-width="88"></div></div>
+          </div>
+          <div class="prof-item">
+            <div class="prof-header"><span class="prof-name">Stakeholder Communication</span><span class="prof-pct">92%</span></div>
+            <div class="prof-bar"><div class="prof-fill" data-width="92"></div></div>
+          </div>
+          <div class="prof-item">
+            <div class="prof-header"><span class="prof-name">Data-Driven Decision Making</span><span class="prof-pct">82%</span></div>
+            <div class="prof-bar"><div class="prof-fill" data-width="82"></div></div>
+          </div>
+          <div class="prof-item">
+            <div class="prof-header"><span class="prof-name">Cross-functional Facilitation</span><span class="prof-pct">86%</span></div>
+            <div class="prof-bar"><div class="prof-fill" data-width="86"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="featured-visual">🗺️</div>
+    </div>
+
+    <div class="skill-cards">
+      <div class="skill-card">
+        <div class="skill-card-icon">🗺️</div>
+        <h3>Product Roadmapping</h3>
+        <p>Translating business goals and user needs into prioritised, time-bound roadmaps using frameworks like RICE, MoSCoW, and OKRs.</p>
+        <div class="skill-tags"><span class="skill-tag">OKRs</span><span class="skill-tag">RICE</span><span class="skill-tag">MoSCoW</span><span class="skill-tag">Linear</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">📊</div>
+        <h3>Analytics & Metrics</h3>
+        <p>Setting up dashboards, defining KPIs, interpreting behavioural analytics, and running A/B tests to guide product decisions with confidence.</p>
+        <div class="skill-tags"><span class="skill-tag">Mixpanel</span><span class="skill-tag">Amplitude</span><span class="skill-tag">Google Analytics</span><span class="skill-tag">Hotjar</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">🤝</div>
+        <h3>Stakeholder Management</h3>
+        <p>Facilitating workshops, presenting to executives, and aligning cross-functional teams — engineering, marketing, and business — around shared goals.</p>
+        <div class="skill-tags"><span class="skill-tag">Workshops</span><span class="skill-tag">Presentations</span><span class="skill-tag">Negotiation</span><span class="skill-tag">Documentation</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">⚡</div>
+        <h3>Agile & Lean Methods</h3>
+        <p>Running sprints, retrospectives, and rapid iteration cycles that keep teams shipping and learning without burning out.</p>
+        <div class="skill-tags"><span class="skill-tag">Scrum</span><span class="skill-tag">Kanban</span><span class="skill-tag">Jira</span><span class="skill-tag">Notion</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">💡</div>
+        <h3>Market Research</h3>
+        <p>Competitive benchmarking, customer segmentation, and opportunity sizing to identify where to play and how to win.</p>
+        <div class="skill-tags"><span class="skill-tag">Benchmarking</span><span class="skill-tag">Segmentation</span><span class="skill-tag">Opportunity Sizing</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">📝</div>
+        <h3>Content & Communication</h3>
+        <p>Writing product specs, design briefs, case studies, and marketing copy that moves people and drives action.</p>
+        <div class="skill-tags"><span class="skill-tag">Copywriting</span><span class="skill-tag">PRDs</span><span class="skill-tag">Case Studies</span><span class="skill-tag">Pitch Decks</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOOLS TAB -->
+  <div class="tab-panel" id="tab-tools">
+    <div class="featured-panel" id="toolsFeatured">
+      <div>
+        <div class="featured-label">Toolkit</div>
+        <h2>Tools I <em>Love</em></h2>
+        <p>I believe in using the right tool for the job. Below is the stack I reach for most often — tried, tested, and trusted across dozens of projects.</p>
+        <p>I pick up new tools quickly. If your team uses something not listed here, I'm confident I'll be up to speed within days.</p>
+      </div>
+      <div class="featured-visual">🛠️</div>
+    </div>
+
+    <div class="tools-section">
+      <div class="tools-section-title">Design Tools</div>
+      <div class="tools-grid">
+        <div class="tool-item"><div class="tool-icon">🎨</div>Figma</div>
+        <div class="tool-item"><div class="tool-icon">✏️</div>Sketch</div>
+        <div class="tool-item"><div class="tool-icon">📐</div>Adobe XD</div>
+        <div class="tool-item"><div class="tool-icon">🖼️</div>Photoshop</div>
+        <div class="tool-item"><div class="tool-icon">💫</div>After Effects</div>
+        <div class="tool-item"><div class="tool-icon">📦</div>Framer</div>
+        <div class="tool-item"><div class="tool-icon">🗺️</div>Miro</div>
+        <div class="tool-item"><div class="tool-icon">🌊</div>Whimsical</div>
+      </div>
+    </div>
+
+    <div class="tools-section" style="margin-top:3rem">
+      <div class="tools-section-title">Development Tools</div>
+      <div class="tools-grid">
+        <div class="tool-item"><div class="tool-icon">⚛️</div>React</div>
+        <div class="tool-item"><div class="tool-icon">▲</div>Next.js</div>
+        <div class="tool-item"><div class="tool-icon">💙</div>TypeScript</div>
+        <div class="tool-item"><div class="tool-icon">🌊</div>Tailwind</div>
+        <div class="tool-item"><div class="tool-icon">🗄️</div>Supabase</div>
+        <div class="tool-item"><div class="tool-icon">🔥</div>Firebase</div>
+        <div class="tool-item"><div class="tool-icon">🐙</div>GitHub</div>
+        <div class="tool-item"><div class="tool-icon">🚀</div>Vercel</div>
+        <div class="tool-item"><div class="tool-icon">🐳</div>Docker</div>
+        <div class="tool-item"><div class="tool-icon">📦</div>Node.js</div>
+      </div>
+    </div>
+
+    <div class="tools-section" style="margin-top:3rem">
+      <div class="tools-section-title">Productivity & Collaboration</div>
+      <div class="tools-grid">
+        <div class="tool-item"><div class="tool-icon">📋</div>Notion</div>
+        <div class="tool-item"><div class="tool-icon">🎯</div>Linear</div>
+        <div class="tool-item"><div class="tool-icon">📊</div>Jira</div>
+        <div class="tool-item"><div class="tool-icon">💬</div>Slack</div>
+        <div class="tool-item"><div class="tool-icon">📹</div>Loom</div>
+        <div class="tool-item"><div class="tool-icon">📈</div>Mixpanel</div>
+        <div class="tool-item"><div class="tool-icon">🔍</div>Hotjar</div>
+        <div class="tool-item"><div class="tool-icon">📉</div>Amplitude</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /skills-content -->
+
+<!-- CURRENTLY LEARNING -->
+<div class="learning-section">
+  <svg width="0" height="0">
+    <defs>
+      <linearGradient id="progressGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#c8a97e"/>
+        <stop offset="100%" style="stop-color:#e8d5b0"/>
+      </linearGradient>
+    </defs>
+  </svg>
+  <div style="max-width:900px">
+    <div style="font-size:.75rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem"><span style="width:20px;height:1px;background:var(--accent);display:inline-block"></span>Always Growing</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);margin-bottom:.5rem">Currently <em style="font-style:italic;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Learning</em></h2>
+    <p style="color:var(--muted);font-size:.95rem;max-width:520px">I'm always adding new tools to my kit. Here's what I'm actively studying right now.</p>
+  </div>
+  <div class="learning-grid">
+    <div class="learning-card" data-progress="70">
+      <div class="progress-ring-wrap">
+        <svg class="progress-ring" width="44" height="44" viewBox="0 0 44 44">
+          <circle class="progress-bg" cx="22" cy="22" r="18"/>
+          <circle class="progress-fill" cx="22" cy="22" r="18" stroke-dasharray="113" stroke-dashoffset="113"/>
+        </svg>
+      </div>
+      <h3>Three.js & WebGL</h3>
+      <p>Building immersive 3D web experiences and interactive data visualisations.</p>
+      <div class="learning-pct">70% complete</div>
+    </div>
+    <div class="learning-card" data-progress="55">
+      <div class="progress-ring-wrap">
+        <svg class="progress-ring" width="44" height="44" viewBox="0 0 44 44">
+          <circle class="progress-bg" cx="22" cy="22" r="18"/>
+          <circle class="progress-fill" cx="22" cy="22" r="18" stroke-dasharray="113" stroke-dashoffset="113"/>
+        </svg>
+      </div>
+      <h3>iOS Development (Swift)</h3>
+      <p>Learning native iOS to complement my existing mobile design expertise.</p>
+      <div class="learning-pct">55% complete</div>
+    </div>
+    <div class="learning-card" data-progress="80">
+      <div class="progress-ring-wrap">
+        <svg class="progress-ring" width="44" height="44" viewBox="0 0 44 44">
+          <circle class="progress-bg" cx="22" cy="22" r="18"/>
+          <circle class="progress-fill" cx="22" cy="22" r="18" stroke-dasharray="113" stroke-dashoffset="113"/>
+        </svg>
+      </div>
+      <h3>AI Integration</h3>
+      <p>Integrating LLM APIs and AI-powered features into product interfaces.</p>
+      <div class="learning-pct">80% complete</div>
+    </div>
+    <div class="learning-card" data-progress="45">
+      <div class="progress-ring-wrap">
+        <svg class="progress-ring" width="44" height="44" viewBox="0 0 44 44">
+          <circle class="progress-bg" cx="22" cy="22" r="18"/>
+          <circle class="progress-fill" cx="22" cy="22" r="18" stroke-dasharray="113" stroke-dashoffset="113"/>
+        </svg>
+      </div>
+      <h3>Motion Design (GSAP)</h3>
+      <p>Advanced animation timelines and scroll-driven interactions with GSAP.</p>
+      <div class="learning-pct">45% complete</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="skills-cta">
+  <h2>Let's build something <em>together</em></h2>
+  <p>Looking for a designer-developer hybrid who can take a project from zero to shipped? Let's talk.</p>
+  <div class="cta-btns">
+    <a href="projects.html" class="btn-primary">See My Work</a>
+    <a href="contact.html" class="btn-ghost">Get in Touch</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 Alexa Kinjiola. All rights reserved.</div>
+  <div class="footer-socials">
+    <a href="#">GitHub</a><a href="#">LinkedIn</a><a href="#">Twitter</a><a href="#">Dribbble</a>
+  </div>
+</footer>
+    
+<script>
+// Cursor
+const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
+(function anim(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(anim);})();
+document.querySelectorAll('a,button,.skill-card,.tool-item').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{ring.style.width='56px';ring.style.height='56px';});
+  el.addEventListener('mouseleave',()=>{ring.style.width='36px';ring.style.height='36px';});
+});
+
+// Mobile menu
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
+
+// Nav scroll
+window.addEventListener('scroll',()=>{document.getElementById('nav').style.padding=window.scrollY>60?'.9rem 5vw':'1.4rem 5vw';});
+
+// Tabs
+function switchTab(id, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-'+id).classList.add('active');
+  // trigger reveals and bars for the newly shown panel
+  setTimeout(()=>{ triggerReveals(); triggerBars(); triggerRings(); }, 50);
+}
+
+// Scroll reveal
+function triggerReveals(){
+  document.querySelectorAll('.tab-panel.active .skill-card, .tab-panel.active .featured-panel, .learning-card').forEach((el,i)=>{
+    const rect=el.getBoundingClientRect();
+    if(rect.top<window.innerHeight-60){
+      setTimeout(()=>el.classList.add('visible'),i*80);
+    }
+  });
+}
+
+// Proficiency bars
+function triggerBars(){
+  document.querySelectorAll('.tab-panel.active .prof-fill').forEach(fill=>{
+    const rect=fill.closest('.prof-item').getBoundingClientRect();
+    if(rect.top<window.innerHeight){
+      fill.style.width=fill.dataset.width+'%';
+    }
+  });
+}
+
+// Learning rings
+function triggerRings(){
+  document.querySelectorAll('.learning-card').forEach(card=>{
+    const rect=card.getBoundingClientRect();
+    if(rect.top<window.innerHeight-60){
+      const pct=parseInt(card.dataset.progress);
+      const fill=card.querySelector('.progress-fill');
+      const circumference=2*Math.PI*18;
+      fill.style.strokeDashoffset=circumference-(circumference*pct/100);
+      card.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll',()=>{triggerReveals();triggerBars();triggerRings();});
+window.addEventListener('load',()=>{triggerReveals();triggerBars();triggerRings();});
+</script>
+</body>
