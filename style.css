@@ -84,6 +84,7 @@
       transition: color 0.25s;
       position: relative;
     }
+    .nav-links a.active { color: var(--accent); font-weight: 600; }
     .nav-links a::after {
       content: '';
       position: absolute;
@@ -106,6 +107,7 @@
       padding: 0 5vw;
       position: relative;
       overflow: hidden;
+     
     }
     .hero-bg {
       position: absolute;
@@ -122,12 +124,35 @@
         linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
       background-size: 60px 60px;
       mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
-    }
+   
     .hero-content {
+        display: flex;
+        align-items: center;
       position: relative;
       z-index: 2;
       max-width: 780px;
     }
+     }
+    .hero-image img {
+         width: 40%; 
+         max-width: 450px; 
+         border-radius: 30px; 
+         align-items: right;
+      filter: grayscale(20%) brightness(0.9);
+    }
+    .hero-description{
+         align-items: left;
+         justify-content: center;
+         width: 60
+%;
+         height: 100%;
+         padding: 2rem;
+    }
+        
+        flex-direction: column;
+        gap: 1.5rem;
+    )
+
     .hero-tag {
       display: inline-flex;
       align-items: center;
@@ -192,6 +217,7 @@
       text-decoration: none;
       display: inline-block;
       transition: opacity 0.2s, transform 0.2s;
+      border-radius: 12px;
     }
     .btn-primary:hover { opacity: 0.85; transform: translateY(-2px); }
     .btn-ghost {
@@ -208,6 +234,7 @@
       text-decoration: none;
       display: inline-block;
       transition: border-color 0.2s, color 0.2s, transform 0.2s;
+      border-radius: 12px;
     }
     .btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
 
