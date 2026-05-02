@@ -7,98 +7,337 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body> 
 
-    <nav class="navbar">
-        <div class="logo">Alex<span>.</span></div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about" class="active">About</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button class="btn-talk">Let's Talk</button>
-    </nav>
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-    <main>
-        <section class="hero container">
-            <div class="hero-content">
-                <div class="status-pill">● Available for new opportunities</div>
-                <h1>UI/UX & Product Designer building <span class="highlight">scalable, user-centered</span> digital products</h1>
-                <p class="hero-subtext">4+ years crafting intuitive experiences for SaaS, Fintech, EdTech, and E-commerce products that users love.</p>
-                <div class="hero-btns">
-                    <button class="btn-primary">View Case Studies →</button>
-                    <button class="btn-outline">Let's Work Together</button>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="profile.jpg" alt="Alex O. Akinjiola">
-            </div>
-        </section>
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-logo">Alex O. Akinjiola</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
 
-        <section class="expertise container">
-            <div class="expertise-header">
-                <span class="section-label">EXPERTISE</span>
-                <h2>What I Bring to the Table</h2>
-                <p>Research-driven design approach combined with a deep understanding of product strategy and user needs.</p>
-                <div class="expertise-tags">
-                    <span>User Research</span> <span>UI Design</span> <span>UX Strategy</span>
-                    <span>Design Systems</span> <span>Prototyping</span> <span>Product Design</span>
-                </div>
-                <a href="#" class="inline-link">Learn more about me →</a>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-card"><h3>4+</h3><p>Years of Experience</p></div>
-                <div class="stat-card"><h3>50+</h3><p>Projects Delivered</p></div>
-                <div class="stat-card"><h3>6+</h3><p>Industries Served</p></div>
-            </div>
-        </section>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-tag">Available for work</div>
+      <h1 class="hero-title">
+        Design. Build.<br><em>Deliver.</em>
+      </h1>
+      <p class="hero-subtitle">
+        I'm Alexa Kinjiola — a product designer & developer crafting thoughtful digital experiences that bridge aesthetics and function.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      Scroll to explore
+    </div>
+  </section>
 
-        <section class="projects container">
-            <span class="section-label">FEATURED WORK</span>
-            <h2>Selected Projects</h2>
-            <div class="project-grid">
-                <div class="project-item">
-                    <div class="project-thumb orange"><img src="mealflex.png" alt="Meal Flex"></div>
-                    <span class="category">FOOD TECH</span>
-                    <h3>Meal Flex</h3>
-                </div>
-                <div class="project-item">
-                    <div class="project-thumb"><img src="krent.jpg" alt="Krent"></div>
-                    <span class="category">REAL ESTATE</span>
-                    <h3>Krent</h3>
-                </div>
-                <div class="project-item">
-                    <div class="project-thumb"><img src="paytrackr.png" alt="Paytrackr"></div>
-                    <span class="category">FINTECH</span>
-                    <h3>Paytrackr</h3>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-cta">
-            <h2>Ready to bring your <span class="highlight">product vision</span> to life?</h2>
-            <p>I'm currently available for freelance projects and full-time opportunities.</p>
-            <button class="btn-primary">Get in Touch →</button>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <div class="about-img-frame">
+          <div class="about-avatar-placeholder">AK</div>
         </div>
-        <div class="footer-details">
-            <div class="footer-brand">
-                <h3>Let's create something <span class="highlight">amazing together.</span></h3>
-                <p>Available for UI/UX & Product Design roles.</p>
-            </div>
-            <div class="footer-links">
-                <p>✉ tayoalex7@gmail.com</p>
-                <p>in LinkedIn</p>
-            </div>
+      </div>
+      <div class="about-text">
+        <div class="section-label" data-n="1">About Me</div>
+        <h2 class="section-title reveal">A passionate creator<br>focused on <em>impact</em></h2>
+        <p class="reveal reveal-delay-1">
+          Hi, I'm <strong>Alexa Kinjiola</strong> — a designer and developer with a love for clean interfaces and meaningful interactions. I believe great digital products should be both beautiful and incredibly functional.
+        </p>
+        <p class="reveal reveal-delay-2">
+          My work spans <strong>UI/UX design</strong>, front-end development, and product strategy. I enjoy the full journey — from early wireframes to polished, deployed products.
+        </p>
+        <p class="reveal reveal-delay-3">
+          When I'm not at my desk, you'll find me exploring design systems, writing about product thinking, or mentoring aspiring designers.
+        </p>
+        <div class="about-stats reveal reveal-delay-4">
+          <div>
+            <div class="stat-num">3+</div>
+            <div class="stat-label">Years Exp.</div>
+          </div>
+          <div>
+            <div class="stat-num">20+</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div>
+            <div class="stat-num">12+</div>
+            <div class="stat-label">Clients</div>
+          </div>
         </div>
-        <div class="legal">
-            <p>© 2026 Alex O. Akinjiola. All rights reserved.</p>
-            <p>Designed & built with passion in Lagos, Nigeria</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label" data-n="2">What I Do</div>
+    <h2 class="section-title reveal">Skills &amp; <em>Expertise</em></h2>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-icon">🎨</div>
+        <h3>UI/UX Design</h3>
+        <p>Creating user-centred interfaces that delight, from wireframes and prototypes to high-fidelity design systems.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">Prototyping</span>
+          <span class="skill-tag">Design Systems</span>
         </div>
-    </footer>
+      </div>
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-icon">⚡</div>
+        <h3>Front-End Development</h3>
+        <p>Building fast, accessible web experiences using modern frameworks and best practices.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">Tailwind CSS</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-icon">📱</div>
+        <h3>Mobile Design</h3>
+        <p>Designing intuitive mobile experiences that work beautifully across iOS and Android platforms.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">React Native</span>
+          <span class="skill-tag">iOS / Android</span>
+          <span class="skill-tag">Responsive</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-3">
+        <div class="skill-icon">🔧</div>
+        <h3>Product Strategy</h3>
+        <p>Translating business goals into clear product roadmaps, user research, and measurable outcomes.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">User Research</span>
+          <span class="skill-tag">Roadmapping</span>
+          <span class="skill-tag">A/B Testing</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-icon">🛠️</div>
+        <h3>Backend & APIs</h3>
+        <p>Building solid backends with Node.js and integrating third-party APIs and data sources.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">Supabase</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-icon">✍️</div>
+        <h3>Content & Branding</h3>
+        <p>Crafting brand identities and content strategies that resonate and communicate clearly.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Branding</span>
+          <span class="skill-tag">Copywriting</span>
+          <span class="skill-tag">Motion Design</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label" data-n="3">Selected Work</div>
+    <h2 class="section-title reveal">Recent <em>Projects</em></h2>
+    <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <div class="project-thumb">
+          <div class="project-thumb-inner">🛒</div>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-type">E-Commerce</span>
+            <div class="project-dot"></div>
+            <span class="project-year">2024</span>
+          </div>
+          <h3>ShopFlow — Redesign</h3>
+          <p>A full UX redesign of a Nigerian e-commerce platform, improving conversion rate by 34% through streamlined checkout flows and a refreshed visual language.</p>
+          <a href="#" class="project-link">
+            View Case Study
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-thumb">
+          <div class="project-thumb-inner">💊</div>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-type">HealthTech</span>
+            <div class="project-dot"></div>
+            <span class="project-year">2024</span>
+          </div>
+          <h3>MediTrack Dashboard</h3>
+          <p>A patient management dashboard built with React and Supabase, enabling clinics to manage records, appointments, and prescriptions from one place.</p>
+          <a href="#" class="project-link">
+            View Case Study
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-thumb">
+          <div class="project-thumb-inner">📊</div>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-type">FinTech</span>
+            <div class="project-dot"></div>
+            <span class="project-year">2023</span>
+          </div>
+          <h3>Budgr — Personal Finance</h3>
+          <p>A mobile-first personal finance app for young Africans. Features spending insights, savings goals, and bill reminders with an intuitive onboarding experience.</p>
+          <a href="#" class="project-link">
+            View Case Study
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-thumb">
+          <div class="project-thumb-inner">🎓</div>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-type">EdTech</span>
+            <div class="project-dot"></div>
+            <span class="project-year">2023</span>
+          </div>
+          <h3>LearnPath LMS</h3>
+          <p>A learning management system for African educational institutions, with live classes, progress tracking, and an offline-first architecture for low-bandwidth environments.</p>
+          <a href="#" class="project-link">
+            View Case Study
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-label" data-n="4">Work History</div>
+    <h2 class="section-title reveal">My <em>Experience</em></h2>
+    <div class="exp-list">
+      <div class="exp-item reveal">
+        <div class="exp-date">2023 — Present</div>
+        <div>
+          <div class="exp-role">Product Designer & Developer</div>
+          <div class="exp-company">Freelance / Independent</div>
+          <div class="exp-desc">Working with startups across Africa and Europe to design and build digital products. Responsibilities span UX research, visual design, and front-end implementation.</div>
+        </div>
+      </div>
+      <div class="exp-item reveal reveal-delay-1">
+        <div class="exp-date">2022 — 2023</div>
+        <div>
+          <div class="exp-role">UI/UX Designer</div>
+          <div class="exp-company">TechHub Lagos</div>
+          <div class="exp-desc">Designed product interfaces for portfolio companies including fintech and logistics apps. Led design system creation and managed handoffs to engineering teams.</div>
+        </div>
+      </div>
+      <div class="exp-item reveal reveal-delay-2">
+        <div class="exp-date">2021 — 2022</div>
+        <div>
+          <div class="exp-role">Junior Front-End Developer</div>
+          <div class="exp-company">Andela</div>
+          <div class="exp-desc">Built and maintained React-based web applications for international clients. Focused on performance optimisation and accessibility compliance.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <div class="section-label" data-n="5">Let's Talk</div>
+        <h2 class="section-title reveal">Have a project<br>in <em>mind?</em></h2>
+        <p class="reveal">I'm currently open to new opportunities — freelance projects, full-time roles, or collaborative ventures. Let's build something great together.</p>
+        <div class="contact-links reveal reveal-delay-1">
+          <a href="mailto:alexa@example.com" class="contact-link">
+            <div class="contact-link-icon">✉️</div>
+            alexa@example.com
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="contact-link">
+            <div class="contact-link-icon">💼</div>
+            linkedin.com/in/alexakinjiola
+          </a>
+          <a href="https://github.com" target="_blank" class="contact-link">
+            <div class="contact-link-icon">🐙</div>
+            github.com/alexakinjiola
+          </a>
+          <a href="https://twitter.com" target="_blank" class="contact-link">
+            <div class="contact-link-icon">🐦</div>
+            @alexakinjiola
+          </a>
+        </div>
+      </div>
+      <div>
+        <form class="contact-form reveal reveal-delay-2" id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project inquiry, collaboration…" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project…" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="align-self:flex-start;">Send Message</button>
+          <div class="form-success" id="formSuccess">
+            ✓ Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-copy">© 2026 Alex Akinjiola. All rights reserved.</div>
+    <div class="footer-socials">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Twitter</a>
+      <a href="#">Dribbble</a>
+    </div>
+  </footer>
+
 
     <script src="script.js"></script>
 </body>
