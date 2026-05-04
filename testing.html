@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex O. Akinjiola | UI/UX & Product Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../images/OCHL9530.jpg" alt="my" />
+</head>
+
+<body> 
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-logo">Alex O. Akinjiola</div>
+    <ul class="nav-links" id="navLinks">
+       <li><a href="index.html" class="active">Home</a></li> 
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label" data-n="3">Selected Work</div>
+  <h2 class="section-title reveal">Recent <em>Projects</em></h2>
+
+  <div class="projects-grid">
+
+    <!-- PROJECT 1 -->
+    <div class="project-card reveal">
+      <div class="project-thumb">
+        <img src="images/paytrackr.jpg" alt="Paytrackr Project">
+      </div>
+      <div class="project-body">
+        <div class="project-meta">
+          <span class="project-type">FinTech</span>
+          <div class="project-dot"></div>
+          <span class="project-year">2024</span>
+        </div>
+        <h3>Paytrackr — Web Platform</h3>
+        <p>A full UX redesign of a Nigerian e-commerce platform, improving conversion rate by 34% through streamlined checkout flows and a refreshed visual language.</p>
+        <a href="#" class="project-link">
+          View Case Study
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project-card reveal reveal-delay-1">
+      <div class="project-thumb">
+        <img src="../images/patrackr.jpg" alt="MediTrack Dashboard">
+      </div>
+      <div class="project-body">
+        <div class="project-meta">
+          <span class="project-type">HealthTech</span>
+          <div class="project-dot"></div>
+          <span class="project-year">2024</span>
+        </div>
+        <h3>MediTrack Dashboard</h3>
+        <p>A patient management dashboard built with React and Supabase, enabling clinics to manage records, appointments, and prescriptions from one place.</p>
+        <a href="#" class="project-link">
+          View Case Study
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="project-card reveal reveal-delay-2">
+      <div class="project-thumb">
+        <img src="images/budgr.jpg" alt="Budgr App">
+      </div>
+      <div class="project-body">
+        <div class="project-meta">
+          <span class="project-type">FinTech</span>
+          <div class="project-dot"></div>
+          <span class="project-year">2023</span>
+        </div>
+        <h3>Budgr — Personal Finance</h3>
+        <p>A mobile-first personal finance app for young Africans with spending insights, savings goals, and bill reminders.</p>
+        <a href="#" class="project-link">
+          View Case Study
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- PROJECT 4 -->
+    <div class="project-card reveal reveal-delay-3">
+      <div class="project-thumb">
+        <img src="images/learnpath.jpg" alt="LearnPath LMS">
+      </div>
+      <div class="project-body">
+        <div class="project-meta">
+          <span class="project-type">EdTech</span>
+          <div class="project-dot"></div>
+          <span class="project-year">2023</span>
+        </div>
+        <h3>LearnPath LMS</h3>
+        <p>A learning management system for African institutions with live classes, progress tracking, and offline-first architecture.</p>
+        <a href="#" class="project-link">
+          View Case Study
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+    // SCROLL REVEAL ANIMATION
+const revealElements = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+  revealElements.forEach((element) => {
+    const windowHeight = window.innerHeight;
+    const revealTop = element.getBoundingClientRect().top;
+    const revealPoint = 120;
+
+    if (revealTop < windowHeight - revealPoint) {
+      element.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+</script>
+</body>
+</html>
