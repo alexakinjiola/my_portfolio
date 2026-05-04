@@ -3702,3 +3702,1029 @@ reveals.forEach(el=>obs.observe(el));
 </html>
 
 
+\\ABOUT PAGE
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Alexa Kinjiola</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0d0d0d;
+      --surface:  #141414;
+      --surface2: #1c1c1c;
+      --surface3: #222222;
+      --border:   rgba(255,255,255,0.07);
+      --text:     #f0ede8;
+      --muted:    #888;
+      --muted2:   #666;
+      --accent:   #c8a97e;
+      --accent2:  #e8d5b0;
+      --green:    #4ade80;
+      --gradient: linear-gradient(135deg, #c8a97e 0%, #e8d5b0 100%);
+      --gradient-radial: radial-gradient(ellipse at center, #c8a97e 0%, #e8d5b0 100%);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+
+    /* ─── CURSOR ─── */
+    .cursor {
+      position: fixed; width: 10px; height: 10px; border-radius: 50%;
+      background: var(--accent); pointer-events: none; z-index: 9999;
+      transform: translate(-50%,-50%); transition: transform .12s;
+    }
+    .cursor-ring {
+      position: fixed; width: 36px; height: 36px; border-radius: 50%;
+      border: 1px solid rgba(200,169,126,.35); pointer-events: none; z-index: 9998;
+      transform: translate(-50%,-50%); transition: width .25s, height .25s, border-color .25s;
+    }
+    .cursor-ring.hovered { width: 56px; height: 56px; border-color: rgba(200,169,126,.6); }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.4rem 5vw;
+      background: rgba(13,13,13,.88); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border); transition: padding .3s;
+    }
+    nav.scrolled { padding: .9rem 5vw; }
+    .nav-logo {
+      font-family: 'Playfair Display', serif; font-size: 1.25rem;
+      letter-spacing: .04em; text-decoration: none;
+      background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a {
+      font-size: .82rem; font-weight: 500; letter-spacing: .09em;
+      text-transform: uppercase; color: var(--muted); text-decoration: none;
+      transition: color .25s; position: relative;
+    }
+    .nav-links a::after { content:''; position:absolute; bottom:-3px; left:0; width:0; height:1px; background:var(--accent); transition:width .3s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); }
+    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+    .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; z-index:201; }
+    .hamburger span { width:24px; height:1.5px; background:var(--text); transition:all .3s; display:block; }
+
+    /* ─── PAGE HERO ─── */
+    .about-hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 8rem 5vw 5rem;
+      gap: 5rem;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-noise {
+      position: absolute; inset: 0; z-index: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .hero-glow {
+      position: absolute; inset: 0; z-index: 0;
+      background:
+        radial-gradient(ellipse 55% 70% at 75% 50%, rgba(200,169,126,.07) 0%, transparent 65%),
+        radial-gradient(ellipse 35% 50% at 10% 80%, rgba(200,169,126,.04) 0%, transparent 60%);
+    }
+    .hero-lines {
+      position: absolute; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 20%, transparent 100%);
+    }
+
+    /* LEFT TEXT */
+    .hero-left { position: relative; z-index: 2; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: .6rem;
+      font-size: .72rem; font-weight: 500; letter-spacing: .16em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 1.8rem;
+      opacity: 0; animation: fadeUp .7s .1s forwards;
+    }
+    .hero-eyebrow::before { content:''; width:32px; height:1px; background:var(--accent); }
+    .hero-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.2rem, 6vw, 5.6rem);
+      font-weight: 700; line-height: 1.06; letter-spacing: -.025em;
+      margin-bottom: 1.8rem;
+      opacity: 0; animation: fadeUp .7s .25s forwards;
+    }
+    .hero-heading em {
+      font-style: italic;
+      background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero-lead {
+      font-size: 1.08rem; font-weight: 300; color: var(--muted);
+      line-height: 1.85; max-width: 500px; margin-bottom: 2.5rem;
+      opacity: 0; animation: fadeUp .7s .4s forwards;
+    }
+    .hero-lead strong { color: var(--text); font-weight: 500; }
+
+    /* QUICK FACTS PILLS */
+    .hero-pills {
+      display: flex; flex-wrap: wrap; gap: .6rem;
+      opacity: 0; animation: fadeUp .7s .55s forwards;
+    }
+    .pill {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .45rem 1rem; border: 1px solid var(--border);
+      font-size: .76rem; font-weight: 500; color: var(--muted);
+      letter-spacing: .04em; transition: border-color .25s, color .25s;
+    }
+    .pill:hover { border-color: rgba(200,169,126,.3); color: var(--text); }
+    .pill-icon { font-size: 1rem; }
+
+    /* RIGHT — PHOTO STACK */
+    .hero-right {
+      position: relative; z-index: 2;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; animation: fadeUp .8s .35s forwards;
+    }
+    .photo-stack {
+      position: relative;
+      width: min(400px, 90%);
+    }
+    /* Shadow card behind */
+    .photo-stack::before {
+      content: '';
+      position: absolute;
+      top: 20px; left: 20px;
+      right: -20px; bottom: -20px;
+      border: 1px solid rgba(200,169,126,.18);
+      z-index: 0;
+    }
+    .photo-main {
+      position: relative; z-index: 2;
+      aspect-ratio: 3/4; overflow: hidden;
+      background: var(--surface2);
+    }
+    .photo-main img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center top;
+      display: block; filter: grayscale(10%);
+      transition: transform .6s ease, filter .4s;
+    }
+    .photo-main:hover img { transform: scale(1.04); filter: grayscale(0%); }
+    .photo-main::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(13,13,13,.5) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    /* Floating cards on photo */
+    .photo-card {
+      position: absolute; z-index: 4;
+      background: rgba(13,13,13,.88); backdrop-filter: blur(16px);
+      border: 1px solid var(--border); padding: .9rem 1.1rem;
+    }
+    .card-top-right {
+      top: 1.5rem; right: -2.5rem;
+      display: flex; align-items: center; gap: .6rem;
+    }
+    .card-bottom-left {
+      bottom: 2rem; left: -2.5rem;
+    }
+    .card-avail-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--green); flex-shrink: 0;
+      box-shadow: 0 0 0 3px rgba(74,222,128,.15);
+      animation: glow 2.2s ease-in-out infinite;
+    }
+    @keyframes glow {
+      0%,100% { box-shadow: 0 0 0 3px rgba(74,222,128,.15); }
+      50%      { box-shadow: 0 0 0 7px rgba(74,222,128,.04); }
+    }
+    .card-avail-text { font-size: .72rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+    .card-avail-sub  { font-size: .65rem; color: var(--muted); margin-top: .15rem; }
+    .card-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 700; line-height: 1;
+      background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .card-stat-label { font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: .2rem; }
+
+    /* Corner accent lines */
+    .corner-tl, .corner-br {
+      position: absolute; width: 50px; height: 50px; z-index: 5; pointer-events: none;
+    }
+    .corner-tl { top: -1px; left: -1px; border-top: 1px solid var(--accent); border-left: 1px solid var(--accent); }
+    .corner-br { bottom: -1px; right: -1px; border-bottom: 1px solid var(--accent); border-right: 1px solid var(--accent); }
+
+    /* ─── SECTION SHARED ─── */
+    .section-wrap { padding: 7rem 5vw; }
+    .section-wrap.alt { background: var(--surface); }
+    .section-tag {
+      display: inline-flex; align-items: center; gap: .55rem;
+      font-size: .68rem; font-weight: 600; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: .8rem;
+    }
+    .section-tag::before { content:''; width:22px; height:1px; background:var(--accent); }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700; line-height: 1.12; letter-spacing: -.02em;
+    }
+    .section-title em {
+      font-style: italic;
+      background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .section-body { color: var(--muted); font-size: .98rem; line-height: 1.9; }
+    .section-body strong { color: var(--text); font-weight: 500; }
+    .section-body p + p { margin-top: 1.1rem; }
+
+    /* ─── STORY SECTION ─── */
+    .story-grid {
+      display: grid; grid-template-columns: 1fr 1.4fr;
+      gap: 6rem; align-items: start; margin-top: 4rem;
+    }
+    .story-sticky { position: sticky; top: 100px; }
+    .story-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 9rem; font-weight: 700; line-height: .9;
+      color: rgba(200,169,126,.06); letter-spacing: -.04em;
+      margin-bottom: -1rem; user-select: none;
+    }
+
+    /* Chapter cards */
+    .chapter { margin-bottom: 3.5rem; padding-bottom: 3.5rem; border-bottom: 1px solid var(--border); }
+    .chapter:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .chapter-year {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .7rem; font-weight: 600; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--accent);
+      padding: .25rem .8rem; border: 1px solid rgba(200,169,126,.2);
+      background: rgba(200,169,126,.06); margin-bottom: 1rem;
+    }
+    .chapter-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; font-weight: 700; margin-bottom: .8rem; line-height: 1.25;
+    }
+    .chapter-title em { font-style: italic; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .chapter p { font-size: .92rem; color: var(--muted); line-height: 1.88; margin-bottom: .9rem; }
+    .chapter p:last-child { margin-bottom: 0; }
+
+    /* ─── VALUES SECTION ─── */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--border);
+      margin-top: 4rem;
+    }
+    .value-card {
+      background: var(--bg); padding: 2.5rem 2rem;
+      position: relative; overflow: hidden;
+      transition: background .3s;
+    }
+    .value-card::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 2px; background: var(--gradient);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .45s cubic-bezier(.4,0,.2,1);
+    }
+    .value-card:hover { background: var(--surface2); }
+    .value-card:hover::after { transform: scaleX(1); }
+    .value-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem; font-weight: 700; line-height: 1;
+      color: rgba(200,169,126,.1); margin-bottom: .5rem;
+      user-select: none; letter-spacing: -.04em;
+    }
+    .value-icon { font-size: 2rem; margin-bottom: 1.2rem; display: block; }
+    .value-title { font-size: 1.05rem; font-weight: 600; margin-bottom: .7rem; }
+    .value-desc { font-size: .87rem; color: var(--muted); line-height: 1.8; }
+
+    /* ─── NUMBERS / IMPACT ─── */
+    .impact-row {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-top: 5rem;
+    }
+    .impact-block {
+      padding: 3rem 2rem; border-right: 1px solid var(--border);
+      text-align: center;
+    }
+    .impact-block:last-child { border-right: none; }
+    .impact-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem; font-weight: 700; line-height: 1;
+      background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      margin-bottom: .5rem;
+    }
+    .impact-label { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+    .impact-sub { font-size: .8rem; color: var(--muted2); margin-top: .3rem; }
+
+    /* ─── PROCESS SECTION ─── */
+    .process-steps {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 0; margin-top: 4rem; position: relative;
+    }
+    /* connecting line */
+    .process-steps::before {
+      content: '';
+      position: absolute; top: 2.2rem; left: 10%; right: 10%; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border) 20%, var(--accent) 50%, var(--border) 80%, transparent);
+    }
+    .process-step {
+      padding: 0 1.5rem 2rem; text-align: center; position: relative;
+    }
+    .step-circle {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--bg); border: 1px solid var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem; font-weight: 700;
+      background: var(--gradient); color: #0d0d0d;
+      position: relative; z-index: 2;
+    }
+    .step-title { font-size: .92rem; font-weight: 600; margin-bottom: .5rem; }
+    .step-desc { font-size: .8rem; color: var(--muted); line-height: 1.75; }
+
+    /* ─── TOOLKIT MARQUEE ─── */
+    .marquee-section { padding: 4rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; }
+    .marquee-label { text-align: center; font-size: .68rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--muted2); margin-bottom: 2rem; }
+    .marquee-track { display: flex; gap: 0; }
+    .marquee-inner {
+      display: flex; gap: 0; align-items: center;
+      animation: marquee 28s linear infinite; flex-shrink: 0;
+    }
+    .marquee-inner:hover { animation-play-state: paused; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .marquee-item {
+      display: flex; align-items: center; gap: .8rem;
+      padding: .6rem 2rem; border-right: 1px solid var(--border);
+      font-size: .82rem; font-weight: 500; color: var(--muted);
+      white-space: nowrap; transition: color .2s;
+    }
+    .marquee-item:hover { color: var(--accent); }
+    .marquee-item-icon { font-size: 1.2rem; }
+
+    /* ─── OUTSIDE WORK ─── */
+    .outside-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; margin-top: 4rem;
+    }
+    .outside-card {
+      background: var(--surface2); border: 1px solid var(--border);
+      padding: 2rem; position: relative; overflow: hidden;
+      transition: border-color .3s, transform .3s;
+    }
+    .outside-card:hover { border-color: rgba(200,169,126,.25); transform: translateY(-4px); }
+    .outside-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: var(--gradient); transform: scaleX(0); transform-origin: left;
+      transition: transform .4s;
+    }
+    .outside-card:hover::before { transform: scaleX(1); }
+    .outside-emoji { font-size: 2.2rem; margin-bottom: 1.2rem; display: block; }
+    .outside-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: .6rem; }
+    .outside-card p { font-size: .85rem; color: var(--muted); line-height: 1.78; }
+
+    /* ─── TESTIMONIALS ─── */
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; margin-top: 4rem;
+    }
+    .testimonial {
+      background: var(--surface2); border: 1px solid var(--border);
+      padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem;
+      position: relative; overflow: hidden;
+    }
+    .testimonial::before {
+      content: '\201C';
+      font-family: 'Playfair Display', serif;
+      font-size: 7rem; line-height: .7;
+      color: rgba(200,169,126,.08);
+      position: absolute; top: .5rem; left: 1rem;
+      pointer-events: none; user-select: none;
+    }
+    .testimonial-text {
+      font-size: .9rem; color: var(--muted); line-height: 1.85;
+      font-style: italic; position: relative; z-index: 1;
+    }
+    .testimonial-author { display: flex; align-items: center; gap: .9rem; }
+    .author-avatar {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: var(--gradient); display: flex; align-items: center;
+      justify-content: center; font-size: .75rem; font-weight: 700;
+      color: #0d0d0d; flex-shrink: 0; font-family: 'Playfair Display', serif;
+    }
+    .author-name { font-size: .88rem; font-weight: 600; }
+    .author-role { font-size: .75rem; color: var(--muted); margin-top: .1rem; }
+    .testimonial-stars { color: var(--accent); font-size: .75rem; letter-spacing: .1em; }
+
+    /* ─── CURRENTLY SECTION ─── */
+    .currently-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1px; background: var(--border); margin-top: 4rem;
+    }
+    .currently-item {
+      background: var(--bg); padding: 2.2rem 2.5rem;
+      display: flex; gap: 1.5rem; align-items: flex-start;
+      transition: background .25s;
+    }
+    .currently-item:hover { background: var(--surface); }
+    .currently-icon {
+      width: 48px; height: 48px; flex-shrink: 0;
+      background: rgba(200,169,126,.06); border: 1px solid rgba(200,169,126,.12);
+      border-radius: 8px; display: flex; align-items: center;
+      justify-content: center; font-size: 1.4rem;
+    }
+    .currently-label { font-size: .65rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: .35rem; }
+    .currently-value { font-size: .95rem; font-weight: 500; margin-bottom: .25rem; }
+    .currently-sub { font-size: .82rem; color: var(--muted); line-height: 1.6; }
+
+    /* ─── CTA FOOTER ─── */
+    .about-cta {
+      padding: 8rem 5vw; text-align: center;
+      position: relative; overflow: hidden;
+      border-top: 1px solid var(--border);
+    }
+    .cta-bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(200,169,126,.05) 0%, transparent 70%);
+    }
+    .about-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 4rem);
+      font-weight: 700; line-height: 1.1; letter-spacing: -.02em;
+      margin-bottom: 1.2rem; position: relative; z-index: 1;
+    }
+    .about-cta h2 em { font-style: italic; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .about-cta p { color: var(--muted); font-size: 1.05rem; max-width: 520px; margin: 0 auto 3rem; position: relative; z-index: 1; line-height: 1.8; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+    .btn-primary {
+      padding: .95rem 2.2rem; background: var(--gradient); color: #0d0d0d;
+      font-family: 'DM Sans', sans-serif; font-size: .85rem; font-weight: 700;
+      letter-spacing: .08em; text-transform: uppercase; border: none;
+      cursor: pointer; text-decoration: none; display: inline-block;
+      transition: opacity .2s, transform .2s;
+    }
+    .btn-primary:hover { opacity: .85; transform: translateY(-3px); }
+    .btn-ghost {
+      padding: .95rem 2.2rem; background: transparent; color: var(--text);
+      font-family: 'DM Sans', sans-serif; font-size: .85rem; font-weight: 500;
+      letter-spacing: .08em; text-transform: uppercase;
+      border: 1px solid var(--border); cursor: pointer; text-decoration: none;
+      display: inline-block; transition: border-color .2s, color .2s, transform .2s;
+    }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-3px); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      padding: 2.5rem 5vw; border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-copy { font-size: .8rem; color: var(--muted); }
+    .footer-socials { display: flex; gap: 1.4rem; }
+    .footer-socials a {
+      font-size: .75rem; font-weight: 500; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--muted); text-decoration: none;
+      transition: color .2s;
+    }
+    .footer-socials a:hover { color: var(--accent); }
+
+    /* ─── SCROLL REVEAL ─── */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left { opacity: 0; transform: translateX(-28px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right { opacity: 0; transform: translateX(28px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+    .d1 { transition-delay: .08s; } .d2 { transition-delay: .16s; }
+    .d3 { transition-delay: .24s; } .d4 { transition-delay: .32s; }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(22px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1100px) {
+      .story-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .story-sticky { position: static; }
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+      .impact-row { grid-template-columns: repeat(2, 1fr); }
+      .impact-block:nth-child(2) { border-right: none; }
+      .impact-block:nth-child(3) { border-top: 1px solid var(--border); }
+      .impact-block:nth-child(4) { border-top: 1px solid var(--border); border-right: none; }
+      .process-steps { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+      .process-steps::before { display: none; }
+      .testimonials-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 900px) {
+      .about-hero { grid-template-columns: 1fr; padding-top: 7rem; gap: 3rem; text-align: center; }
+      .hero-pills { justify-content: center; }
+      .hero-right { order: -1; }
+      .photo-stack { width: min(300px, 75%); }
+      .card-top-right { right: -1rem; }
+      .card-bottom-left { left: -1rem; }
+      .outside-grid { grid-template-columns: 1fr 1fr; }
+      .currently-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .nav-links { display:none; flex-direction:column; position:fixed; top:0; right:0; bottom:0; width:72vw; background:var(--surface); padding:5rem 2rem 2rem; gap:1.5rem; z-index:200; transform:translateX(100%); transition:transform .3s; }
+      .nav-links.open { display:flex; transform:translateX(0); }
+      .hamburger { display:flex; }
+      .values-grid { grid-template-columns: 1fr; }
+      .impact-row { grid-template-columns: 1fr 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .outside-grid { grid-template-columns: 1fr; }
+      .section-wrap { padding: 5rem 5vw; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ─── NAV ─── -->
+<nav id="nav">
+  <a href="alexa_kinjiola_portfolio.html" class="nav-logo">Alexa Kinjiola</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="alexa_kinjiola_portfolio.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="about-hero">
+  <div class="hero-noise"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-lines"></div>
+
+  <!-- LEFT -->
+  <div class="hero-left">
+    <div class="hero-eyebrow">About Me</div>
+    <h1 class="hero-heading">
+      Designer. Developer.<br><em>Storyteller.</em>
+    </h1>
+    <p class="hero-lead">
+      I'm <strong>Alexa Kinjiola</strong> — a Lagos-based product designer and front-end developer who believes technology should feel <strong>human</strong>. I build things people actually enjoy using.
+    </p>
+    <div class="hero-pills">
+      <span class="pill"><span class="pill-icon">📍</span> Lagos, Nigeria</span>
+      <span class="pill"><span class="pill-icon">🎓</span> BSc Computer Science</span>
+      <span class="pill"><span class="pill-icon">💼</span> 3+ Years Experience</span>
+      <span class="pill"><span class="pill-icon">🌍</span> Remote-Ready</span>
+      <span class="pill"><span class="pill-icon">✨</span> Open to Opportunities</span>
+    </div>
+  </div>
+
+  <!-- RIGHT — PHOTO -->
+  <div class="hero-right">
+    <div class="photo-stack">
+      <div class="photo-main">
+        <img
+          src="OCHL9530.jpeg"
+          alt="Alexa Kinjiola"
+          onerror="this.closest('.photo-main').innerHTML='<div style=\'width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#181818,#242424);font-family:Playfair Display,serif;font-size:8rem;color:rgba(200,169,126,.12)\'>AK</div>'"
+        />
+      </div>
+      <div class="corner-tl"></div>
+      <div class="corner-br"></div>
+
+      <!-- Floating: availability -->
+      <div class="photo-card card-top-right">
+        <div class="card-avail-dot"></div>
+        <div>
+          <div class="card-avail-text">Open to Work</div>
+          <div class="card-avail-sub">Freelance &amp; Full-time</div>
+        </div>
+      </div>
+
+      <!-- Floating: stat -->
+      <div class="photo-card card-bottom-left">
+        <div class="card-stat-num">20+</div>
+        <div class="card-stat-label">Projects Shipped</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── MY STORY ─── -->
+<div class="section-wrap" id="story">
+  <div class="section-tag">My Story</div>
+  <h2 class="section-title reveal">The journey that<br>shaped <em>who I am</em></h2>
+
+  <div class="story-grid">
+
+    <!-- Sticky left side -->
+    <div class="story-sticky reveal-left">
+      <div class="story-number">01</div>
+      <p class="section-body" style="margin-top:1.5rem">
+        I didn't start out wanting to be a designer. I wanted to <strong>understand why some products feel effortless</strong> and others feel like a fight. That curiosity became a career.
+      </p>
+      <p class="section-body" style="margin-top:1rem">
+        Every chapter below is a turning point — a moment that pushed my thinking forward and shaped how I approach every project today.
+      </p>
+    </div>
+
+    <!-- Chapters -->
+    <div>
+      <div class="chapter reveal">
+        <div class="chapter-year">2017 – 2021</div>
+        <h3 class="chapter-title">The <em>Foundation</em></h3>
+        <p>Growing up in Lagos, I was obsessed with how things worked. I took apart radios, rebuilt old computers from parts markets in Computer Village, and spent late nights reading about the internet. When I got into Computer Science at the University of Lagos, I finally had a name for what I loved: software.</p>
+        <p>But somewhere between data structures and algorithms, I realised I cared less about the machines and more about the <strong>people using them</strong>. My final year dissertation — designing accessible e-government interfaces for low-literacy Nigerians — was the moment everything clicked.</p>
+      </div>
+
+      <div class="chapter reveal d1">
+        <div class="chapter-year">2020 – 2021</div>
+        <h3 class="chapter-title">Learning to <em>Build & Design</em></h3>
+        <p>While finishing my degree, I joined Semicolon Africa's competitive bootcamp — selected from 2,400 applicants — and simultaneously completed Google's UX Design Professional Certificate. For the first time, I could speak both languages: design and code. I stopped thinking of them as separate disciplines and started seeing them as one.</p>
+        <p>That hybrid perspective became my biggest asset. I could sketch a wireframe in the morning and ship it as a working component by evening.</p>
+      </div>
+
+      <div class="chapter reveal d2">
+        <div class="chapter-year">2021 – 2022</div>
+        <h3 class="chapter-title">Going <em>Global with Andela</em></h3>
+        <p>Being selected for Andela meant working on real enterprise products with senior engineers in New York and Warsaw. It forced me to write cleaner code, communicate across time zones, and understand how large-scale product decisions get made. I grew more in 10 months there than in 3 years before it.</p>
+        <p>I also began noticing how rarely engineering teams had anyone who could bridge design intent and implementation — and decided that's exactly where I wanted to live.</p>
+      </div>
+
+      <div class="chapter reveal d3">
+        <div class="chapter-year">2022 – Now</div>
+        <h3 class="chapter-title">Building for <em>Africa & Beyond</em></h3>
+        <p>Since going independent in 2023, I've worked with startups across Lagos, Accra, London, and Berlin — helping them design and ship products that actually work for their users. Whether it's a fintech app for first-generation bankers in Kano or an LMS for rural schools without reliable internet, I care deeply about <strong>building for the context, not just the prototype</strong>.</p>
+        <p>I'm not done. I'm just getting started.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── VALUES ─── -->
+<div class="section-wrap alt">
+  <div class="section-tag">What I Stand For</div>
+  <h2 class="section-title reveal">The principles that<br>guide my <em>work</em></h2>
+
+  <div class="values-grid">
+    <div class="value-card reveal">
+      <div class="value-num">01</div>
+      <span class="value-icon">🎯</span>
+      <div class="value-title">Clarity over cleverness</div>
+      <p class="value-desc">A great interface is invisible. I resist the urge to show off in favour of making things that just work — for everyone, every time.</p>
+    </div>
+    <div class="value-card reveal d1">
+      <div class="value-num">02</div>
+      <span class="value-icon">🧪</span>
+      <div class="value-title">Test early, ship often</div>
+      <p class="value-desc">I'd rather put a rough prototype in front of a real user on day three than present a polished design on day thirty that solves the wrong problem.</p>
+    </div>
+    <div class="value-card reveal d2">
+      <div class="value-num">03</div>
+      <span class="value-icon">🌍</span>
+      <div class="value-title">Context is everything</div>
+      <p class="value-desc">A product built for Silicon Valley doesn't automatically work in Lagos. I design for the actual environment — bandwidth, literacy, device, culture.</p>
+    </div>
+    <div class="value-card reveal d1">
+      <div class="value-num">04</div>
+      <span class="value-icon">🤝</span>
+      <div class="value-title">Collaboration > heroics</div>
+      <p class="value-desc">The best outcomes come from genuine partnership with clients, engineers, and end users — not from a designer working in isolation and presenting a "reveal."</p>
+    </div>
+    <div class="value-card reveal d2">
+      <div class="value-num">05</div>
+      <span class="value-icon">♿</span>
+      <div class="value-title">Accessibility is non-negotiable</div>
+      <p class="value-desc">Designing only for people who look like you is a failure of imagination. I build inclusive products from the first wireframe, not as a final audit.</p>
+    </div>
+    <div class="value-card reveal d3">
+      <div class="value-num">06</div>
+      <span class="value-icon">📈</span>
+      <div class="value-title">Outcomes over outputs</div>
+      <p class="value-desc">I care about whether the thing I shipped actually moved the needle — not just that it shipped on time and looked good in the case study.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── IMPACT NUMBERS ─── -->
+<div class="section-wrap">
+  <div class="section-tag">By the Numbers</div>
+  <h2 class="section-title reveal">Work that <em>leaves a mark</em></h2>
+  <div class="impact-row">
+    <div class="impact-block reveal">
+      <div class="impact-num" data-count="20">0</div>
+      <div class="impact-label">Projects Shipped</div>
+      <div class="impact-sub">Across 6 countries</div>
+    </div>
+    <div class="impact-block reveal d1">
+      <div class="impact-num" data-count="12">0</div>
+      <div class="impact-label">Happy Clients</div>
+      <div class="impact-sub">80% repeat business</div>
+    </div>
+    <div class="impact-block reveal d2">
+      <div class="impact-num" data-count="3">0</div>
+      <div class="impact-label">Years Experience</div>
+      <div class="impact-sub">Full-stack creative</div>
+    </div>
+    <div class="impact-block reveal d3">
+      <div class="impact-num" data-count="80">0</div>
+      <div class="impact-label">Mentees Helped</div>
+      <div class="impact-sub">Via ADPList & workshops</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── PROCESS ─── -->
+<div class="section-wrap alt">
+  <div class="section-tag">How I Work</div>
+  <h2 class="section-title reveal">My design &amp; build <em>process</em></h2>
+  <div class="process-steps">
+    <div class="process-step reveal">
+      <div class="step-circle">1</div>
+      <div class="step-title">Discover</div>
+      <p class="step-desc">User interviews, analytics audits, competitive analysis, and stakeholder workshops to understand the real problem — not the assumed one.</p>
+    </div>
+    <div class="process-step reveal d1">
+      <div class="step-circle">2</div>
+      <div class="step-title">Define</div>
+      <p class="step-desc">Synthesise findings into a clear brief, user journey maps, and measurable success metrics before any design work begins.</p>
+    </div>
+    <div class="process-step reveal d2">
+      <div class="step-circle">3</div>
+      <div class="step-title">Design & Build</div>
+      <p class="step-desc">Rapid wireframes → interactive prototypes → high-fidelity screens → production code. Each stage is validated with real users.</p>
+    </div>
+    <div class="process-step reveal d3">
+      <div class="step-circle">4</div>
+      <div class="step-title">Iterate</div>
+      <p class="step-desc">Post-launch monitoring, A/B tests, and follow-up research sessions. Shipping is the beginning of the process, not the end.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── TOOLKIT MARQUEE ─── -->
+<div class="marquee-section">
+  <div class="marquee-label">Tools &amp; Technologies I use daily</div>
+  <div class="marquee-track">
+    <div class="marquee-inner" id="marquee1">
+      <div class="marquee-item"><span class="marquee-item-icon">🎨</span> Figma</div>
+      <div class="marquee-item"><span class="marquee-item-icon">⚛️</span> React</div>
+      <div class="marquee-item"><span class="marquee-item-icon">💙</span> TypeScript</div>
+      <div class="marquee-item"><span class="marquee-item-icon">🌊</span> Tailwind CSS</div>
+      <div class="marquee-item"><span class="marquee-item-icon">🗄️</span> Supabase</div>
+      <div class="marquee-item"><span class="marquee-item-icon">▲</span> Next.js</div>
+      <div class="marquee-item"><span class="marquee-item-icon">🔥</span> Firebase</div>
+      <div class="marquee-item"><span class="marquee-item-icon">🐙</span> GitHub</div>
+      <div class="marquee-item"><span class="marquee-item-icon">🚀</span> Vercel</div>
+      <div class="marquee-item"><span class="marquee-item-icon">📊</span> Mixpanel</div>
+      <div class="marquee-item"><span class="marquee-item-icon">🔍</span> Hotjar</div>
+      <div class="marquee-item"><span class="marquee-item-icon">📋</span> Notion</div>
+      <div class="marquee-item"><span class="marquee-item-icon">🎯</span> Linear</div>
+      <div class="marquee-item"><span class="marquee-item-icon">💫</span> Framer</div>
+      <div class="marquee-item"><span class="marquee-item-icon">🎨</span> Figma</div>
+      <div class="marquee-item"><span class="marquee-item-icon">⚛️</span> React</div>
+      <div class="marquee-item"><span class="marquee-item-icon">💙</span> TypeScript</div>
+      <div class="marquee-item"><span class="marquee-item-icon">🌊</span> Tailwind CSS</div>
+      <div class="marquee-item"><span class="marquee-item-icon">🗄️</span> Supabase</div>
+      <div class="marquee-item"><span class="marquee-item-icon">▲</span> Next.js</div>
+      <div class="marquee-item"><span class="marquee-item-icon">🔥</span> Firebase</div>
+      <div class="marquee-item"><span class="marquee-item-icon">🐙</span> GitHub</div>
+      <div class="marquee-item"><span class="marquee-item-icon">🚀</span> Vercel</div>
+      <div class="marquee-item"><span class="marquee-item-icon">📊</span> Mixpanel</div>
+      <div class="marquee-item"><span class="marquee-item-icon">🔍</span> Hotjar</div>
+      <div class="marquee-item"><span class="marquee-item-icon">📋</span> Notion</div>
+      <div class="marquee-item"><span class="marquee-item-icon">🎯</span> Linear</div>
+      <div class="marquee-item"><span class="marquee-item-icon">💫</span> Framer</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── OUTSIDE WORK ─── -->
+<div class="section-wrap">
+  <div class="section-tag">Beyond the Screen</div>
+  <h2 class="section-title reveal">What I do when I'm<br>not <em>designing</em></h2>
+  <div class="outside-grid">
+    <div class="outside-card reveal">
+      <span class="outside-emoji">✍️</span>
+      <h3>Writing</h3>
+      <p>I publish articles on UX, front-end development, and building digital products in Africa. 50,000+ readers across Smashing Magazine and DEV Community. Writing helps me think.</p>
+    </div>
+    <div class="outside-card reveal d1">
+      <span class="outside-emoji">🎤</span>
+      <h3>Mentoring</h3>
+      <p>I mentor aspiring designers and developers via ADPList — 80+ sessions to date. If you're trying to break into the industry, my DMs are always open.</p>
+    </div>
+    <div class="outside-card reveal d2">
+      <span class="outside-emoji">🎵</span>
+      <h3>Music</h3>
+      <p>Afrobeats, jazz, and anything with a good drum pattern. Music is how I reset. I'm convinced good taste in music and good taste in design come from the same place.</p>
+    </div>
+    <div class="outside-card reveal">
+      <span class="outside-emoji">🏃</span>
+      <h3>Running</h3>
+      <p>Early morning runs along Lagos waterfront. It's the one hour of the day when I'm not thinking about pixels. Or at least I try not to.</p>
+    </div>
+    <div class="outside-card reveal d1">
+      <span class="outside-emoji">📚</span>
+      <h3>Reading</h3>
+      <p>Product books, African literature, and way too many design newsletters. Currently working through <em>The Design of Everyday Things</em> for the third time.</p>
+    </div>
+    <div class="outside-card reveal d2">
+      <span class="outside-emoji">🌍</span>
+      <h3>Community</h3>
+      <p>Volunteer facilitator for Google Developer Student Clubs. I believe the next generation of African tech talent just needs access and exposure — not hand-holding.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── TESTIMONIALS ─── -->
+<div class="section-wrap alt">
+  <div class="section-tag">Kind Words</div>
+  <h2 class="section-title reveal">What clients &amp;<br>colleagues <em>say</em></h2>
+  <div class="testimonials-grid">
+    <div class="testimonial reveal">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Alexa is that rare find — someone who can design it beautifully AND build it properly. She redesigned our entire checkout flow and the results were immediate. 34% conversion uplift in the first 60 days."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">KA</div>
+        <div>
+          <div class="author-name">Kofi Agyemang</div>
+          <div class="author-role">CEO, ShopFlow Nigeria</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial reveal d1">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Working with Alexa felt like having a co-founder. She understood our clinical workflows within a week — better than contractors we'd worked with for months. The product she built is now in 12 clinics."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">FO</div>
+        <div>
+          <div class="author-name">Dr. Funmi Okafor</div>
+          <div class="author-role">Co-founder, MediTrack Health</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial reveal d2">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"I came to Alexa with a messy brief and a tight budget. She brought structure, pushed back thoughtfully on what didn't make sense, and delivered something I'm genuinely proud of. Exceptional communicator."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">TM</div>
+        <div>
+          <div class="author-name">Taiwo Makinde</div>
+          <div class="author-role">Founder, Budgr Finance</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── CURRENTLY ─── -->
+<div class="section-wrap">
+  <div class="section-tag">Right Now</div>
+  <h2 class="section-title reveal">What I'm <em>currently</em> up to</h2>
+  <div class="currently-grid">
+    <div class="currently-item reveal">
+      <div class="currently-icon">💼</div>
+      <div>
+        <div class="currently-label">Working on</div>
+        <div class="currently-value">LearnPath v2.0</div>
+        <div class="currently-sub">Expanding the offline-first LMS to support 15 new schools across Ogun State with video lessons and teacher dashboards.</div>
+      </div>
+    </div>
+    <div class="currently-item reveal d1">
+      <div class="currently-icon">📖</div>
+      <div>
+        <div class="currently-label">Learning</div>
+        <div class="currently-value">Three.js & WebGL</div>
+        <div class="currently-sub">Building immersive 3D web experiences — because flat screens are getting boring and the web deserves more depth.</div>
+      </div>
+    </div>
+    <div class="currently-item reveal d2">
+      <div class="currently-icon">✍️</div>
+      <div>
+        <div class="currently-label">Writing</div>
+        <div class="currently-value">"Designing for Africa" Series</div>
+        <div class="currently-sub">A 5-part essay series on the unique UX challenges of building digital products for African markets. Publishing monthly on Substack.</div>
+      </div>
+    </div>
+    <div class="currently-item reveal d3">
+      <div class="currently-icon">🎧</div>
+      <div>
+        <div class="currently-label">Listening to</div>
+        <div class="currently-value">Fela Kuti, Burna Boy & Yusuf Keşli</div>
+        <div class="currently-sub">My current work playlist — a chaotic but somehow productive mix of Afrobeat, Afro-fusion, and Turkish jazz.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── CTA ─── -->
+<div class="about-cta">
+  <div class="cta-bg"></div>
+  <h2>Let's build something<br><em>worth talking about</em></h2>
+  <p>If you've read this far, there's a good chance we'd work well together. Whether you have a project in mind or just want to connect — reach out. I respond to every message.</p>
+  <div class="cta-buttons">
+    <a href="contact.html" class="btn-primary">Start a Conversation</a>
+    <a href="projects.html" class="btn-ghost">See My Work First</a>
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-copy">© 2025 Alexa Kinjiola. All rights reserved.</div>
+  <div class="footer-socials">
+    <a href="#">GitHub</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">Twitter</a>
+    <a href="#">Dribbble</a>
+  </div>
+</footer>
+
+<script>
+  // ── Cursor
+  const cursor = document.getElementById('cursor');
+  const ring   = document.getElementById('cursorRing');
+  let mx=0, my=0, rx=0, ry=0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx+'px'; cursor.style.top = my+'px';
+  });
+  (function loop() {
+    rx += (mx-rx)*.12; ry += (my-ry)*.12;
+    ring.style.left = rx+'px'; ring.style.top = ry+'px';
+    requestAnimationFrame(loop);
+  })();
+  document.querySelectorAll('a, button, .value-card, .outside-card, .testimonial, .currently-item, .marquee-item').forEach(el => {
+    el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
+  });
+
+  // ── Nav
+  function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+  window.addEventListener('scroll', () => {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // ── Scroll Reveal
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => revObs.observe(el));
+
+  // ── Count-up animation for impact numbers
+  function countUp(el) {
+    const target = parseInt(el.dataset.count);
+    const suffix = el.dataset.count.includes('+') ? '+' : '';
+    const duration = 1600;
+    const steps = 50;
+    const increment = target / steps;
+    let current = 0;
+    let count = 0;
+    const timer = setInterval(() => {
+      count++;
+      current = Math.min(Math.round(increment * count), target);
+      el.textContent = current + (current === target ? '+' : '');
+      if (current >= target) clearInterval(timer);
+    }, duration / steps);
+  }
+  const impactObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        countUp(e.target);
+        impactObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.impact-num[data-count]').forEach(el => impactObs.observe(el));
+</script>
+</body>
+</html>

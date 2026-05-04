@@ -34,10 +34,419 @@
   </nav>
   
 
+  <!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-tag">Selected Work</div>
+  <h1 style="animation:fadeUp .7s .2s both">Things I've <em>Built</em></h1>
+  <p style="animation:fadeUp .7s .4s both">A curated selection of projects spanning product design, web development, and digital strategy — each one a story of a real problem solved.</p>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <span class="filter-label">Filter:</span>
+  <button class="filter-btn active" onclick="filterProjects('all',this)">All</button>
+  <button class="filter-btn" onclick="filterProjects('design',this)">Design</button>
+  <button class="filter-btn" onclick="filterProjects('development',this)">Development</button>
+  <button class="filter-btn" onclick="filterProjects('fullstack',this)">Full-Stack</button>
+  <button class="filter-btn" onclick="filterProjects('strategy',this)">Strategy</button>
+</div>
+
+<!-- PROJECTS -->
+<div class="projects-outer">
+  <div class="results-count" id="resultsCount"><span id="visibleCount">6</span> projects</div>
+  <div class="projects-grid" id="projectsGrid">
+
+    <!-- PROJECT 1 — WIDE FEATURED -->
+    <div class="project-card wide" data-cat="fullstack" data-modal="shopflow" onclick="openModal('shopflow')">
+      <div class="card-inner">
+        <div class="card-thumb" style="background:linear-gradient(135deg,#1a1208 0%,#2a1e0d 100%)">
+          <div class="card-thumb-inner">🛒</div>
+          <div class="card-badge">Full-Stack</div>
+          <div class="card-featured">Featured</div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-type">E-Commerce</span>
+            <div class="card-sep"></div>
+            <span class="card-year">2024</span>
+          </div>
+          <h3>ShopFlow — E-Commerce Redesign</h3>
+          <p>End-to-end redesign of a Nigerian e-commerce platform. Rebuilt the full customer journey — discovery, product pages, cart, and checkout — resulting in a 34% lift in conversion rate and a 52% reduction in cart abandonment.</p>
+          <div class="card-tags">
+            <span class="card-tag">Figma</span><span class="card-tag">React</span><span class="card-tag">Node.js</span><span class="card-tag">PostgreSQL</span><span class="card-tag">User Research</span>
+          </div>
+          <div class="card-footer">
+            <span class="card-link">View Case Study <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="card-role">Lead Designer & Developer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project-card" data-cat="fullstack" data-modal="meditrack" onclick="openModal('meditrack')">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#0d1a1a 0%,#0d2424 100%)">
+        <div class="card-thumb-inner">💊</div>
+        <div class="card-badge">Full-Stack</div>
+      </div>
+      <div class="card-body">
+        <div class="card-meta"><span class="card-type">HealthTech</span><div class="card-sep"></div><span class="card-year">2024</span></div>
+        <h3>MediTrack Dashboard</h3>
+        <p>A patient management system for Nigerian clinics — records, scheduling, prescriptions, and analytics in one clean interface.</p>
+        <div class="card-tags"><span class="card-tag">React</span><span class="card-tag">TypeScript</span><span class="card-tag">Supabase</span><span class="card-tag">Figma</span></div>
+        <div class="card-footer">
+          <span class="card-link">View Case Study <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="card-role">Product Designer</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="project-card" data-cat="design" data-modal="budgr" onclick="openModal('budgr')">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#0f1a0d 0%,#162314 100%)">
+        <div class="card-thumb-inner">📊</div>
+        <div class="card-badge">Design</div>
+      </div>
+      <div class="card-body">
+        <div class="card-meta"><span class="card-type">FinTech</span><div class="card-sep"></div><span class="card-year">2023</span></div>
+        <h3>Budgr — Personal Finance App</h3>
+        <p>A mobile-first finance app designed for young Africans — budgeting, savings goals, and spending insights with delightful micro-interactions.</p>
+        <div class="card-tags"><span class="card-tag">Figma</span><span class="card-tag">Prototyping</span><span class="card-tag">Mobile</span><span class="card-tag">Design System</span></div>
+        <div class="card-footer">
+          <span class="card-link">View Case Study <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="card-role">UI/UX Designer</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 4 -->
+    <div class="project-card" data-cat="development" data-modal="learnpath" onclick="openModal('learnpath')">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#0d0d1a 0%,#141422 100%)">
+        <div class="card-thumb-inner">🎓</div>
+        <div class="card-badge">Development</div>
+      </div>
+      <div class="card-body">
+        <div class="card-meta"><span class="card-type">EdTech</span><div class="card-sep"></div><span class="card-year">2023</span></div>
+        <h3>LearnPath LMS</h3>
+        <p>An offline-first learning management system for African schools — live classes, progress tracking, and adaptive quizzes designed for low-bandwidth environments.</p>
+        <div class="card-tags"><span class="card-tag">React</span><span class="card-tag">Node.js</span><span class="card-tag">PWA</span><span class="card-tag">Firebase</span></div>
+        <div class="card-footer">
+          <span class="card-link">View Case Study <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="card-role">Full-Stack Developer</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 5 -->
+    <div class="project-card" data-cat="strategy" data-modal="growthco" onclick="openModal('growthco')">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#1a0d0d 0%,#2a1010 100%)">
+        <div class="card-thumb-inner">📈</div>
+        <div class="card-badge">Strategy</div>
+      </div>
+      <div class="card-body">
+        <div class="card-meta"><span class="card-type">SaaS</span><div class="card-sep"></div><span class="card-year">2022</span></div>
+        <h3>GrowthCo — Onboarding Redesign</h3>
+        <p>Diagnosed a 68% drop-off in user onboarding for a B2B SaaS tool, then redesigned the full activation flow — cutting time-to-value from 14 days to 3.</p>
+        <div class="card-tags"><span class="card-tag">Product Strategy</span><span class="card-tag">UX Audit</span><span class="card-tag">A/B Testing</span><span class="card-tag">Analytics</span></div>
+        <div class="card-footer">
+          <span class="card-link">View Case Study <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="card-role">Product Strategist</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 6 -->
+    <div class="project-card" data-cat="design" data-modal="brandkit" onclick="openModal('brandkit')">
+      <div class="card-thumb" style="background:linear-gradient(135deg,#1a100d 0%,#261810 100%)">
+        <div class="card-thumb-inner">🎨</div>
+        <div class="card-badge">Design</div>
+      </div>
+      <div class="card-body">
+        <div class="card-meta"><span class="card-type">Branding</span><div class="card-sep"></div><span class="card-year">2022</span></div>
+        <h3>Zara Lagos — Brand Identity</h3>
+        <p>Full brand identity system for an Afro-fusion restaurant chain — logo, typography, colour palette, packaging, signage, and digital brand guidelines.</p>
+        <div class="card-tags"><span class="card-tag">Brand Identity</span><span class="card-tag">Figma</span><span class="card-tag">Illustration</span><span class="card-tag">Guidelines</span></div>
+        <div class="card-footer">
+          <span class="card-link">View Case Study <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="card-role">Brand Designer</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MODALS -->
+<!-- ShopFlow Modal -->
+<div class="modal-overlay" id="modal-shopflow" onclick="closeModalOutside(event,'shopflow')">
+  <div class="modal">
+    <div class="modal-close" onclick="closeModal('shopflow')">✕</div>
+    <div class="modal-hero" style="background:linear-gradient(135deg,#1a1208 0%,#2a1e0d 100%)">🛒</div>
+    <div class="modal-body">
+      <div class="modal-meta">
+        <div class="modal-meta-item"><span class="modal-meta-label">Category</span><span class="modal-meta-value">E-Commerce · Full-Stack</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">Year</span><span class="modal-meta-value">2024</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">Role</span><span class="modal-meta-value">Lead Designer & Developer</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">Duration</span><span class="modal-meta-value">4 months</span></div>
+      </div>
+      <h2>ShopFlow — <em>E-Commerce Redesign</em></h2>
+      <h4>The Challenge</h4>
+      <p>ShopFlow, a Lagos-based e-commerce platform serving 50,000+ monthly users, was haemorrhaging revenue. Conversion rates sat at 1.2% — well below the industry average of 3.5% — and cart abandonment had climbed to 78%. Users found the checkout confusing, product pages uninspiring, and the mobile experience unusable.</p>
+      <h4>My Process</h4>
+      <p>I began with a 2-week discovery phase: moderated usability sessions with 12 users, analysis of session recordings (Hotjar), and a competitive audit of 6 comparable platforms. The findings revealed 3 critical failure points — unclear trust signals, too many steps in checkout, and poor product photography standards.</p>
+      <p>From there, I designed a revised information architecture, wireframes, and a full high-fidelity design system in Figma. I then led the front-end rebuild in React, including a custom checkout flow, product page template, and real-time inventory component.</p>
+      <div class="modal-results">
+        <div class="result-item"><div class="result-num">+34%</div><div class="result-label">Conversion Rate</div></div>
+        <div class="result-item"><div class="result-num">−52%</div><div class="result-label">Cart Abandonment</div></div>
+        <div class="result-item"><div class="result-num">4.8★</div><div class="result-label">App Store Rating</div></div>
+      </div>
+      <h4>Key Outcomes</h4>
+      <p>Within 60 days of launch, conversion rate rose from 1.2% to 1.8% (a 50% relative improvement), and cart abandonment fell from 78% to 37.5%. The redesigned checkout reduced average completion time from 4.5 minutes to 1.8 minutes.</p>
+      <div class="modal-tags"><span class="modal-tag">Figma</span><span class="modal-tag">React</span><span class="modal-tag">Node.js</span><span class="modal-tag">PostgreSQL</span><span class="modal-tag">Hotjar</span><span class="modal-tag">A/B Testing</span><span class="modal-tag">Design Systems</span></div>
+      <div class="modal-cta">
+        <a href="#" class="btn-primary">View Live Project</a>
+        <a href="contact.html" class="btn-ghost">Work With Me</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MediTrack Modal -->
+<div class="modal-overlay" id="modal-meditrack" onclick="closeModalOutside(event,'meditrack')">
+  <div class="modal">
+    <div class="modal-close" onclick="closeModal('meditrack')">✕</div>
+    <div class="modal-hero" style="background:linear-gradient(135deg,#0d1a1a 0%,#0d2424 100%)">💊</div>
+    <div class="modal-body">
+      <div class="modal-meta">
+        <div class="modal-meta-item"><span class="modal-meta-label">Category</span><span class="modal-meta-value">HealthTech · Full-Stack</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">Year</span><span class="modal-meta-value">2024</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">Role</span><span class="modal-meta-value">Product Designer</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">Duration</span><span class="modal-meta-value">6 months</span></div>
+      </div>
+      <h2>MediTrack <em>Dashboard</em></h2>
+      <h4>The Challenge</h4>
+      <p>Small and mid-sized Nigerian clinics were drowning in paper records and scattered spreadsheets. Staff spent 40% of their day on administrative tasks instead of patient care. The client needed a unified digital platform that could be adopted by clinicians with minimal training.</p>
+      <h4>My Process</h4>
+      <p>I spent a week embedded in two clinics, shadowing nurses, receptionists, and doctors to map their real-world workflows. This field research directly shaped the information architecture — particularly the decision to centre the dashboard around a day-view schedule rather than a patient list.</p>
+      <p>The stack — React, TypeScript, and Supabase — was chosen for its real-time capabilities and offline resilience, critical in environments with intermittent connectivity.</p>
+      <div class="modal-results">
+        <div class="result-item"><div class="result-num">40%</div><div class="result-label">Admin Time Saved</div></div>
+        <div class="result-item"><div class="result-num">98%</div><div class="result-label">Staff Adoption</div></div>
+        <div class="result-item"><div class="result-num">12</div><div class="result-label">Clinics Onboarded</div></div>
+      </div>
+      <h4>Key Outcomes</h4>
+      <p>Administrative time dropped by 40% within the first month. The platform has since been adopted by 12 clinics and is being evaluated for a national health programme partnership.</p>
+      <div class="modal-tags"><span class="modal-tag">React</span><span class="modal-tag">TypeScript</span><span class="modal-tag">Supabase</span><span class="modal-tag">Figma</span><span class="modal-tag">Field Research</span><span class="modal-tag">Real-time</span></div>
+      <div class="modal-cta">
+        <a href="#" class="btn-primary">View Live Project</a>
+        <a href="contact.html" class="btn-ghost">Work With Me</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Budgr Modal -->
+<div class="modal-overlay" id="modal-budgr" onclick="closeModalOutside(event,'budgr')">
+  <div class="modal">
+    <div class="modal-close" onclick="closeModal('budgr')">✕</div>
+    <div class="modal-hero" style="background:linear-gradient(135deg,#0f1a0d 0%,#162314 100%)">📊</div>
+    <div class="modal-body">
+      <div class="modal-meta">
+        <div class="modal-meta-item"><span class="modal-meta-label">Category</span><span class="modal-meta-value">FinTech · Mobile Design</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">Year</span><span class="modal-meta-value">2023</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">Role</span><span class="modal-meta-value">Lead UI/UX Designer</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">Duration</span><span class="modal-meta-value">3 months</span></div>
+      </div>
+      <h2>Budgr — <em>Personal Finance App</em></h2>
+      <h4>The Challenge</h4>
+      <p>Most personal finance apps are designed for Western markets and fail young Nigerians managing multiple currencies, mobile money, and informal income streams. Budgr needed to feel native to its audience — not a reskin of Mint.</p>
+      <h4>My Process</h4>
+      <p>I ran 20 in-depth interviews with Nigerians aged 22–35 in Lagos and Abuja about their money habits, frustrations with existing apps, and their financial goals. The insights shaped every design decision — from the card-first layout to the Naira-forward UX copy.</p>
+      <p>The design system was built mobile-first in Figma, with a full component library covering 84 unique screens across onboarding, dashboard, budgets, savings, and settings.</p>
+      <div class="modal-results">
+        <div class="result-item"><div class="result-num">84</div><div class="result-label">Screens Designed</div></div>
+        <div class="result-item"><div class="result-num">4.9★</div><div class="result-label">Beta User Rating</div></div>
+        <div class="result-item"><div class="result-num">2k+</div><div class="result-label">Beta Sign-ups</div></div>
+      </div>
+      <h4>Key Outcomes</h4>
+      <p>Beta users reported a 4.9/5 satisfaction score in post-test surveys. The app's waitlist grew to 2,000+ before public launch, driven entirely by word of mouth from the beta cohort.</p>
+      <div class="modal-tags"><span class="modal-tag">Figma</span><span class="modal-tag">Prototyping</span><span class="modal-tag">iOS / Android</span><span class="modal-tag">Design System</span><span class="modal-tag">User Research</span></div>
+      <div class="modal-cta">
+        <a href="#" class="btn-primary">View Prototype</a>
+        <a href="contact.html" class="btn-ghost">Work With Me</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LearnPath Modal -->
+<div class="modal-overlay" id="modal-learnpath" onclick="closeModalOutside(event,'learnpath')">
+  <div class="modal">
+    <div class="modal-close" onclick="closeModal('learnpath')">✕</div>
+    <div class="modal-hero" style="background:linear-gradient(135deg,#0d0d1a 0%,#141422 100%)">🎓</div>
+    <div class="modal-body">
+      <div class="modal-meta">
+        <div class="modal-meta-item"><span class="modal-meta-label">Category</span><span class="modal-meta-value">EdTech · Development</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">Year</span><span class="modal-meta-value">2023</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">Role</span><span class="modal-meta-value">Full-Stack Developer</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">Duration</span><span class="modal-meta-value">5 months</span></div>
+      </div>
+      <h2>LearnPath <em>LMS</em></h2>
+      <h4>The Challenge</h4>
+      <p>Rural Nigerian secondary schools had tablets and laptops but unreliable internet. Existing LMS platforms like Google Classroom required constant connectivity, making them unusable outside major cities. LearnPath needed to work offline — fully — and sync when connectivity returned.</p>
+      <h4>My Process</h4>
+      <p>Built as a Progressive Web App using React and a service worker strategy for offline caching. Content (videos, PDFs, quizzes) was downloaded on-demand during connectivity windows. A background sync queue handled submissions and progress tracking offline.</p>
+      <p>Firebase was used for real-time sync when online, with IndexedDB as the offline store. The PWA install experience was optimised to feel native on low-end Android devices.</p>
+      <div class="modal-results">
+        <div class="result-item"><div class="result-num">3k+</div><div class="result-label">Students Reached</div></div>
+        <div class="result-item"><div class="result-num">100%</div><div class="result-label">Offline Capable</div></div>
+        <div class="result-item"><div class="result-num">6</div><div class="result-label">Schools Deployed</div></div>
+      </div>
+      <h4>Key Outcomes</h4>
+      <p>Deployed across 6 schools reaching 3,000+ students. Exam pass rates in pilot schools improved by 18% over one academic term. The project was cited in a local government digital education report.</p>
+      <div class="modal-tags"><span class="modal-tag">React</span><span class="modal-tag">PWA</span><span class="modal-tag">Node.js</span><span class="modal-tag">Firebase</span><span class="modal-tag">IndexedDB</span><span class="modal-tag">Service Workers</span></div>
+      <div class="modal-cta">
+        <a href="#" class="btn-primary">View on GitHub</a>
+        <a href="contact.html" class="btn-ghost">Work With Me</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GrowthCo Modal -->
+<div class="modal-overlay" id="modal-growthco" onclick="closeModalOutside(event,'growthco')">
+  <div class="modal">
+    <div class="modal-close" onclick="closeModal('growthco')">✕</div>
+    <div class="modal-hero" style="background:linear-gradient(135deg,#1a0d0d 0%,#2a1010 100%)">📈</div>
+    <div class="modal-body">
+      <div class="modal-meta">
+        <div class="modal-meta-item"><span class="modal-meta-label">Category</span><span class="modal-meta-value">SaaS · Strategy</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">Year</span><span class="modal-meta-value">2022</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">Role</span><span class="modal-meta-value">Product Strategist & UX Lead</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">Duration</span><span class="modal-meta-value">2 months</span></div>
+      </div>
+      <h2>GrowthCo — <em>Onboarding Redesign</em></h2>
+      <h4>The Challenge</h4>
+      <p>GrowthCo's analytics SaaS had strong retention among activated users but was losing 68% of new sign-ups within 72 hours. Time-to-value averaged 14 days. The CEO suspected the problem was the product; the data suggested it was the onboarding.</p>
+      <h4>My Process</h4>
+      <p>I conducted a full UX audit — session recordings, drop-off funnel analysis in Amplitude, and 8 user interviews with churned customers. The root cause was clear: the onboarding asked users to configure too much before delivering any value. Users gave up before they saw why the product mattered.</p>
+      <p>I redesigned the activation sequence around a "first aha moment" — getting each user to see one meaningful insight within 5 minutes of sign-up. The redesign included a new onboarding checklist, progressive disclosure of configuration, and an in-app coach layer.</p>
+      <div class="modal-results">
+        <div class="result-item"><div class="result-num">−78%</div><div class="result-label">Drop-off Rate</div></div>
+        <div class="result-item"><div class="result-num">3 days</div><div class="result-label">Time to Value</div></div>
+        <div class="result-item"><div class="result-num">+41%</div><div class="result-label">Week-1 Retention</div></div>
+      </div>
+      <h4>Key Outcomes</h4>
+      <p>Onboarding drop-off fell from 68% to 15%. Time-to-value went from 14 days to 3. Week-one retention improved by 41%. The changes contributed to a 22% increase in paid conversion within the next quarter.</p>
+      <div class="modal-tags"><span class="modal-tag">Product Strategy</span><span class="modal-tag">UX Audit</span><span class="modal-tag">Amplitude</span><span class="modal-tag">A/B Testing</span><span class="modal-tag">Figma</span><span class="modal-tag">User Interviews</span></div>
+      <div class="modal-cta">
+        <a href="#" class="btn-primary">View Case Study PDF</a>
+        <a href="contact.html" class="btn-ghost">Work With Me</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BrandKit Modal -->
+<div class="modal-overlay" id="modal-brandkit" onclick="closeModalOutside(event,'brandkit')">
+  <div class="modal">
+    <div class="modal-close" onclick="closeModal('brandkit')">✕</div>
+    <div class="modal-hero" style="background:linear-gradient(135deg,#1a100d 0%,#261810 100%)">🎨</div>
+    <div class="modal-body">
+      <div class="modal-meta">
+        <div class="modal-meta-item"><span class="modal-meta-label">Category</span><span class="modal-meta-value">Branding · Design</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">Year</span><span class="modal-meta-value">2022</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">Role</span><span class="modal-meta-value">Brand Designer</span></div>
+        <div class="modal-meta-item"><span class="modal-meta-label">Duration</span><span class="modal-meta-value">6 weeks</span></div>
+      </div>
+      <h2>Zara Lagos — <em>Brand Identity</em></h2>
+      <h4>The Brief</h4>
+      <p>Zara Lagos, an Afro-fusion restaurant expanding from 1 to 4 locations across Lagos, needed a brand identity that felt premium but rooted in Nigerian culture — not the generic Afrobeats clichés found on every highstreet restaurant sign.</p>
+      <h4>My Process</h4>
+      <p>The creative strategy was built around the concept of "Refined Heritage" — using traditional Yoruba textile patterns as the foundation for a modern geometric logo system. The colour palette was drawn from Aso-Oke weaving: deep indigo, burnt terracotta, and warm gold.</p>
+      <p>Deliverables included the primary logo and variants, a full typographic system (pairing Canela with Söhne), a 40-page brand guidelines document, packaging mockups, signage specs, and a digital social media kit.</p>
+      <div class="modal-results">
+        <div class="result-item"><div class="result-num">40+</div><div class="result-label">Brand Assets</div></div>
+        <div class="result-item"><div class="result-num">4</div><div class="result-label">Locations Branded</div></div>
+        <div class="result-item"><div class="result-num">3×</div><div class="result-label">Social Engagement Lift</div></div>
+      </div>
+      <h4>Key Outcomes</h4>
+      <p>The new identity launched across all 4 locations simultaneously. Social media engagement tripled in the first month. The brand was featured in a Lagos design publication as an example of culturally authentic modern African branding.</p>
+      <div class="modal-tags"><span class="modal-tag">Brand Identity</span><span class="modal-tag">Figma</span><span class="modal-tag">Illustration</span><span class="modal-tag">Typography</span><span class="modal-tag">Brand Guidelines</span><span class="modal-tag">Packaging</span></div>
+      <div class="modal-cta">
+        <a href="#" class="btn-primary">View Brand Book</a>
+        <a href="contact.html" class="btn-ghost">Work With Me</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-copy">© 2025 Alexa Kinjiola. All rights reserved.</div>
+  <div class="footer-socials">
+    <a href="#">GitHub</a><a href="#">LinkedIn</a><a href="#">Twitter</a><a href="#">Dribbble</a>
+  </div>
+</footer>
+
+<script>
+// Cursor
+const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
+(function a(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a);})();
+document.querySelectorAll('a,button,.project-card').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{ring.style.width='56px';ring.style.height='56px';});
+  el.addEventListener('mouseleave',()=>{ring.style.width='36px';ring.style.height='36px';});
+});
+
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
+window.addEventListener('scroll',()=>{document.getElementById('nav').style.padding=window.scrollY>60?'.9rem 5vw':'1.4rem 5vw';});
+
+// Scroll reveal
+const cards=document.querySelectorAll('.project-card');
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('visible'),i*80);});
+},{threshold:.1});
+cards.forEach(c=>obs.observe(c));
+
+// Filter
+function filterProjects(cat,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  let count=0;
+  document.querySelectorAll('.project-card').forEach(card=>{
+    const cardCat=card.dataset.cat;
+    const show=cat==='all'||cardCat===cat;
+    card.classList.toggle('hidden',!show);
+    if(show)count++;
+  });
+  document.getElementById('visibleCount').textContent=count;
+}
+
+// Modal
+function openModal(id){
+  document.body.style.overflow='hidden';
+  document.getElementById('modal-'+id).classList.add('open');
+}
+function closeModal(id){
+  document.body.style.overflow='';
+  document.getElementById('modal-'+id).classList.remove('open');
+}
+function closeModalOutside(e,id){
+  if(e.target===document.getElementById('modal-'+id))closeModal(id);
+}
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    document.querySelectorAll('.modal-overlay.open').forEach(m=>{
+      m.classList.remove('open');
+      document.body.style.overflow='';
+    });
+  }
+});
+</script>
 
 
-
-
-
-    
-  </body>
+ </body>
+</html>
