@@ -718,6 +718,12 @@
       gap: 0.6rem;
       margin-bottom: 0.8rem;
     }
+    
+
+    svg{
+      width: 16px; height: 16px;
+      fill: var(--accent2);
+    }
     .project-type {
       font-size: 0.72rem;
       font-weight: 500;
