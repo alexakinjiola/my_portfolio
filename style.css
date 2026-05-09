@@ -1630,6 +1630,8 @@
     }
   </style>
 
+
+  \\* ─── ABOUT PAGE  ─── *\\
   <style>
    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -1968,8 +1970,9 @@
       background: linear-gradient(90deg, transparent, var(--border) 20%, var(--accent) 50%, var(--border) 80%, transparent);
     }
     .process-step {
-      padding: 0 1.5rem 2rem; text-align: center; position: relative;
+      padding: 0 1.5rem 2rem; text-align: center ; position: relative;
     }
+
     .step-circle {
       width: 44px; height: 44px; border-radius: 50%;
       background: var(--bg); border: 1px solid var(--accent);
@@ -1979,6 +1982,7 @@
       font-size: 1rem; font-weight: 700;
       background: var(--gradient); color: #0d0d0d;
       position: relative; z-index: 2;
+      Animations: fadeUp .7s forwards;
     }
     .step-title { font-size: .92rem; font-weight: 600; margin-bottom: .5rem; }
     .step-desc { font-size: .8rem; color: var(--muted); line-height: 1.75; }
