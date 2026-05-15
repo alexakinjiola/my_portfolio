@@ -40,7 +40,7 @@
   <div class="page-hero-grid"></div>
   <div class="page-hero-tag">Selected Work</div>
   <h1 style="animation:fadeUp .7s .2s both">Things I've <em>Built</em></h1>
-  <p style="animation:fadeUp .7s .4s both">A curated selection of projects spanning product design, web development, and digital strategy — each one a story of a real problem solved.</p>
+  <p style="animation:fadeUp .7s .4s both">A curated selection of projects spanning product design, web development, data analysis, and digital strategy — each one a story of a real problem solved.</p>
 </div>
 
 <!-- FILTER BAR -->
@@ -49,8 +49,8 @@
   <button class="filter-btn active" onclick="filterProjects('all',this)">All</button>
   <button class="filter-btn" onclick="filterProjects('design',this)">Design</button>
   <button class="filter-btn" onclick="filterProjects('development',this)">Development</button>
-  <button class="filter-btn" onclick="filterProjects('fullstack',this)">Full-Stack</button>
-  <button class="filter-btn" onclick="filterProjects('strategy',this)">Strategy</button>
+  <button class="filter-btn" onclick="filterProjects('data',this)">Data Analysis</button>
+  <button class="filter-btn" onclick="filterProjects('strategy',this)">ProductStrategy</button>
 </div>
 
 <!-- PROJECTS -->
@@ -59,46 +59,46 @@
   <div class="projects-grid" id="projectsGrid">
 
     <!-- PROJECT 1 — WIDE FEATURED -->
-    <div class="project-card wide" data-cat="fullstack" data-modal="shopflow" onclick="openModal('shopflow')">
+    <div class="project-card wide" data-cat="design" data-modal="shopflow" onclick="openModal('shopflow')">
       <div class="card-inner">
         <div class="card-thumb" style="background:linear-gradient(135deg,#1a1208 0%,#2a1e0d 100%)">
-          <div class="card-thumb-inner">🛒</div>
-          <div class="card-badge">Full-Stack</div>
+          <div class="card-thumb-inner"><img src="../images/patrackr.png" alt="Paytrackr Project" width="100%"></div>
+          <div class="card-badge">UI/UX Designer</div>
           <div class="card-featured">Featured</div>
         </div>
         <div class="card-body">
           <div class="card-meta">
             <span class="card-type">E-Commerce</span>
             <div class="card-sep"></div>
-            <span class="card-year">2024</span>
+            <span class="card-year">2025</span>
           </div>
-          <h3>ShopFlow — E-Commerce Redesign</h3>
-          <p>End-to-end redesign of a Nigerian e-commerce platform. Rebuilt the full customer journey — discovery, product pages, cart, and checkout — resulting in a 34% lift in conversion rate and a 52% reduction in cart abandonment.</p>
+          <h3> Paytrackr— Invoice Management System</h3>
+          <p> Invoice management system for small businesses — streamline invoicing, track payments, and generate reports with a clean, intuitive interface.</p>
           <div class="card-tags">
-            <span class="card-tag">Figma</span><span class="card-tag">React</span><span class="card-tag">Node.js</span><span class="card-tag">PostgreSQL</span><span class="card-tag">User Research</span>
+            <span class="card-tag">Figma</span><span class="card-tag">Photoshop</span><span class="card-tag">User Research</span>
           </div>
           <div class="card-footer">
             <span class="card-link">View Case Study <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <span class="card-role">Lead Designer & Developer</span>
+            <span class="card-role">Lead Designer</span>
           </div>
         </div>
       </div>
     </div>
 
     <!-- PROJECT 2 -->
-    <div class="project-card" data-cat="fullstack" data-modal="meditrack" onclick="openModal('meditrack')">
+    <div class="project-card" data-cat="development" data-modal="meditrack" onclick="openModal('meditrack')">
       <div class="card-thumb" style="background:linear-gradient(135deg,#0d1a1a 0%,#0d2424 100%)">
-        <div class="card-thumb-inner">💊</div>
-        <div class="card-badge">Full-Stack</div>
+        <div class="card-thumb-inner"><img src="../images/portfolio website.jpeg" alt="Portfolio Project" width="100%" height="100%"></div>
+        <div class="card-badge">designer & developer</div>
       </div>
       <div class="card-body">
-        <div class="card-meta"><span class="card-type">HealthTech</span><div class="card-sep"></div><span class="card-year">2024</span></div>
-        <h3>MediTrack Dashboard</h3>
-        <p>A patient management system for Nigerian clinics — records, scheduling, prescriptions, and analytics in one clean interface.</p>
-        <div class="card-tags"><span class="card-tag">React</span><span class="card-tag">TypeScript</span><span class="card-tag">Supabase</span><span class="card-tag">Figma</span></div>
+        <div class="card-meta"><span class="card-type">Professional Portfolio website</span><div class="card-sep"></div><span class="card-year">2024</span></div>
+        <h3>Portfolio Website</h3>
+        <p>A professional portfolio website to showcase my work and skills as a UI/UX Designer and Developer.</p>
+        <div class="card-tags"><span class="card-tag">HTML</span><span class="card-tag">CSS</span><span class="card-tag">JavaScript</span><span class="card-tag">Figma</span></div>
         <div class="card-footer">
           <span class="card-link">View Case Study <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <span class="card-role">Product Designer</span>
+          <span class="card-role">UI/UX Designer & Developer</span>
         </div>
       </div>
     </div>
@@ -106,13 +106,13 @@
     <!-- PROJECT 3 -->
     <div class="project-card" data-cat="design" data-modal="budgr" onclick="openModal('budgr')">
       <div class="card-thumb" style="background:linear-gradient(135deg,#0f1a0d 0%,#162314 100%)">
-        <div class="card-thumb-inner">📊</div>
+        <div class="card-thumb-inner"><img src="../images/Ajiroba cover.png" alt="Ajiroba" width="100%"></div>
         <div class="card-badge">Design</div>
       </div>
       <div class="card-body">
-        <div class="card-meta"><span class="card-type">FinTech</span><div class="card-sep"></div><span class="card-year">2023</span></div>
-        <h3>Budgr — Personal Finance App</h3>
-        <p>A mobile-first finance app designed for young Africans — budgeting, savings goals, and spending insights with delightful micro-interactions.</p>
+        <div class="card-meta"><span class="card-type">E-commerce</span><div class="card-sep"></div><span class="card-year">2023</span></div>
+        <h3>E-commerce Website</h3>
+        <p>A modern, responsive e-commerce website designed to provide an excellent user experience across all devices.</p>
         <div class="card-tags"><span class="card-tag">Figma</span><span class="card-tag">Prototyping</span><span class="card-tag">Mobile</span><span class="card-tag">Design System</span></div>
         <div class="card-footer">
           <span class="card-link">View Case Study <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -122,19 +122,19 @@
     </div>
 
     <!-- PROJECT 4 -->
-    <div class="project-card" data-cat="development" data-modal="learnpath" onclick="openModal('learnpath')">
+    <div class="project-card" data-cat="design" data-modal="learnpath" onclick="openModal('learnpath')">
       <div class="card-thumb" style="background:linear-gradient(135deg,#0d0d1a 0%,#141422 100%)">
-        <div class="card-thumb-inner">🎓</div>
-        <div class="card-badge">Development</div>
+        <div class="card-thumb-inner"><img src="../images/Meal flex catalogue.png" alt="Meal flex" width="100%"></div>
+        <div class="card-badge">Design</div>
       </div>
       <div class="card-body">
-        <div class="card-meta"><span class="card-type">EdTech</span><div class="card-sep"></div><span class="card-year">2023</span></div>
-        <h3>LearnPath LMS</h3>
-        <p>An offline-first learning management system for African schools — live classes, progress tracking, and adaptive quizzes designed for low-bandwidth environments.</p>
-        <div class="card-tags"><span class="card-tag">React</span><span class="card-tag">Node.js</span><span class="card-tag">PWA</span><span class="card-tag">Firebase</span></div>
+        <div class="card-meta"><span class="card-type">Foodtech</span><div class="card-sep"></div><span class="card-year">2023</span></div>
+        <h3>Mealflex — Food Ordering App</h3>
+        <p>A modern, responsive food ordering app designed to provide an excellent user experience across all devices.</p>
+        <div class="card-tags"><span class="card-tag">Figma</span><span class="card-tag">Photoshop</span><span class="card-tag">Mobile app design</span></div>
         <div class="card-footer">
           <span class="card-link">View Case Study <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <span class="card-role">Full-Stack Developer</span>
+          <span class="card-role">UI/UX Designer</span>
         </div>
       </div>
     </div>
@@ -142,7 +142,7 @@
     <!-- PROJECT 5 -->
     <div class="project-card" data-cat="strategy" data-modal="growthco" onclick="openModal('growthco')">
       <div class="card-thumb" style="background:linear-gradient(135deg,#1a0d0d 0%,#2a1010 100%)">
-        <div class="card-thumb-inner">📈</div>
+        <div class="card-thumb-inner"><img src="../images/spin&win.png" alt="Spin & Win campaign" width="100%"></div>
         <div class="card-badge">Strategy</div>
       </div>
       <div class="card-body">
@@ -160,17 +160,16 @@
     <!-- PROJECT 6 -->
     <div class="project-card" data-cat="design" data-modal="brandkit" onclick="openModal('brandkit')">
       <div class="card-thumb" style="background:linear-gradient(135deg,#1a100d 0%,#261810 100%)">
-        <div class="card-thumb-inner">🎨</div>
+        <div class="card-thumb-inner"><img src="../images/krent.png" alt="krent app" width="100%"></div>
         <div class="card-badge">Design</div>
       </div>
       <div class="card-body">
-        <div class="card-meta"><span class="card-type">Branding</span><div class="card-sep"></div><span class="card-year">2022</span></div>
-        <h3>Zara Lagos — Brand Identity</h3>
+        <div class="card-meta"><span class="card-type">PropTech</span><div class="card-sep"></div><span class="card-year">2022</span></div>
         <p>Full brand identity system for an Afro-fusion restaurant chain — logo, typography, colour palette, packaging, signage, and digital brand guidelines.</p>
-        <div class="card-tags"><span class="card-tag">Brand Identity</span><span class="card-tag">Figma</span><span class="card-tag">Illustration</span><span class="card-tag">Guidelines</span></div>
+        <div class="card-tags"><span class="card-tag">Prototyping</span><span class="card-tag">Figma</span><span class="card-tag">Wireframing</span><span class="card-tag">Web & Mobile app design</span></div>
         <div class="card-footer">
           <span class="card-link">View Case Study <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <span class="card-role">Brand Designer</span>
+          <span class="card-role">UI/UX Designer</span>
         </div>
       </div>
     </div>
