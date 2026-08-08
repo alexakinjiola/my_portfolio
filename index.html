@@ -1,412 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex O. Akinjiola | UI/UX & Product Designer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="../images/OCHL9530.jpg" alt="my" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Alex O. Akinjiola — Product &amp; UI/UX Designer</title>
+<meta name="description" content="Product and UI/UX designer who builds in code and validates with data. SaaS, EduTech, fintech and e-commerce." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
 </head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 
-<body> 
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Alex O. Akinjiola</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
+</nav>
 
-  <!-- Custom cursor -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-
-  <!-- NAV -->
-  <nav id="nav">
-    <div class="nav-logo">Alex O. Akinjiola</div>
-    <ul class="nav-links" id="navLinks">
-       <li><a href="index.html" class="active">Home</a></li> 
-      <li><a href="about.html">About</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
-    <div class="hero-content">
-        <div class="hero-description">
-            <div class="hero-tag">Available for work</div>
-        <h1 class="hero-title">
-            Design. Build.<br><em>Deliver.</em>
-        </h1>
-        <p class="hero-subtitle">
-            I'm Alex Akinjiola - a product designer, developer and data analyst with over <strong>4 years</strong> of experience, crafting thoughtful digital experiences that bridge aesthetics and function.
-        </p>
-        <div class="hero-cta">
-            <a href="projects.html" class="btn-primary">View My Work</a>
-            <a href="contact.html" class="btn-ghost">Get in Touch</a>
-        </div>
-        </div>
-        <div class="hero-image">
-                    <img src="../images/OCHL9530.jpg" alt="Alex O. Akinjiola PROFILE PICTURE" />
-                </div>
-    </div>
-    <div class="hero-scroll">
-      <div class="scroll-line"></div>
-      Scroll to explore
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="about-grid">
-      <div class="about-img-wrap reveal">
-        <div class="about-img-frame">
-          <div class="about-avatar-placeholder">AK</div>
-        </div>
-        
-      </div>
-      <div class="about-text">
-        <div class="section-label" data-n="1">About Me</div>
-        <h2 class="section-title reveal">A passionate creator<br>focused on <em>impact</em></h2>
-        <p class="reveal reveal-delay-1">
-          Hi, I'm <strong>Alex O. Akinjiola</strong> — a designer, developer and data analyst with a love for clean interfaces and meaningful interactions. I believe great digital products should be both beautiful and incredibly functional.
-        </p>
-        <p class="reveal reveal-delay-2">
-          My work spans <strong>UI/UX design</strong>, front-end development, Data analysis and product strategy. I enjoy the full journey - from early wireframes to polished, deployed products.
-        </p>
-        <p class="reveal reveal-delay-3">
-          When I'm not at my desk, you'll find me exploring design systems, writing about product thinking, or mentoring aspiring designers.
-        </p>
-        <div class="about-stats reveal reveal-delay-4">
-          <div>
-            <div class="stat-num">4+</div>
-            <div class="stat-label">Years Experience.</div>
-          </div>
-          <div>
-            <div class="stat-num">25+</div>
-            <div class="stat-label">Projects</div>
-          </div>
-          <div>
-            <div class="stat-num">12+</div>
-            <div class="stat-label">Clients</div>
-          </div>
-        </div>
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-description">
+      <span class="hero-tag">Product &amp; UI/UX Designer · Lagos, NG</span>
+      <h1 class="hero-title">I turn complex requirements into interfaces people <em>navigate effortlessly</em>.</h1>
+      <p class="hero-subtitle">Then I build them in code and validate them with data. <strong>4+ years</strong> across SaaS, EduTech, fintech and e-commerce — from product strategy and design systems to functional frontend and analytics.</p>
+      <div class="hero-cta">
+        <a href="projects.html" class="btn-primary">View my work</a>
+        <a href="contact.html" class="btn-ghost">Get in touch</a>
       </div>
     </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="section-label" data-n="2">What I Do</div>
-    <h2 class="section-title reveal">Skills &amp; <em>Expertise</em></h2>
-    <div class="skills-grid">
-      <div class="skill-card reveal">
-        <div class="skill-icon">🎨</div>
-        <h3>Product Design</h3>
-        <p>Creating user-centred interfaces that delight, from wireframes and prototypes to high-fidelity design systems.</p>
-        <div class="skill-tags">
-          <span class="skill-tag">Figma</span>
-          <span class="skill-tag">Prototyping</span>
-          <span class="skill-tag">Design Systems</span>
-          <span class="skill-tag">User Research</span>
-        </div>
-      </div>
-      <div class="skill-card reveal reveal-delay-1">
-        <div class="skill-icon">⚡</div>
-        <h3>Front-End Development</h3>
-        <p>Building fast, accessible web experiences using modern frameworks and best practices.</p>
-        <div class="skill-tags">
-          <span class="skill-tag">HTML</span>
-          <span class="skill-tag">CSS</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">React</span>
-        </div>
-      </div>
-      <div class="skill-card reveal reveal-delay-2">
-        <div class="skill-icon">📊</div>
-        <h3>Data Analysis</h3>
-        <p>Transforming raw data into clear insights, actionable strategies, and smarter business decisions through analytical precision.</p>
-        <div class="skill-tags">
-          <span class="skill-tag">Excel</span>
-          <span class="skill-tag">SQL</span>
-          <span class="skill-tag">Power BI</span>
-        </div>
-      </div>
-      <div class="skill-card reveal reveal-delay-3">
-        <div class="skill-icon">🔧</div>
-        <h3>Product Strategy</h3>
-        <p>Translating business goals into clear product roadmaps, user research, and measurable outcomes.</p>
-        <div class="skill-tags">
-          <span class="skill-tag">User Research</span>
-          <span class="skill-tag">Roadmapping</span>
-          <span class="skill-tag">A/B Testing</span>
-        </div>
-      </div>
-      
-      </div>
-      
+    <div class="hero-image">
+      <img src="images/OCHL9530.jpg" alt="Portrait of Alex Oluwaseun Akinjiola" />
     </div>
-  </section>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><span class="scroll-line"></span></div>
+</section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="section-label" data-n="3">Selected Work</div>
-    <h2 class="section-title reveal">Recent <em>Projects</em></h2>
-    <div class="projects-grid">
-
-      <div class="project-card reveal">
-        <div class="project-thumb">
-          <img src="../images/patrackr.png" alt="Paytrackr Project">
-        </div>
-        <div class="project-body">
-          <div class="project-meta">
-            <span class="project-type">FinTech</span>
-            <div class="project-dot"></div>
-            <span class="project-year">2024</span>
-          </div>
-          <h3>Paytrackr</h3>
-          <p>A full UX redesign of a Nigerian e-commerce platform, improving conversion rate by 34% through streamlined checkout flows and a refreshed visual language.</p>
-          <a href="https://bit.ly/Paytrackr" class="project-link">
-            View Case Study
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="project-card reveal reveal-delay-1">
-        <div class="project-thumb">
-          <img src="../images/Ajiroba cover.png" alt="Ajiroba Project">
-        </div>
-        <div class="project-body">
-          <div class="project-meta">
-            <span class="project-type">E-commerce</span>
-            <div class="project-dot"></div>
-            <span class="project-year">2024</span>
-          </div>
-          <h3>Ajiroba Technologies Limited</h3>
-          <p>A Nigerian e-commerce platform focused on providing a seamless shopping experience for local consumers.</p>
-          <a href="https://ajiroba.org/" class="project-link">
-            View Case Study
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="project-card reveal reveal-delay-2">
-        <div class="project-thumb">
-          <img src="../images/Meal flex catalogue.png" alt="Mealflex Project">
-        </div>
-        <div class="project-body">
-          <div class="project-meta">
-            <span class="project-type">FoodTech</span>
-            <div class="project-dot"></div>
-            <span class="project-year">2023</span>
-          </div>
-          <h3>Mealflex — Food Ordering App</h3>
-          <p>A mobile-first food ordering app for young Africans. Features restaurant discovery, real-time order tracking, and a seamless checkout experience.</p>
-          <a href="https://www.behance.net/gallery/231847479/Meal-Flex" class="project-link">
-            View Case Study
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="project-card reveal reveal-delay-1">
-       <div class="project-thumb">
-          <img src="../images/Meal flex catalogue.png" alt="Mealflex Project">
-        </div>
-        <div class="project-body">
-          <div class="project-meta">
-            <span class="project-type">PropTech</span>
-            <div class="project-dot"></div>
-            <span class="project-year">2026</span>
-          </div>
-          <h3>Krent</h3>
-          <p>A property management system for African real estate companies, with listing management, tenant onboarding, and an offline-first architecture for low-bandwidth environments.</p>
-          <a href="https://krent.space/" class="project-link">
-            View Case Study
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="section-label" data-n="4">Work History</div>
-    <h2 class="section-title reveal">My <em>Experience</em></h2>
-    <div class="exp-list">
-      <div class="exp-item reveal">
-        <div class="exp-date">2025 — Present</div>
-        <div>
-          <div class="exp-role">UI/UX Designer</div>
-          <div class="exp-company">Morgen Green Limited</div>
-          <div class="exp-desc">Designed end-to-end user experiences for SaaS and EdTech applications for the education sector in Nigeria, supporting multiple IT solutions and digital innovations.</div>
-        </div>
-      </div>
-
-      </div>
-      <div class="exp-item reveal reveal-delay-1">
-        <div class="exp-date">2023 — 2025</div>
-        <div>
-          <div class="exp-role">Product Designer</div>
-          <div class="exp-company">Ajiroba Technologies Limited</div>
-          <div class="exp-desc">Led product design for a web and mobile e-commerce platform, driving UX improvements through audits, cross-functional collaboration, and design system evolution — resulting in a 30% boost in perceived performance and 15% faster delivery timelines.</div>
-        </div>
-      </div>
-
-      <div class="exp-item reveal reveal-delay-1">
-        <div class="exp-date">2022 — 2023</div>
-        <div>
-          <div class="exp-role">Product Designer</div>
-          <div class="exp-company">Creatifff</div>
-          <div class="exp-desc">Designed the full design lifecycle of a mobile-first fashion e-commerce app from ideation to launch, building a scalable design system and collaborating in agile teams to deliver improved onboarding and checkout flows that drove a 15% increase in user satisfaction.</div>
-        </div>
-      </div>
-     
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="contact-inner">
-      <div class="contact-info">
-        <div class="section-label" data-n="5">Let's Talk</div>
-        <h2 class="section-title reveal">Have a project<br>in <em>mind?</em></h2>
-        <p class="reveal">I'm currently open to new opportunities — freelance projects, full-time roles, or collaborative ventures. Let's build something great together.</p>
-        <div class="contact-links reveal reveal-delay-1">
-          <a href="mailto:tayoalex7@gmail.com" class="contact-link">
-            <div class="contact-link-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#e3e3e3"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 6H4l8 4.99zM4 8v10h16V8l-8 5z" opacity=".3"/><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2l-8 4.99L4 6h16zm0 12H4V8l8 5 8-5v10z"/></svg></div>
-            tayoalex7@gmail.com
-          </a>
-          <a href="tel:+2348139780018" class="contact-link">
-            <div class="contact-link-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#e3e3e3"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 17.47c-.88-.07-1.75-.22-2.6-.45l-1.19 1.19c1.2.41 2.48.67 3.8.75v-1.49zM6.54 5h-1.5c.09 1.32.35 2.59.75 3.8l1.2-1.2c-.24-.84-.39-1.71-.45-2.6z" opacity=".3"/><path d="M20 21c.55 0 1-.45 1-1v-3.49c0-.55-.45-1-1-1-1.24 0-2.45-.2-3.57-.57-.1-.04-.21-.05-.31-.05-.26 0-.51.1-.71.29l-2.2 2.2c-2.83-1.45-5.15-3.76-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17zm-3.6-3.98c.85.24 1.72.39 2.6.45v1.49c-1.32-.09-2.59-.35-3.8-.75l1.2-1.19zM5.03 5h1.5c.07.89.22 1.76.46 2.59l-1.2 1.2c-.41-1.2-.67-2.47-.76-3.79z"/></svg></div>
-            Tel: +234 813 978 0018
-          </a>
-          <a href="https://www.linkedin.com/in/alexakinjiola/" target="_blank" class="contact-link">
-            <div class="contact-link-icon">💼</div>
-            linkedin.com/in/alexakinjiola
-          </a>
-          <a href="https://github.com/alexakinjiola" target="_blank" class="contact-link">
-            <div class="contact-link-icon">🐙</div>
-            github.com/alexakinjiola
-          </a>
-          <a href="https://wa.link/c8h3k4" target="_blank" class="contact-link">
-            <div class="contact-link-icon"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#e3e3e3"><g><rect fill="none" height="24" width="24"/></g><g><g><path d="M4,17.17L5.17,16H20V7.9C19.68,7.96,19.34,8,19,8s-0.68-0.04-1-0.1V8H6V6h9.03 c-0.44-0.58-0.77-1.26-0.92-2H4V17.17z M6,9h12v2H6V9z M6,12h8v2H6V12z" enable-background="new" opacity=".3"/><g><circle cx="19" cy="3" r="3"/><path d="M20,16H5.17L4,17.17V4h10.1c-0.18-0.89-0.08-1.61,0-2H4C2.9,2,2.01,2.9,2.01,4L2,22l4-4h14c1.1,0,2-0.9,2-2V6.97 c-0.58,0.44-1.26,0.77-2,0.92V16z"/><rect height="2" width="8" x="6" y="12"/><rect height="2" width="12" x="6" y="9"/><path d="M6,8h12V7.9c-1.21-0.25-2.25-0.95-2.97-1.9H6V8z"/></g></g></g></svg></div>
-            Click here to chat on WhatsApp
-          </a>
-        </div>
-      </div>
-      <div>
-        <form class="contact-form reveal reveal-delay-2" id="contactForm" onsubmit="handleSubmit(event)">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required />
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="Project inquiry, collaboration…" />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell me about your project…" required></textarea>
-          <br>
-          </div>
-          <button type="submit" class="btn-primary" style="align-self:flex-start;">Send Message</button>
-          <div class="form-success" id="formSuccess">
-            ✓ Message sent! I'll get back to you soon.
-          </div>
-        </form>
+<!-- ABOUT PREVIEW -->
+<section id="about">
+  <span class="section-label" data-n="1">About</span>
+  <h2 class="section-title">A designer who <em>ships in code</em> and thinks in data.</h2>
+  <div class="about-grid">
+    <div class="about-img-wrap">
+      <div class="about-img-frame">
+        <img class="about-avatar" src="images/OCHL9530.jpg" alt="Alex O. Akinjiola" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+        <div class="about-avatar-placeholder" style="display:none">AA</div>
       </div>
     </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-copy">© 2026 Alex Akinjiola. All rights reserved.</div>
-    <div class="footer-socials">
-      <a href="https://github.com/alexakinjiola" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/alexakinjiola/" target="_blank">LinkedIn</a>
-      <a href="https://x.com/alex_akinjiola" target="_blank"><strong>X</strong></a>
-      <a href="https://www.behance.net/alexuidesigns" target="_blank">Behance</a>
+    <div class="about-text">
+      <p>I'm a <strong>Product &amp; UI/UX designer</strong> based in Surulere, Lagos. My background is in <strong>Civil Engineering</strong> (Obafemi Awolowo University) — a systems-thinking foundation that shapes how I approach structure, constraints and problem-solving.</p>
+      <p>I work end-to-end: product strategy and design systems, high-fidelity UI in Figma, functional frontend in HTML/CSS/JavaScript, and analytics with SQL and Power BI. My design work has lifted usability by up to <strong>40%</strong> and satisfaction by <strong>15%</strong>.</p>
+      <div class="about-stats">
+        <div><div class="stat-num">4+</div><div class="stat-label">Years</div></div>
+        <div><div class="stat-num">40%</div><div class="stat-label">Usability lift</div></div>
+        <div><div class="stat-num">8</div><div class="stat-label">Certifications</div></div>
+      </div>
     </div>
-  </footer>
+  </div>
+</section>
 
- <script>
-    // Custom cursor
-    const cursor = document.getElementById('cursor');
-    const ring = document.getElementById('cursorRing');
-    let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+<!-- SKILLS PREVIEW -->
+<section id="skills">
+  <span class="section-label" data-n="2">What I do</span>
+  <h2 class="section-title">Three disciplines, <em>one workflow</em>.</h2>
+  <div class="skills-grid">
+    <div class="skill-card reveal">
+      <div class="skill-icon">✦</div>
+      <h3>Product &amp; UI/UX Design</h3>
+      <p>Research, journeys, wireframes, high-fidelity UI and scalable design systems — from PRD to polished prototype.</p>
+      <div class="skill-tags"><span class="skill-tag">Figma</span><span class="skill-tag">Design Systems</span><span class="skill-tag">Prototyping</span><span class="skill-tag">User Research</span></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">◆</div>
+      <h3>Frontend Development</h3>
+      <p>I carry designs from Figma to working frontend — semantic HTML, modern CSS and JavaScript, responsive to the pixel.</p>
+      <div class="skill-tags"><span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Git</span></div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-icon">▲</div>
+      <h3>Data Analytics</h3>
+      <p>Cleaning, modelling and visualising real-world data into decisions — Excel to SQL to interactive Power BI dashboards.</p>
+      <div class="skill-tags"><span class="skill-tag">SQL</span><span class="skill-tag">Power BI</span><span class="skill-tag">Excel</span><span class="skill-tag">Data Modelling</span></div>
+    </div>
+  </div>
+</section>
 
-    document.addEventListener('mousemove', e => {
-      mouseX = e.clientX; mouseY = e.clientY;
-      cursor.style.left = mouseX + 'px';
-      cursor.style.top = mouseY + 'px';
-    });
+<!-- FEATURED PROJECTS -->
+<section id="projects">
+  <span class="section-label" data-n="3">Selected work</span>
+  <h2 class="section-title">Recent <em>projects</em>.</h2>
+  <div class="projects-grid">
+    <article class="project-card reveal" onclick="location.href='projects.html'">
+      <div class="project-thumb"><div class="card-thumb-inner" style="background:linear-gradient(135deg,#1d1a14,#2a2418);font-size:3rem">🧾</div></div>
+      <div class="project-body">
+        <div class="project-meta"><span class="project-type">Design &amp; Frontend</span><span class="project-dot"></span><span class="project-year">2025</span></div>
+        <h3>Ledger Studio</h3>
+        <p>A polished, no-backend invoice generator using client-side state (localStorage / URL-encoded data) for a fast, install-free experience.</p>
+        <a href="projects.html" class="project-link">View case study →</a>
+      </div>
+    </article>
+    <article class="project-card reveal" onclick="location.href='projects.html'">
+      <div class="project-thumb"><div class="card-thumb-inner" style="background:linear-gradient(135deg,#181818,#242424);font-size:3rem">🛍️</div></div>
+      <div class="project-body">
+        <div class="project-meta"><span class="project-type">Design &amp; Frontend</span><span class="project-dot"></span><span class="project-year">2024</span></div>
+        <h3>AnnysHub</h3>
+        <p>A retail showroom website with two interfaces — a customer-facing storefront and an admin console for the owner.</p>
+        <a href="projects.html" class="project-link">View case study →</a>
+      </div>
+    </article>
+    <article class="project-card reveal" onclick="location.href='projects.html'">
+      <div class="project-thumb"><div class="card-thumb-inner" style="background:linear-gradient(135deg,#141a17,#1c2a22);font-size:3rem">📊</div></div>
+      <div class="project-body">
+        <div class="project-meta"><span class="project-type">Data Analytics</span><span class="project-dot"></span><span class="project-year">2025</span></div>
+        <h3>Retail &amp; Admissions Analytics</h3>
+        <p>End-to-end pipelines on retail and admissions data: cleaned and modelled, queried in SQL, delivered as interactive Power BI dashboards.</p>
+        <a href="projects.html" class="project-link">View case study →</a>
+      </div>
+    </article>
+  </div>
+</section>
 
-    function animateRing() {
-      ringX += (mouseX - ringX) * 0.12;
-      ringY += (mouseY - ringY) * 0.12;
-      ring.style.left = ringX + 'px';
-      ring.style.top = ringY + 'px';
-      requestAnimationFrame(animateRing);
-    }
-    animateRing();
+<!-- EXPERIENCE -->
+<section id="experience">
+  <span class="section-label" data-n="4">Experience</span>
+  <h2 class="section-title">Where I've <em>worked</em>.</h2>
+  <div class="exp-list">
+    <div class="exp-item reveal">
+      <div class="exp-date">Oct 2025 — Present</div>
+      <div><div class="exp-role">Product Designer (Hybrid)</div><div class="exp-company">Morgen Green Limited · Lekki, Lagos</div><p class="exp-desc">Lead end-to-end product design for SaaS and EduTech platforms — from strategy through design delivery and frontend handoff.</p></div>
+    </div>
+    <div class="exp-item reveal">
+      <div class="exp-date">Nov 2023 — Sept 2025</div>
+      <div><div class="exp-role">Product Designer (Remote)</div><div class="exp-company">Ajiroba Technologies Limited</div><p class="exp-desc">Designed and launched a B2C e-commerce platform; UX audits improved usability and perceived performance by 30%.</p></div>
+    </div>
+    <div class="exp-item reveal">
+      <div class="exp-date">Mar 2022 — Oct 2023</div>
+      <div><div class="exp-role">Product Designer (Remote)</div><div class="exp-company">Creatifff · Lagos</div><p class="exp-desc">Designed a mobile-first fashion e-commerce app; improved onboarding and checkout, increasing satisfaction by 15%.</p></div>
+    </div>
+  </div>
+</section>
 
-    document.querySelectorAll('a, button, .project-card, .skill-card').forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        ring.style.width = '58px'; ring.style.height = '58px';
-        ring.style.borderColor = 'rgba(200,169,126,0.6)';
-      });
-      el.addEventListener('mouseleave', () => {
-        ring.style.width = '36px'; ring.style.height = '36px';
-        ring.style.borderColor = 'rgba(200,169,126,0.4)';
-      });
-    });
+<!-- CONTACT CTA -->
+<section id="contact">
+  <span class="section-label" data-n="5">Contact</span>
+  <h2 class="section-title">Let's build something <em>worth shipping</em>.</h2>
+  <div class="contact-inner">
+    <div class="contact-info">
+      <p>Available for remote, hybrid, or relocation opportunities in product design and frontend. Tell me about your project and I'll reply personally.</p>
+      <div class="contact-links">
+        <a href="mailto:tayoalex7@gmail.com" class="contact-link"><span class="contact-link-icon">✉</span> tayoalex7@gmail.com</a>
+        <a href="tel:+2348139780018" class="contact-link"><span class="contact-link-icon">☎</span> +234 813 978 0018</a>
+        <a href="https://www.linkedin.com/in/alexakinjiola/" target="_blank" rel="noopener" class="contact-link"><span class="contact-link-icon">in</span> /in/alexakinjiola</a>
+      </div>
+    </div>
+    <div class="contact-info">
+      <p>Prefer the full form? Head to the contact page — you'll get an instant confirmation by email and I'll follow up soon after.</p>
+      <div class="hero-cta"><a href="contact.html" class="btn-primary">Open contact form</a></div>
+    </div>
+  </div>
+</section>
 
-    // Mobile menu
-    function toggleMenu() {
-      const links = document.getElementById('navLinks');
-      links.classList.toggle('open');
-    }
+<footer>
+  <span class="footer-copy">© 2026 Alex O. Akinjiola. All rights reserved.</span>
+  <div class="footer-socials">
+    <a href="https://www.linkedin.com/in/alexakinjiola/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/alexakinjiola" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:tayoalex7@gmail.com">Email</a>
+    <a href="https://alexakinjiola-portfolio.vercel.app/" target="_blank" rel="noopener">Portfolio</a>
+  </div>
+</footer>
 
-    // Scroll reveal
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-    }, { threshold: 0.12 });
-    reveals.forEach(el => observer.observe(el));
-
-    // Nav compact on scroll
-    window.addEventListener('scroll', () => {
-      const nav = document.getElementById('nav');
-      nav.style.padding = window.scrollY > 60 ? '0.9rem 5vw' : '1.4rem 5vw';
-    });
-
-    // Form submit
-    function handleSubmit(e) {
-      e.preventDefault();
-      const btn = e.target.querySelector('button[type=submit]');
-      const success = document.getElementById('formSuccess');
-      btn.textContent = 'Sending…';
-      btn.disabled = true;
-      setTimeout(() => {
-        btn.style.display = 'none';
-        success.style.display = 'block';
-        e.target.reset();
-      }, 1200);
-    }
-  </script>
+<script src="main.js" defer></script>
 </body>
 </html>

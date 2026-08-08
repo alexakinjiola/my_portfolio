@@ -1,281 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex O. Akinjiola | UI/UX & Product Designer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="../images/OCHL9530.jpg" alt="my" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Résumé — Alex O. Akinjiola</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
 </head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 
-<body> 
-
-  <!-- Custom cursor -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-
-  <!-- NAV -->
-  <nav id="nav">
-    <div class="nav-logo">Alex O. Akinjiola</div>
-    <ul class="nav-links" id="navLinks">
-       <li><a href="index.html" >Home</a></li> 
-      <li><a href="about.html">About</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html" class="active">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </div>
-  </nav>
-    
-
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Alex O. Akinjiola</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="resume.html" class="active">Resume</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
+</nav>
 
 <!-- PAGE HERO -->
-<div class="page-hero">
+<header class="page-hero">
   <div class="page-hero-bg"></div>
   <div class="page-hero-grid"></div>
-  <div class="page-hero-tag">Background</div>
-  <h1 style="animation:fadeUp .7s .2s both">The Journey <em>So Far</em></h1>
-  <p style="animation:fadeUp .7s .4s both">Every role, project, and lesson that shaped how I think about design, technology, and the products people rely on every day.</p>
-</div>
+  <span class="page-hero-tag">Résumé</span>
+  <h1>Four years turning <em>requirements</em> into interfaces.</h1>
+  <p>Product &amp; UI/UX designer working end-to-end — from product strategy and design systems through to functional frontend and analytics.</p>
+</header>
 
-<!-- STATS STRIP -->
+<!-- STATS -->
 <div class="stats-strip">
-  <div class="stat-block">
-    <div class="stat-num">4+</div>
-    <div class="stat-label">Years of Experience</div>
-  </div>
-  <div class="stat-block">
-    <div class="stat-num">4</div>
-    <div class="stat-label">Companies & Studios</div>
-  </div>
-  <div class="stat-block">
-    <div class="stat-num">20+</div>
-    <div class="stat-label">Projects Shipped</div>
-  </div>
-  <div class="stat-block">
-    <div class="stat-num">5</div>
-    <div class="stat-label">Certifications</div>
-  </div>
+  <div class="stat-block"><div class="stat-num">4+</div><div class="stat-label">Years experience</div></div>
+  <div class="stat-block"><div class="stat-num">40%</div><div class="stat-label">Usability lift</div></div>
+  <div class="stat-block"><div class="stat-num">15%</div><div class="stat-label">Satisfaction lift</div></div>
+  <div class="stat-block"><div class="stat-num">8</div><div class="stat-label">Certifications</div></div>
 </div>
 
-<!-- MAIN LAYOUT -->
+<!-- LAYOUT -->
 <div class="exp-layout">
-
   <!-- SIDEBAR -->
   <aside class="exp-sidebar">
-    <div class="sidebar-nav-title">Jump to</div>
-    <button class="sidebar-link active" onclick="scrollTo('work')">
-      <span class="link-dot current"></span> Work Experience
-    </button>
-    <button class="sidebar-link" onclick="scrollTo('education')">
-      <span class="link-dot"></span> Education
-    </button>
-    <button class="sidebar-link" onclick="scrollTo('certifications')">
-      <span class="link-dot"></span> Certifications
-    </button>
-    <button class="sidebar-link" onclick="scrollTo('awards')">
-      <span class="link-dot"></span> Awards
-    </button>
-    <button class="sidebar-link" onclick="scrollTo('volunteering')">
-      <span class="link-dot"></span> Volunteering
-    </button>
+    <div class="sidebar-nav-title">On this page</div>
+    <button class="sidebar-link active" data-target="experience"><span class="link-dot"></span>Experience</button>
+    <button class="sidebar-link" data-target="projects"><span class="link-dot"></span>Key Projects</button>
+    <button class="sidebar-link" data-target="education"><span class="link-dot"></span>Education</button>
+    <button class="sidebar-link" data-target="certifications"><span class="link-dot"></span>Certifications</button>
     <div class="sidebar-divider"></div>
-    <a href="./Akinjiola_Alex _ CV.pdf" download="Akinjiola_Alex _ CV.pdf" class="sidebar-download">
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M3 6l4 4 4-4M2 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Download CV
-    </a>
-    <a href="./Alex Akinjiola's Cover letter.pdf" download="Alex Akinjiola's Cover letter.pdf" class="sidebar-download">
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M3 6l4 4 4-4M2 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Download Cover Letter
-    </a>
+    <a class="sidebar-download" href="Alex-Akinjiola-CV.pdf" download>↓ Download CV</a>
   </aside>
 
   <!-- MAIN -->
   <main class="exp-main">
 
-    <!-- WORK EXPERIENCE -->
-    <section class="exp-section" id="work">
+    <!-- EXPERIENCE -->
+    <section class="exp-section" id="experience">
       <div class="exp-section-header">
         <div class="exp-section-num">01</div>
-        <div class="exp-section-label">
+        <div>
           <div class="exp-section-tag">Career</div>
-          <div class="exp-section-title">Work <em>Experience</em></div>
+          <h2 class="exp-section-title">Professional <em>experience</em></h2>
         </div>
       </div>
-
       <div class="timeline">
-
-        <!-- JOB 1 -->
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-dot current"></div>
           <div class="timeline-card">
             <div class="timeline-header">
               <div class="timeline-title-wrap">
                 <div class="timeline-role">Product Designer</div>
-                <div class="timeline-company">
-                  Morgen Green Limited
-                  <span class="company-type">Hybrid / Full Time</span>
-                </div>
+                <div class="timeline-company">Morgen Green Limited <span class="company-type">Hybrid</span></div>
               </div>
               <div class="timeline-meta">
-                <span class="timeline-date">Jan 2023 — Present</span>
-                <span class="timeline-badge">Current Role</span>
+                <span class="timeline-date">Oct 2025 — Present</span>
+                <span class="timeline-badge">Current</span>
               </div>
             </div>
-            <p class="timeline-desc">Working independently with startups across Africa and Europe, delivering end-to-end product design and front-end development. Clients span fintech, healthtech, e-commerce, and education sectors. I manage the full project lifecycle — from discovery and research through to design, development, and post-launch iteration.</p>
+            <p class="timeline-desc">Lead end-to-end product design for SaaS (Software-as-a-Service) and EduTech platforms — dashboards, analytics tools, and admin interfaces — from strategy through design delivery.</p>
             <ul class="timeline-achievements">
-              <li>Redesigned ShopFlow's e-commerce experience, increasing conversion rate by 34% and cutting cart abandonment by 52%</li>
-              <li>Built and shipped MediTrack, a clinic management dashboard adopted by 12 healthcare providers across Lagos</li>
-              <li>Designed the Budgr personal finance app from zero to beta — 2,000+ users joined the waitlist pre-launch</li>
-              <li>Established a repeatable freelance design-to-dev process, reducing delivery time by 30% across engagements</li>
+              <li>Design user journeys, workflows, and information architecture that make complex decisions feel simple.</li>
+              <li>Carry designs from Figma to working frontend, removing handoff back-and-forth.</li>
+              <li>Build and maintain scalable design systems and reusable component libraries.</li>
+              <li>Author PRDs (Product Requirement Documents) and user flows that keep design and engineering aligned.</li>
             </ul>
-            <div class="timeline-tags">
-              <span class="exp-tag">Figma</span><span class="exp-tag">React</span><span class="exp-tag">TypeScript</span>
-              <span class="exp-tag">Node.js</span><span class="exp-tag">Supabase</span><span class="exp-tag">User Research</span>
-              <span class="exp-tag">Client Management</span>
-            </div>
+            <div class="timeline-tags"><span class="exp-tag">Figma</span><span class="exp-tag">Design Systems</span><span class="exp-tag">Frontend</span><span class="exp-tag">PRDs</span><span class="exp-tag">SaaS</span><span class="exp-tag">EduTech</span></div>
           </div>
         </div>
 
-        <!-- JOB 2 -->
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-header">
               <div class="timeline-title-wrap">
-                <div class="timeline-role">UI/UX Designer</div>
-                <div class="timeline-company">
-                  TechHub Lagos
-                  <span class="company-type">Full-Time</span>
-                </div>
+                <div class="timeline-role">Product Designer</div>
+                <div class="timeline-company">Ajiroba Technologies Limited <span class="company-type">Remote</span></div>
               </div>
               <div class="timeline-meta">
-                <span class="timeline-date">Jun 2022 — Dec 2022</span>
+                <span class="timeline-date">Nov 2023 — Sept 2025</span>
               </div>
             </div>
-            <p class="timeline-desc">Joined TechHub Lagos — West Africa's leading tech accelerator — as the sole designer supporting 8 portfolio companies. Responsible for product design, design system creation, and bridging the gap between business strategy and shipped software.</p>
+            <p class="timeline-desc">Designed and launched a B2C (business-to-consumer) e-commerce platform serving users across web and mobile.</p>
             <ul class="timeline-achievements">
-              <li>Created a shared design system used across 3 portfolio companies, reducing onboarding time for new design contractors by 60%</li>
-              <li>Led UX redesign for a logistics SaaS that increased driver app adoption from 34% to 81%</li>
-              <li>Facilitated monthly design critique sessions, raising design quality across the portfolio</li>
-              <li>Introduced user testing as a standard practice across 5 portfolio products — previously none were conducting usability research</li>
+              <li>Ran UX audits and usability optimisation that improved usability and perceived performance by 30%.</li>
+              <li>Simplified complex product workflows, improving navigation clarity and feature adoption.</li>
+              <li>Built and maintained a scalable Figma design system for consistent UI across the product.</li>
+              <li>Partnered with developers to ship implementation-ready UI and efficient design handoff.</li>
             </ul>
-            <div class="timeline-tags">
-              <span class="exp-tag">Figma</span><span class="exp-tag">Design Systems</span><span class="exp-tag">Prototyping</span>
-              <span class="exp-tag">Usability Testing</span><span class="exp-tag">Stakeholder Workshops</span><span class="exp-tag">Handoff</span>
-            </div>
+            <div class="timeline-tags"><span class="exp-tag">UX Audit</span><span class="exp-tag">E-commerce</span><span class="exp-tag">Design System</span><span class="exp-tag">Usability</span></div>
           </div>
         </div>
 
-        <!-- JOB 3 -->
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-header">
               <div class="timeline-title-wrap">
-                <div class="timeline-role">Junior Front-End Developer</div>
-                <div class="timeline-company">
-                  Andela
-                  <span class="company-type">Full-Time</span>
-                </div>
+                <div class="timeline-role">Product Designer</div>
+                <div class="timeline-company">Creatifff <span class="company-type">Remote</span></div>
               </div>
               <div class="timeline-meta">
-                <span class="timeline-date">Aug 2021 — May 2022</span>
+                <span class="timeline-date">Mar 2022 — Oct 2023</span>
               </div>
             </div>
-            <p class="timeline-desc">Selected from a competitive 4,000-applicant cohort into Andela's engineering programme. Placed on a team building a React-based enterprise dashboard for a US-based SaaS client, working across time zones with senior engineers in New York and Warsaw.</p>
+            <p class="timeline-desc">Designed a mobile-first fashion e-commerce application, leading the full design lifecycle from research to implementation.</p>
             <ul class="timeline-achievements">
-              <li>Built 12 reusable UI components now used across 4 products in the client's platform suite</li>
-              <li>Reduced page load time by 38% on the main dashboard view through code-splitting and lazy loading</li>
-              <li>Achieved 95% unit test coverage on assigned components using Jest and React Testing Library</li>
-              <li>Mentored 2 more junior developers joining the team in Q1 2022</li>
+              <li>Ran UX research, user journey mapping, and interaction design to sharpen usability.</li>
+              <li>Created wireframes, high-fidelity UI, and interactive prototypes in Figma.</li>
+              <li>Improved onboarding and checkout flows, increasing user satisfaction by 15%.</li>
+              <li>Built a component-based design system to support product scalability.</li>
             </ul>
-            <div class="timeline-tags">
-              <span class="exp-tag">React</span><span class="exp-tag">JavaScript</span><span class="exp-tag">Jest</span>
-              <span class="exp-tag">Git</span><span class="exp-tag">Agile / Scrum</span><span class="exp-tag">Code Review</span>
-            </div>
+            <div class="timeline-tags"><span class="exp-tag">Mobile-first</span><span class="exp-tag">User Research</span><span class="exp-tag">Prototyping</span><span class="exp-tag">Fashion</span></div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- JOB 4 -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div class="timeline-title-wrap">
-                <div class="timeline-role">Design Intern</div>
-                <div class="timeline-company">
-                  Flutterwave
-                  <span class="company-type">Internship</span>
-                </div>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-date">Jan 2021 — Jul 2021</span>
-              </div>
-            </div>
-            <p class="timeline-desc">Six-month design internship at Africa's leading payments infrastructure company. Worked within the consumer product team on Flutterwave Store and the onboarding experience for new merchants.</p>
-            <ul class="timeline-achievements">
-              <li>Redesigned the merchant onboarding flow, reducing drop-off by 28% — first major project shipped as an intern</li>
-              <li>Contributed 40+ components to the internal Figma design system under guidance of the senior design lead</li>
-              <li>Conducted competitive analysis of 10 payment platforms across Africa and the US, presented to the product team</li>
-            </ul>
-            <div class="timeline-tags">
-              <span class="exp-tag">Figma</span><span class="exp-tag">Design Systems</span><span class="exp-tag">Competitive Research</span>
-              <span class="exp-tag">Wireframing</span><span class="exp-tag">Payments UX</span>
-            </div>
-          </div>
+    <!-- KEY PROJECTS -->
+    <section class="exp-section" id="projects">
+      <div class="exp-section-header">
+        <div class="exp-section-num">02</div>
+        <div>
+          <div class="exp-section-tag">Selected work</div>
+          <h2 class="exp-section-title">Key <em>projects</em></h2>
         </div>
-
-      </div><!-- /timeline -->
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card reveal"><div class="edu-icon">🧾</div><div class="edu-degree">Ledger Studio</div><div class="edu-school">Design &amp; Frontend</div><p class="edu-desc">A polished, no-backend invoicing suite using client-side state (localStorage / URL-encoded data) for a fast, install-free experience.</p></div>
+        <div class="edu-card reveal"><div class="edu-icon">🛍️</div><div class="edu-degree">AnnysHub</div><div class="edu-school">Design &amp; Frontend</div><p class="edu-desc">A retail showroom website with two interfaces — a customer-facing storefront and an admin console for the owner.</p></div>
+        <div class="edu-card reveal"><div class="edu-icon">📊</div><div class="edu-degree">Retail &amp; Admissions Analytics</div><div class="edu-school">Excel · SQL · Power BI</div><p class="edu-desc">End-to-end analytics pipelines: cleaned and modelled data, wrote SQL queries, and delivered interactive Power BI dashboards to support decisions.</p></div>
+        <div class="edu-card reveal"><div class="edu-icon">🎯</div><div class="edu-degree">Portfolio</div><div class="edu-school">Design &amp; Frontend</div><p class="edu-desc">A no-backend personal portfolio built to carry my design and frontend work across every job application.</p></div>
+      </div>
     </section>
 
     <!-- EDUCATION -->
     <section class="exp-section" id="education">
       <div class="exp-section-header">
-        <div class="exp-section-num">02</div>
-        <div class="exp-section-label">
-          <div class="exp-section-tag">Academic</div>
-          <div class="exp-section-title">My <em>Education</em></div>
+        <div class="exp-section-num">03</div>
+        <div>
+          <div class="exp-section-tag">Academics</div>
+          <h2 class="exp-section-title">Education</h2>
         </div>
       </div>
       <div class="edu-grid">
-        <div class="edu-card">
+        <div class="edu-card reveal">
           <div class="edu-icon">🎓</div>
-          <div class="edu-degree">B.Sc. Computer Science</div>
-          <div class="edu-school">University of Lagos (UNILAG)</div>
-          <div class="edu-period">2017 — 2021</div>
-          <div class="edu-desc">Studied core computer science fundamentals — algorithms, data structures, software engineering, databases, and networks. Final year dissertation focused on designing accessible e-government interfaces for low-literacy users in Nigeria.</div>
-          <div class="edu-honours">🏅 Second Class Upper (2:1)</div>
+          <div class="edu-degree">B.Sc, Civil Engineering</div>
+          <div class="edu-school">Obafemi Awolowo University, Ile-Ife</div>
+          <div class="edu-period">2019</div>
+          <p class="edu-desc">A systems-thinking foundation that shapes how I approach structure, constraints, and problem-solving in product work.</p>
+          <span class="edu-honours">Second Class Upper · 4.09 CGPA</span>
         </div>
-        <div class="edu-card">
-          <div class="edu-icon">🖥️</div>
-          <div class="edu-degree">UX Design Professional Certificate</div>
-          <div class="edu-school">Google / Coursera</div>
-          <div class="edu-period">2020 — 2021</div>
-          <div class="edu-desc">7-course programme covering the end-to-end UX design process: empathising with users, defining problems, ideating, prototyping, and testing. Completed 3 capstone portfolio projects including a mobile app and responsive web design case study.</div>
-          <div class="edu-honours">✅ Completed with Distinction</div>
-        </div>
-        <div class="edu-card">
+        <div class="edu-card reveal">
           <div class="edu-icon">📐</div>
-          <div class="edu-degree">Full-Stack Web Development Bootcamp</div>
-          <div class="edu-school">Semicolon Africa, Lagos</div>
-          <div class="edu-period">2020 (6 months)</div>
-          <div class="edu-desc">Intensive six-month bootcamp covering modern JavaScript, React, Node.js, and cloud deployment. Selected as one of 30 students from 2,400 applicants. Built and shipped a full-stack social commerce application as the final project.</div>
-          <div class="edu-honours">🏆 Top 5% Graduate</div>
-        </div>
-        <div class="edu-card">
-          <div class="edu-icon">🌍</div>
-          <div class="edu-degree">IELTS Academic</div>
-          <div class="edu-school">British Council</div>
-          <div class="edu-period">2022</div>
-          <div class="edu-desc">Achieved an overall band score of 8.0 (Listening: 9.0, Reading: 8.5, Writing: 7.0, Speaking: 7.5), demonstrating high-level English language proficiency across all four skills.</div>
-          <div class="edu-honours">📋 Band Score: 8.0 / 9</div>
+          <div class="edu-degree">OND, Civil Engineering</div>
+          <div class="edu-school">Moshood Abiola Polytechnic</div>
+          <div class="edu-period">2012</div>
+          <p class="edu-desc">National Diploma in Civil Engineering — the start of the analytical grounding I still build on today.</p>
+          <span class="edu-honours">Upper Credit · 3.28 CGPA</span>
         </div>
       </div>
     </section>
@@ -283,226 +190,45 @@
     <!-- CERTIFICATIONS -->
     <section class="exp-section" id="certifications">
       <div class="exp-section-header">
-        <div class="exp-section-num">03</div>
-        <div class="exp-section-label">
-          <div class="exp-section-tag">Professional</div>
-          <div class="exp-section-title">Certifications &amp; <em>Training</em></div>
+        <div class="exp-section-num">04</div>
+        <div>
+          <div class="exp-section-tag">Credentials</div>
+          <h2 class="exp-section-title">Certifications</h2>
         </div>
       </div>
       <div class="cert-list">
-        <div class="cert-item">
-          <div class="cert-icon">🎨</div>
-          <div class="cert-info">
-            <div class="cert-name">Google UX Design Professional Certificate</div>
-            <div class="cert-issuer">Google via Coursera — 7 courses, 200+ hours</div>
-          </div>
-          <div class="cert-meta">
-            <span class="cert-year">2021</span>
-            <span class="cert-badge">Verified</span>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-icon">⚛️</div>
-          <div class="cert-info">
-            <div class="cert-name">Meta Front-End Developer Professional Certificate</div>
-            <div class="cert-issuer">Meta via Coursera — React, Advanced JavaScript, Testing</div>
-          </div>
-          <div class="cert-meta">
-            <span class="cert-year">2022</span>
-            <span class="cert-badge">Verified</span>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-icon">♿</div>
-          <div class="cert-info">
-            <div class="cert-name">Web Accessibility (WCAG 2.1)</div>
-            <div class="cert-issuer">W3C / edX — Accessible Design and Development</div>
-          </div>
-          <div class="cert-meta">
-            <span class="cert-year">2022</span>
-            <span class="cert-badge">Verified</span>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-icon">📊</div>
-          <div class="cert-info">
-            <div class="cert-name">Product Analytics Certification</div>
-            <div class="cert-issuer">Amplitude — Product Data Fundamentals and Advanced Analytics</div>
-          </div>
-          <div class="cert-meta">
-            <span class="cert-year">2023</span>
-            <span class="cert-badge">Verified</span>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-icon">☁️</div>
-          <div class="cert-info">
-            <div class="cert-name">AWS Certified Cloud Practitioner</div>
-            <div class="cert-issuer">Amazon Web Services — Cloud Fundamentals</div>
-          </div>
-          <div class="cert-meta">
-            <span class="cert-year">2023</span>
-            <span class="cert-badge">Verified</span>
-          </div>
-        </div>
+        <div class="cert-item reveal"><div class="cert-icon">💻</div><div class="cert-info"><div class="cert-name">Frontend Development</div><div class="cert-issuer">TS Academy</div></div><div class="cert-meta"><span class="cert-year">2026</span></div></div>
+        <div class="cert-item reveal"><div class="cert-icon">📊</div><div class="cert-info"><div class="cert-name">Data Analytics</div><div class="cert-issuer">Data Academy</div></div><div class="cert-meta"><span class="cert-year">2026</span></div></div>
+        <div class="cert-item reveal"><div class="cert-icon">🎨</div><div class="cert-info"><div class="cert-name">UX Design: Empathize, Define &amp; Ideate</div><div class="cert-issuer">Google</div></div><div class="cert-meta"><span class="cert-year">2023</span></div></div>
+        <div class="cert-item reveal"><div class="cert-icon">✏️</div><div class="cert-info"><div class="cert-name">UI/UX with Adobe XD and Figma</div><div class="cert-issuer">AQSkills</div></div><div class="cert-meta"><span class="cert-year">2023</span></div></div>
+        <div class="cert-item reveal"><div class="cert-icon">🗂️</div><div class="cert-info"><div class="cert-name">Foundations of Project Management</div><div class="cert-issuer">Google</div></div><div class="cert-meta"><span class="cert-year">2022</span></div></div>
+        <div class="cert-item reveal"><div class="cert-icon">🧭</div><div class="cert-info"><div class="cert-name">Foundations of User Experience (UX) Design</div><div class="cert-issuer">Google</div></div><div class="cert-meta"><span class="cert-year">2022</span></div></div>
+        <div class="cert-item reveal"><div class="cert-icon">✦</div><div class="cert-info"><div class="cert-name">Product Design (UI/UX)</div><div class="cert-issuer">Future Academy Africa</div></div><div class="cert-meta"><span class="cert-year">2022</span></div></div>
+        <div class="cert-item reveal"><div class="cert-icon">📋</div><div class="cert-info"><div class="cert-name">Project Management Essentials</div><div class="cert-issuer">Management Strategy &amp; Institutes</div></div><div class="cert-meta"><span class="cert-year">2021</span></div></div>
       </div>
     </section>
-
-    <!-- AWARDS -->
-    <section class="exp-section" id="awards">
-      <div class="exp-section-header">
-        <div class="exp-section-num">04</div>
-        <div class="exp-section-label">
-          <div class="exp-section-tag">Recognition</div>
-          <div class="exp-section-title">Awards &amp; <em>Honours</em></div>
-        </div>
-      </div>
-      <div class="awards-grid">
-        <div class="award-card">
-          <div class="award-icon">🏆</div>
-          <div class="award-name">Best Design Portfolio</div>
-          <div class="award-org">Design Lagos Summit</div>
-          <div class="award-year">2024</div>
-        </div>
-        <div class="award-card">
-          <div class="award-icon">🥇</div>
-          <div class="award-name">Top 10 African Designers to Watch</div>
-          <div class="award-org">African Design Foundation</div>
-          <div class="award-year">2023</div>
-        </div>
-        <div class="award-card">
-          <div class="award-icon">🎖️</div>
-          <div class="award-name">Community Choice Award</div>
-          <div class="award-org">Figma Community — Nigeria Chapter</div>
-          <div class="award-year">2023</div>
-        </div>
-        <div class="award-card">
-          <div class="award-icon">⭐</div>
-          <div class="award-name">Top Graduate — Cohort 12</div>
-          <div class="award-org">Semicolon Africa Bootcamp</div>
-          <div class="award-year">2020</div>
-        </div>
-        <div class="award-card">
-          <div class="award-icon">🌟</div>
-          <div class="award-name">Andela Learning Community Award</div>
-          <div class="award-org">Andela — Excellence in Engineering</div>
-          <div class="award-year">2022</div>
-        </div>
-        <div class="award-card">
-          <div class="award-icon">💡</div>
-          <div class="award-name">Most Innovative Project</div>
-          <div class="award-org">UNILAG Computer Science Fair</div>
-          <div class="award-year">2021</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- VOLUNTEERING -->
-    <section class="exp-section" id="volunteering">
-      <div class="exp-section-header">
-        <div class="exp-section-num">05</div>
-        <div class="exp-section-label">
-          <div class="exp-section-tag">Community</div>
-          <div class="exp-section-title">Giving <em>Back</em></div>
-        </div>
-      </div>
-      <div class="vol-list">
-        <div class="vol-item">
-          <div class="vol-icon">🎤</div>
-          <div>
-            <div class="vol-role">Design Mentor</div>
-            <div class="vol-org">ADPList — Global Mentorship Platform</div>
-            <p class="vol-desc">1-on-1 mentoring sessions for aspiring designers across Africa and the diaspora. Topics include portfolio reviews, career strategy, breaking into the industry, and transitioning from other fields into UX/product design.</p>
-            <div class="vol-period">2022 — Present · 80+ sessions conducted</div>
-          </div>
-        </div>
-        <div class="vol-item">
-          <div class="vol-icon">🌍</div>
-          <div>
-            <div class="vol-role">Workshop Facilitator</div>
-            <div class="vol-org">Google Developer Student Club — UNILAG Chapter</div>
-            <p class="vol-desc">Delivered hands-on workshops on UI/UX fundamentals and front-end development to university students. Created all course materials and led 4 workshops per semester, reaching 300+ students.</p>
-            <div class="vol-period">2021 — 2022 · 8 workshops, 300+ students reached</div>
-          </div>
-        </div>
-        <div class="vol-item">
-          <div class="vol-icon">✍️</div>
-          <div>
-            <div class="vol-role">Technical Writer & Contributor</div>
-            <div class="vol-org">Smashing Magazine & DEV Community</div>
-            <p class="vol-desc">Writing articles on UX design, front-end development, and building digital products in the African market. Published articles have received 50,000+ views and are regularly cited in bootcamp curricula.</p>
-            <div class="vol-period">2022 — Present · 12 articles published</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main><!-- /exp-main -->
-</div><!-- /exp-layout -->
-
-<!-- CTA -->
-<div class="exp-cta">
-  <h2>Ready to work <em>together?</em></h2>
-  <p>I'm currently available for new projects, freelance engagements, and full-time opportunities. Let's build something great.</p>
-  <div class="cta-row">
-    <a href="contact.html" class="btn-primary">Get in Touch</a>
-    <a href="projects.html" class="btn-ghost">View My Work</a>
-  </div>
+  </main>
 </div>
 
+<!-- CTA -->
+<section class="exp-cta">
+  <h2>Let's build something <em>together</em>.</h2>
+  <p>Available for remote, hybrid, or relocation opportunities in product design and frontend.</p>
+  <div class="cta-row">
+    <a href="contact.html" class="btn-primary">Get in touch</a>
+    <a href="Alex-Akinjiola-CV.pdf" class="btn-ghost" download>Download CV</a>
+  </div>
+</section>
+
 <footer>
-  <div class="footer-copy">© 2026 Alex Akinjiola. All rights reserved.</div>
+  <span class="footer-copy">© 2026 Alex O. Akinjiola. All rights reserved.</span>
   <div class="footer-socials">
-     <a href="https://github.com/alexakinjiola" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/alexakinjiola/" target="_blank">LinkedIn</a>
-      <a href="https://x.com/alex_akinjiola" target="_blank"><strong>X</strong></a>
-      <a href="https://www.behance.net/alexuidesigns" target="_blank">Behance</a>
+    <a href="https://www.linkedin.com/in/alexakinjiola/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:tayoalex7@gmail.com">Email</a>
+    <a href="https://alexakinjiola-portfolio.vercel.app/" target="_blank" rel="noopener">Portfolio</a>
   </div>
 </footer>
 
-<script>
-// Cursor
-const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
-(function a(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a);})();
-document.querySelectorAll('a,button,.timeline-card,.edu-card,.cert-item,.award-card,.vol-item').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{ring.style.width='56px';ring.style.height='56px';});
-  el.addEventListener('mouseleave',()=>{ring.style.width='36px';ring.style.height='36px';});
-});
-
-function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
-window.addEventListener('scroll',()=>{document.getElementById('nav').style.padding=window.scrollY>60?'.9rem 5vw':'1.4rem 5vw';});
-
-// Sidebar scroll navigation
-function scrollTo(id){
-  const el=document.getElementById(id);
-  if(el){el.scrollIntoView({behavior:'smooth',block:'start'});}
-  document.querySelectorAll('.sidebar-link').forEach(l=>l.classList.remove('active'));
-  event.currentTarget.classList.add('active');
-}
-
-// Active sidebar on scroll
-const sections=['work','education','certifications','awards','volunteering'];
-window.addEventListener('scroll',()=>{
-  let current='';
-  sections.forEach(id=>{
-    const el=document.getElementById(id);
-    if(el&&window.scrollY>=el.offsetTop-160)current=id;
-  });
-  document.querySelectorAll('.sidebar-link').forEach((l,i)=>{
-    l.classList.toggle('active',sections[i]===current);
-    l.querySelector('.link-dot').classList.toggle('current',sections[i]===current);
-  });
-});
-
-// Scroll reveal
-const allReveal=[...document.querySelectorAll('.timeline-item,.edu-card,.cert-item,.award-card,.vol-item')];
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('visible'),i*70);});
-},{threshold:.1});
-allReveal.forEach(el=>obs.observe(el));
-</script>
-
+<script src="main.js" defer></script>
 </body>
 </html>
