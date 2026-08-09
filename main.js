@@ -72,6 +72,7 @@
     function toggle() { navLinks.classList.contains('open') ? close() : open(); }
 
     window.toggleMenu = toggle;                 /* fallback for inline onclick */
+    hamburger.removeAttribute('onclick');       /* prevent double-firing with main.js */
     hamburger.setAttribute('aria-controls', 'navLinks');
     hamburger.setAttribute('aria-expanded', 'false');
     hamburger.setAttribute('aria-label', 'Toggle navigation menu');
@@ -104,13 +105,20 @@
   function countUp(el) {
     if (el.dataset.counted) { return; }
     el.dataset.counted = '1';
-    var raw = el.textContent.trim();
-    var m = raw.match(/([\d.]+)/);
-    if (!m) { return; }
-    var target = parseFloat(m[1]);
-    var prefix = raw.slice(0, m.index);
-    var suffix = raw.slice(m.index + m[1].length);
-    var decimals = (m[1].split('.')[1] || '').length;
+    var dataVal = el.getAttribute('data-count') || el.getAttribute('data-target');
+    var prefix = '', suffix = el.getAttribute('data-suffix') || '', target, decimals = 0;
+    if (dataVal !== null && dataVal !== '') {
+      target = parseFloat(dataVal);
+      decimals = (String(dataVal).split('.')[1] || '').length;
+    } else {
+      var raw = el.textContent.trim();
+      var m = raw.match(/([\d.]+)/);
+      if (!m) { return; }
+      target = parseFloat(m[1]);
+      prefix = raw.slice(0, m.index);
+      suffix = raw.slice(m.index + m[1].length);
+      decimals = (m[1].split('.')[1] || '').length;
+    }
     if (reduceMotion) { el.textContent = prefix + target.toFixed(decimals) + suffix; return; }
     var start = performance.now(), dur = 1300;
     (function tick(now) {
@@ -346,7 +354,8 @@
   function initContactForm() {
     var form = $('#contactForm');
     if (!form) { return; }
-    var btn = $('.submit-btn', form);
+    form.removeAttribute('onsubmit');           /* replace the old simulated submit */
+    var btn = $('.submit-btn', form) || $('button[type=submit]', form);
     var successBox = $('#formSuccess');
     var errorBox = $('#formError');
 

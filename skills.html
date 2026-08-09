@@ -1,218 +1,922 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Skills — Alex O. Akinjiola</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>Alex O. Akinjiola | UI/UX & Product Designer</title>
+<link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin
+/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<!-- Custom cursor -->
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
-
+<!-- NAV -->
 <nav id="nav">
-  <a href="index.html" class="nav-logo">Alex O. Akinjiola</a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="skills.html" class="active">Skills</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="resume.html">Resume</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
+<div class="nav-logo">Alex O. Akinjiola</div>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html" >Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="skills.html" class="active">Skills</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="resume.html">Resume</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<div class="hamburger" id="hamburger">
+<span></span><span></span><span></span>
+</div>
 </nav>
-
-<!-- Gradient used by the learning rings -->
-<svg width="0" height="0" aria-hidden="true"><defs>
-  <linearGradient id="progressGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" stop-color="#c8a97e"/><stop offset="100%" stop-color="#e8d5b0"/>
-  </linearGradient>
-</defs></svg>
-
 <!-- PAGE HERO -->
-<header class="page-hero">
-  <div class="page-hero-bg"></div>
-  <div class="page-hero-grid"></div>
-  <span class="page-hero-tag">Capabilities</span>
-  <h1>What I <em>bring</em>.</h1>
-  <p>A full-stack creative — blending design thinking with frontend engineering and analytical precision to deliver experiences that are as functional as they are considered.</p>
-</header>
-
+<div class="page-hero">
+<div class="page-hero-bg"></div>
+<div class="page-hero-grid"></div>
+<div class="page-hero-tag">Capabilities</div>
+<h1 style="animation: fadeUp .7s .2s both">What I <em>Bring</em></h1>
+<p style="animation: fadeUp .7s .4s both">A full-stack creative —
+blending design thinking with engineering and analytical precision to
+deliver experiences that are as functional as they are beautiful.</p>
+</div>
 <!-- TABS -->
 <div class="tabs-wrap">
-  <div class="tabs">
-    <button class="tab-btn active" data-tab="design">Design</button>
-    <button class="tab-btn" data-tab="frontend">Frontend</button>
-    <button class="tab-btn" data-tab="data">Data</button>
-    <button class="tab-btn" data-tab="tools">Tools</button>
-  </div>
+<div class="tabs">
+<button data-tab="design" class="tab-btn active" onclick="switchTab('design',
+this)">Design</button>
+<button data-tab="development" class="tab-btn" onclick="switchTab('development',
+this)">Development</button>
+<button data-tab="data" class="tab-btn" onclick="switchTab('data', this)">Data
+Analysis</button>
+<button data-tab="strategy" class="tab-btn" onclick="switchTab('strategy',
+this)">Strategy</button>
+<button data-tab="tools" class="tab-btn" onclick="switchTab('tools', this)">Tools &
+Tech</button>
 </div>
-
+</div>
+<!-- TAB CONTENT -->
 <div class="skills-content">
-
-  <!-- DESIGN -->
-  <div class="tab-panel active" id="tab-design">
-    <div class="featured-panel">
-      <div>
-        <div class="featured-label">Core discipline</div>
-        <h2>Product &amp; UI/UX <em>Design</em></h2>
-        <p>I design with empathy and intent — from research and low-fidelity wireframes through to pixel-perfect, prototyped UI. My process starts with understanding users before touching any tool, and ends with a system a team can build on.</p>
-        <div class="proficiency-list">
-          <div class="prof-item"><div class="prof-header"><span class="prof-name">Visual &amp; UI Design</span><span class="prof-pct">95%</span></div><div class="prof-bar"><div class="prof-fill" data-width="95"></div></div></div>
-          <div class="prof-item"><div class="prof-header"><span class="prof-name">Prototyping &amp; Figma</span><span class="prof-pct">95%</span></div><div class="prof-bar"><div class="prof-fill" data-width="95"></div></div></div>
-          <div class="prof-item"><div class="prof-header"><span class="prof-name">Design Systems</span><span class="prof-pct">90%</span></div><div class="prof-bar"><div class="prof-fill" data-width="90"></div></div></div>
-          <div class="prof-item"><div class="prof-header"><span class="prof-name">User Research</span><span class="prof-pct">85%</span></div><div class="prof-bar"><div class="prof-fill" data-width="85"></div></div></div>
-        </div>
-      </div>
-      <div class="featured-visual" style="background:linear-gradient(135deg,#1a1712,#241f17)">✦</div>
-    </div>
-    <div class="skill-cards">
-      <div class="skill-card"><div class="skill-card-icon">🔍</div><h3>Research &amp; Discovery</h3><p>Interviews, usability testing and competitive analysis to uncover real needs before any pixel is drawn.</p><div class="skill-tags"><span class="skill-tag">Usability Testing</span><span class="skill-tag">Personas</span></div></div>
-      <div class="skill-card"><div class="skill-card-icon">🗂️</div><h3>Information Architecture</h3><p>Organising content and navigation so complex decisions feel simple and intuitive.</p><div class="skill-tags"><span class="skill-tag">User Flows</span><span class="skill-tag">Journey Mapping</span></div></div>
-      <div class="skill-card"><div class="skill-card-icon">✏️</div><h3>Wireframing &amp; Prototyping</h3><p>Low-fidelity sketches to validate early, then interactive high-fidelity prototypes for sign-off and handoff.</p><div class="skill-tags"><span class="skill-tag">Figma</span><span class="skill-tag">Adobe XD</span></div></div>
-      <div class="skill-card"><div class="skill-card-icon">🧩</div><h3>Design Systems</h3><p>Scalable, reusable component libraries that keep cross-functional teams shipping fast and consistent.</p><div class="skill-tags"><span class="skill-tag">Components</span><span class="skill-tag">Tokens</span></div></div>
-    </div>
-  </div>
-
-  <!-- FRONTEND -->
-  <div class="tab-panel" id="tab-frontend">
-    <div class="featured-panel">
-      <div>
-        <div class="featured-label">Engineering</div>
-        <h2>Frontend <em>Development</em></h2>
-        <p>I carry designs from Figma to working frontend, so there's no "close enough" gap between the design file and the browser — semantic HTML, modern CSS and JavaScript, responsive to the pixel.</p>
-        <div class="proficiency-list">
-          <div class="prof-item"><div class="prof-header"><span class="prof-name">HTML5 &amp; CSS3</span><span class="prof-pct">90%</span></div><div class="prof-bar"><div class="prof-fill" data-width="90"></div></div></div>
-          <div class="prof-item"><div class="prof-header"><span class="prof-name">JavaScript</span><span class="prof-pct">80%</span></div><div class="prof-bar"><div class="prof-fill" data-width="80"></div></div></div>
-          <div class="prof-item"><div class="prof-header"><span class="prof-name">Responsive / Design-to-Code</span><span class="prof-pct">90%</span></div><div class="prof-bar"><div class="prof-fill" data-width="90"></div></div></div>
-          <div class="prof-item"><div class="prof-header"><span class="prof-name">Git &amp; Version Control</span><span class="prof-pct">78%</span></div><div class="prof-bar"><div class="prof-fill" data-width="78"></div></div></div>
-        </div>
-      </div>
-      <div class="featured-visual" style="background:linear-gradient(135deg,#12161a,#171f24)">◆</div>
-    </div>
-    <div class="skill-cards">
-      <div class="skill-card"><div class="skill-card-icon">🎯</div><h3>HTML, CSS &amp; JavaScript</h3><p>Semantic markup, modern CSS (Grid, Flexbox, custom properties, animation) and JavaScript without heavy frameworks.</p><div class="skill-tags"><span class="skill-tag">CSS Grid</span><span class="skill-tag">Animations</span></div></div>
-      <div class="skill-card"><div class="skill-card-icon">📱</div><h3>Responsive Web</h3><p>Layouts, touch targets and patterns that feel at home on any device, from phones to desktop.</p><div class="skill-tags"><span class="skill-tag">Responsive</span><span class="skill-tag">Accessibility</span></div></div>
-      <div class="skill-card"><div class="skill-card-icon">🔗</div><h3>Design-to-Code</h3><p>Translating design intent directly into living interfaces — closing the handoff gap end to end.</p><div class="skill-tags"><span class="skill-tag">Figma → Code</span><span class="skill-tag">Prototypes</span></div></div>
-      <div class="skill-card"><div class="skill-card-icon">🔧</div><h3>Version Control</h3><p>Working confidently with Git and GitHub for versioned, collaborative builds.</p><div class="skill-tags"><span class="skill-tag">Git</span><span class="skill-tag">GitHub</span></div></div>
-    </div>
-  </div>
-
-  <!-- DATA -->
-  <div class="tab-panel" id="tab-data">
-    <div class="featured-panel">
-      <div>
-        <div class="featured-label">Analytics</div>
-        <h2>Data <em>Analysis</em></h2>
-        <p>I turn raw data into decisions — cleaning and modelling messy datasets, querying in SQL, and building executive-ready dashboards that tell a clear story.</p>
-        <div class="proficiency-list">
-          <div class="prof-item"><div class="prof-header"><span class="prof-name">Excel (Advanced)</span><span class="prof-pct">92%</span></div><div class="prof-bar"><div class="prof-fill" data-width="92"></div></div></div>
-          <div class="prof-item"><div class="prof-header"><span class="prof-name">Power BI</span><span class="prof-pct">85%</span></div><div class="prof-bar"><div class="prof-fill" data-width="85"></div></div></div>
-          <div class="prof-item"><div class="prof-header"><span class="prof-name">SQL</span><span class="prof-pct">75%</span></div><div class="prof-bar"><div class="prof-fill" data-width="75"></div></div></div>
-          <div class="prof-item"><div class="prof-header"><span class="prof-name">Data Cleaning &amp; Modelling</span><span class="prof-pct">85%</span></div><div class="prof-bar"><div class="prof-fill" data-width="85"></div></div></div>
-        </div>
-      </div>
-      <div class="featured-visual" style="background:linear-gradient(135deg,#121a16,#17241d)">▲</div>
-    </div>
-    <div class="skill-cards">
-      <div class="skill-card"><div class="skill-card-icon">🗃️</div><h3>SQL &amp; Querying</h3><p>Joins, aggregations and transforms to extract and shape data from relational databases.</p><div class="skill-tags"><span class="skill-tag">SQL</span><span class="skill-tag">Querying</span></div></div>
-      <div class="skill-card"><div class="skill-card-icon">📈</div><h3>Data Visualisation</h3><p>Interactive Power BI dashboards that communicate insight — from exec summaries to operational detail.</p><div class="skill-tags"><span class="skill-tag">Power BI</span><span class="skill-tag">Dashboards</span></div></div>
-      <div class="skill-card"><div class="skill-card-icon">🧹</div><h3>Data Cleaning</h3><p>Turning messy, inconsistent raw data into clean, analysis-ready datasets.</p><div class="skill-tags"><span class="skill-tag">Cleaning</span><span class="skill-tag">Modelling</span></div></div>
-      <div class="skill-card"><div class="skill-card-icon">📋</div><h3>Advanced Excel</h3><p>Modelling, pivot tables, lookups and Power Query for repeatable, automated reporting.</p><div class="skill-tags"><span class="skill-tag">Excel</span><span class="skill-tag">Power Query</span></div></div>
-    </div>
-  </div>
-
-  <!-- TOOLS -->
-  <div class="tab-panel" id="tab-tools">
-    <div class="featured-panel">
-      <div>
-        <div class="featured-label">Toolkit</div>
-        <h2>Tools I <em>reach for</em></h2>
-        <p>The stack I use most across design, frontend and data — plus the collaboration tools that keep teams aligned. I pick up new tools quickly.</p>
-      </div>
-      <div class="featured-visual" style="background:linear-gradient(135deg,#1a1622,#241c2e)">🧰</div>
-    </div>
-    <div class="tools-section">
-      <div class="tools-section-title">Design</div>
-      <div class="tools-grid">
-        <div class="tool-item"><div class="tool-icon">🎨</div>Figma</div>
-        <div class="tool-item"><div class="tool-icon">📐</div>Adobe XD</div>
-        <div class="tool-item"><div class="tool-icon">🖼️</div>Adobe Creative Suite</div>
-      </div>
-    </div>
-    <div class="tools-section">
-      <div class="tools-section-title">Frontend</div>
-      <div class="tools-grid">
-        <div class="tool-item"><div class="tool-icon">🧩</div>VS Code</div>
-        <div class="tool-item"><div class="tool-icon">🔧</div>Git / GitHub</div>
-        <div class="tool-item"><div class="tool-icon">🌐</div>HTML · CSS · JS</div>
-      </div>
-    </div>
-    <div class="tools-section">
-      <div class="tools-section-title">Data</div>
-      <div class="tools-grid">
-        <div class="tool-item"><div class="tool-icon">📊</div>Power BI</div>
-        <div class="tool-item"><div class="tool-icon">🗃️</div>SQL</div>
-        <div class="tool-item"><div class="tool-icon">📋</div>Excel</div>
-      </div>
-    </div>
-    <div class="tools-section">
-      <div class="tools-section-title">Collaboration</div>
-      <div class="tools-grid">
-        <div class="tool-item"><div class="tool-icon">📌</div>Trello</div>
-        <div class="tool-item"><div class="tool-icon">✅</div>ClickUp</div>
-        <div class="tool-item"><div class="tool-icon">📈</div>Microsoft Project</div>
-      </div>
-    </div>
-  </div>
-
+<!-- DESIGN TAB -->
+<div class="tab-panel active" id="tab-design">
+<div class="featured-panel" id="designFeatured">
+<div>
+<div class="featured-label">Core Discipline</div>
+<h2>UI/UX <em>Design</em></h2>
+<p>I design with empathy and intent. From early research
+sessions and low-fidelity wireframes through to pixel-perfect
+prototypes, I focus on clarity, usability, and moments of delight that
+make products truly memorable.</p>
+<p>My design process always starts with understanding users —
+their needs, frustrations, and goals — before touching any tool.</p>
+<div class="proficiency-list" id="designProf">
+<div class="prof-item">
+<div class="prof-header"><span class="prof-name">Visual
+Design</span><span class="prof-pct">95%</span></div>
+<div class="prof-bar"><div class="prof-fill"
+data-width="95"></div></div>
 </div>
-
+<div class="prof-item">
+<div class="prof-header"><span
+class="prof-name">Prototyping & Figma</span><span
+class="prof-pct">98%</span></div>
+<div class="prof-bar"><div class="prof-fill"
+data-width="98"></div></div>
+</div>
+<div class="prof-item">
+<div class="prof-header"><span class="prof-name">User
+Research</span><span class="prof-pct">85%</span></div>
+<div class="prof-bar"><div class="prof-fill"
+data-width="85"></div></div>
+</div>
+<div class="prof-item">
+<div class="prof-header"><span class="prof-name">Design
+Systems</span><span class="prof-pct">88%</span></div>
+<div class="prof-bar"><div class="prof-fill"
+data-width="88"></div></div>
+</div>
+</div>
+</div>
+<div class="featured-visual"><img
+src="https://i.pinimg.com/1200x/0f/91/28/0f9128e7e2b9476346e65889d25450
+ab.jpg" alt="Design Illustration" width="100%"> </div>
+</div>
+<div class="skill-cards">
+<div class="skill-card">
+🔍
+<div class="skill-card-icon"> </div>
+<h3>User Research & Discovery</h3>
+<p>Conducting interviews, surveys, usability testing, and
+competitive analysis to uncover real user needs before any pixel is
+drawn.</p>
+<div class="skill-tags"><span class="skill-tag">User
+Interviews</span><span class="skill-tag">Usability Testing</span><span
+class="skill-tag">Competitive Analysis</span><span
+class="skill-tag">Personas</span></div>
+</div>
+<div class="skill-card">
+🗂
+<div class="skill-card-icon"> </div>
+<h3>Information Architecture</h3>
+<p>Organising content and navigation in ways that feel
+intuitive, reducing cognitive load and guiding users naturally through
+flows.</p>
+<div class="skill-tags"><span
+class="skill-tag">Sitemaps</span><span class="skill-tag">Card
+Sorting</span><span class="skill-tag">User Flows</span><span
+class="skill-tag">Journey Maps</span></div>
+</div>
+<div class="skill-card">
+✏
+<div class="skill-card-icon"> </div>
+<h3>Wireframing & Prototyping</h3>
+<p>Rapid low-fidelity sketches to validate concepts early, then
+high-fidelity interactive prototypes for stakeholder sign-off and dev
+handoff.</p>
+<div class="skill-tags"><span
+class="skill-tag">Figma</span><span class="skill-tag">Adobe
+XD</span><span class="skill-tag">Miro</span><span
+class="skill-tag">ProtoPie</span></div>
+</div>
+<div class="skill-card">
+🎨
+<div class="skill-card-icon"> </div>
+<h3>Visual & Brand Design</h3>
+<p>Crafting cohesive visual identities — typography, colour,
+iconography, and illustration — that communicate brand personality with
+precision.</p>
+<div class="skill-tags"><span
+class="skill-tag">Typography</span><span class="skill-tag">Color
+Theory</span><span class="skill-tag">Iconography</span><span
+class="skill-tag">Illustration</span></div>
+</div>
+<div class="skill-card">
+🧩
+<div class="skill-card-icon"> </div>
+<h3>Design Systems</h3>
+<p>Building scalable, token-based design systems that keep
+teams aligned and reduce design-dev friction across large product
+surfaces.</p>
+<div class="skill-tags"><span class="skill-tag">Component
+Libraries</span><span class="skill-tag">Tokens</span><span
+class="skill-tag">Storybook</span><span
+class="skill-tag">Documentation</span></div>
+</div>
+<div class="skill-card">
+📱
+<div class="skill-card-icon"> </div>
+<h3>Desktop & Mobile Design</h3>
+<p>Designing for web and mobile — responsive layouts, touch
+targets, and native web and mobile patterns that feel at home on any
+device.</p>
+<div class="skill-tags"><span class="skill-tag">iOS</span><span
+class="skill-tag">Android</span><span class="skill-tag">Web
+Design</span><span class="skill-tag">Material Design</span><span
+class="skill-tag">Responsive</span><span
+class="skill-tag">Accessibility</span></div>
+</div>
+</div>
+</div>
+<!-- DEVELOPMENT TAB -->
+<div class="tab-panel" id="tab-development">
+<div class="featured-panel" id="devFeatured">
+<div>
+<div class="featured-label">Engineering</div>
+<h2>Front-End <em>Development</em></h2>
+<p>I write production-grade code. My development work
+translates design intent directly into living, breathing interfaces —
+no "close enough" compromises between the design file and the
+browser.</p>
+<p>I'm comfortable across the full front-end stack, with strong
+back-end knowledge to integrate APIs.</p>
+<div class="proficiency-list" id="devProf">
+<div class="prof-item">
+<div class="prof-header"><span
+class="prof-name">React</span><span class="prof-pct">40%</span></div>
+<div class="prof-bar"><div class="prof-fill"
+data-width="40"></div></div>
+</div>
+<div class="prof-item">
+<div class="prof-header"><span class="prof-name">HTML / CSS
+/ JS</span><span class="prof-pct">80%</span></div>
+<div class="prof-bar"><div class="prof-fill"
+data-width="80"></div></div>
+</div>
+<div class="prof-item">
+<div class="prof-header"><span class="prof-name">APIs
+Integration</span><span class="prof-pct">78%</span></div>
+<div class="prof-bar"><div class="prof-fill"
+data-width="78"></div></div>
+</div>
+</div>
+</div>
+<div class="featured-visual"> <img
+src="https://i.pinimg.com/736x/3b/9c/3f/3b9c3f2d285ae3842bc52d2b0ba39a4
+5.jpg" alt="Front-End Development" width="100%"></div>
+</div>
+<div class="skill-cards">
+<div class="skill-card">
+⚛
+<div class="skill-card-icon"> </div>
+<h3>React Ecosystem</h3>
+<p>Building component-driven UIs with React, including state
+management, routing, server components, and performance
+optimisation.</p>
+<div class="skill-tags"><span
+class="skill-tag">React</span><span
+class="skill-tag">Next.js</span><span class="skill-tag">React
+Query</span></div>
+</div>
+<div class="skill-card">
+🎯
+<div class="skill-card-icon"> </div>
+<h3>HTML, CSS & JavaScript</h3>
+<p>Deep command of semantic HTML, modern CSS (Grid, Flexbox,
+Custom Properties, animations) and JavaScript without relying on heavy
+frameworks.</p>
+<div class="skill-tags"><span class="skill-tag">CSS
+Grid</span><span class="skill-tag">Animations</span><span
+class="skill-tag">HTML</span><span class="skill-tag">GSAP</span></div>
+</div>
+<div class="skill-card">
+🗄
+<div class="skill-card-icon"> </div>
+<h3>Backend & Databases</h3>
+<p>Node.js APIs, serverless functions, and database design with
+Supabase, and PostgreSQL for full-stack product delivery.</p>
+<div class="skill-tags"><span
+class="skill-tag">Supabase</span><span
+class="skill-tag">PostgreSQL</span></div>
+</div>
+<div class="skill-card">
+🚀
+<div class="skill-card-icon"> </div>
+<h3>Deployment</h3>
+<p>Deploying to Vercel, Netlify, and cloud platforms with
+proper environment management.</p>
+<div class="skill-tags"><span
+class="skill-tag">Vercel</span><span
+class="skill-tag">GitHub</span></div>
+</div>
+</div>
+</div>
+<!-- DATA ANALYSIS TAB -->
+<div class="tab-panel" id="tab-data">
+<div class="featured-panel" id="dataFeatured">
+<div>
+<div class="featured-label">Analytics</div>
+<h2>Data <em>Analysis</em></h2>
+<p>I turn raw data into actionable insights. My analytical work
+bridges the gap between spreadsheets and strategy — uncovering
+patterns, building dashboards, and telling clear stories that drive
+real decisions.</p>
+<p>I'm comfortable across the full data stack, from wrangling
+messy datasets to building automated pipelines and presenting
+executive-ready visualisations.</p>
+<div class="proficiency-list" id="dataProf">
+<div class="prof-item">
+<div class="prof-header"><span class="prof-name">Data
+Cleaning</span><span class="prof-pct">88%</span></div>
+<div class="prof-bar"><div class="prof-fill"
+data-width="88"></div></div>
+</div>
+<div class="prof-item">
+<div class="prof-header"><span class="prof-name">SQL &
+Database Querying</span><span class="prof-pct">70%</span></div>
+<div class="prof-bar"><div class="prof-fill"
+data-width="70"></div></div>
+</div>
+<div class="prof-item">
+<div class="prof-header"><span class="prof-name">Data
+Visualisation (Power BI / Tableau)</span><span
+class="prof-pct">92%</span></div>
+<div class="prof-bar"><div class="prof-fill"
+data-width="92"></div></div>
+</div>
+<div class="prof-item">
+<div class="prof-header"><span class="prof-name">Excel &
+Google Sheets (Advanced)</span><span class="prof-pct">95%</span></div>
+<div class="prof-bar"><div class="prof-fill"
+data-width="95"></div></div>
+</div>
+</div>
+</div>
+<div class="featured-visual"> <img
+src="https://i1-e.pinimg.com/1200x/18/01/34/18013464a304457d7d7aee22fdf
+6c89a.jpg" alt="Data Analysis" width="100%"></div>
+</div>
+<div class="skill-cards">
+<div class="skill-card">
+🗃
+<div class="skill-card-icon"> </div>
+<h3>SQL & Database Analysis</h3>
+<p>Writing complex queries — joins, window functions, CTEs, and
+subqueries — to extract and transform data from relational databases at
+scale.</p>
+<div class="skill-tags"><span
+class="skill-tag">PostgreSQL</span><span
+class="skill-tag">MySQL</span></div>
+</div>
+<div class="skill-card">
+📈
+<div class="skill-card-icon"> </div>
+<h3>Data Visualisation</h3>
+<p>Building interactive dashboards and charts that communicate
+insights clearly — from executive summaries to granular operational
+reports.</p>
+<div class="skill-tags"><span class="skill-tag">Power
+BI</span><span class="skill-tag">Tableau</span><span
+class="skill-tag">Google Data Studio</span></div>
+</div>
+<div class="skill-card">
+🧹
+<div class="skill-card-icon"> </div>
+<h3>Data Cleaning & Wrangling</h3>
+<p>Transforming messy, inconsistent raw data into clean,
+analysis-ready datasets — handling missing values, duplicates,
+outliers, and format inconsistencies.</p>
+<div class="skill-tags"><span
+class="skill-tag">Pandas</span><span class="skill-tag">Regular
+Expressions</span></div>
+</div>
+<div class="skill-card">
+📋
+<div class="skill-card-icon"> </div>
+<h3>Excel & Spreadsheet Modelling</h3>
+<p>Advanced Excel for financial modelling, pivot tables,
+VLOOKUP / INDEX-MATCH, dynamic charts, and automated reporting with
+macros and Power Query.</p>
+<div class="skill-tags"><span class="skill-tag">Advanced
+Excel</span><span class="skill-tag">Power Query</span><span
+class="skill-tag">Pivot Tables</span></div>
+</div>
+</div>
+</div>
+<!-- STRATEGY TAB -->
+<div class="tab-panel" id="tab-strategy">
+<div class="featured-panel" id="stratFeatured">
+<div>
+<div class="featured-label">Product Thinking</div>
+<h2>Strategy & <em>Leadership</em></h2>
+<p>Great products don't happen by accident. I help teams move
+from fuzzy ideas to clear roadmaps — defining success metrics, aligning
+stakeholders, and making prioritisation decisions grounded in data and
+user insight.</p>
+<p>Having shipped products across multiple industries, I bring
+a pragmatic, outcome-oriented perspective to every engagement.</p>
+<div class="proficiency-list">
+<div class="prof-item">
+<div class="prof-header"><span class="prof-name">Product
+Roadmapping</span><span class="prof-pct">88%</span></div>
+<div class="prof-bar"><div class="prof-fill"
+data-width="88"></div></div>
+</div>
+<div class="prof-item">
+<div class="prof-header"><span
+class="prof-name">Stakeholder Communication</span><span
+class="prof-pct">92%</span></div>
+<div class="prof-bar"><div class="prof-fill"
+data-width="92"></div></div>
+</div>
+<div class="prof-item">
+<div class="prof-header"><span
+class="prof-name">Data-Driven Decision Making</span><span
+class="prof-pct">82%</span></div>
+<div class="prof-bar"><div class="prof-fill"
+data-width="82"></div></div>
+</div>
+<div class="prof-item">
+<div class="prof-header"><span
+class="prof-name">Cross-functional Facilitation</span><span
+class="prof-pct">86%</span></div>
+<div class="prof-bar"><div class="prof-fill"
+data-width="86"></div></div>
+</div>
+</div>
+</div>
+<div class="featured-visual"><img
+src="https://i1-e.pinimg.com/1200x/f6/a9/1c/f6a91c3729a11909ffc917d80e1
+a966b.jpg" alt="product strategy" width="100%"></div>
+</div>
+<div class="skill-cards">
+<div class="skill-card">
+🗺
+<div class="skill-card-icon"> </div>
+<h3>Product Roadmapping</h3>
+<p>Translating business goals and user needs into prioritised,
+time-bound roadmaps using frameworks like RICE, MoSCoW, and OKRs.</p>
+<div class="skill-tags"><span
+class="skill-tag">Linear</span></div>
+</div>
+<div class="skill-card">
+📊
+<div class="skill-card-icon"> </div>
+<h3>Analytics & Metrics</h3>
+<p>Setting up dashboards, defining KPIs, interpreting
+behavioural analytics, and running A/B tests to guide product decisions
+with confidence.</p>
+<div class="skill-tags"><span class="skill-tag">Google
+Analytics</span></div>
+</div>
+<div class="skill-card">
+🤝
+<div class="skill-card-icon"> </div>
+<h3>Stakeholder Management</h3>
+<p>Facilitating workshops, presenting to executives, and
+aligning cross-functional teams — engineering, marketing, and business
+— around shared goals.</p>
+<div class="skill-tags"><span
+class="skill-tag">Workshops</span><span
+class="skill-tag">Presentations</span><span
+class="skill-tag">Negotiation</span><span
+class="skill-tag">Documentation</span></div>
+</div>
+<div class="skill-card">
+⚡
+<div class="skill-card-icon"> </div>
+<h3>Agile & Scrum Methods</h3>
+<p>Running sprints, retrospectives, and rapid iteration cycles
+that keep teams shipping and learning without burning out.</p>
+<div class="skill-tags"><span
+class="skill-tag">Scrum</span><span class="skill-tag">Jira</span><span
+class="skill-tag">Notion</span></div>
+</div>
+<div class="skill-card">
+💡
+<div class="skill-card-icon"> </div>
+<h3>Market Research</h3>
+<p>Competitive benchmarking, customer segmentation, and
+opportunity sizing to identify where to play and how to win.</p>
+<div class="skill-tags"><span class="skill-tag">Opportunity
+Sizing</span></div>
+</div>
+<div class="skill-card">
+📝
+<div class="skill-card-icon"> </div>
+<h3>Content & Communication</h3>
+<p>Writing product specs, design briefs, case studies, and
+marketing copy that moves people and drives action.</p>
+<div class="skill-tags"><span
+class="skill-tag">Copywriting</span><span
+class="skill-tag">PRDs</span><span class="skill-tag">Case
+Studies</span></div>
+</div>
+</div>
+</div>
+<!-- TOOLS TAB -->
+<div class="tab-panel" id="tab-tools">
+<div class="featured-panel" id="toolsFeatured">
+<div>
+<div class="featured-label">Toolkit</div>
+<h2>Tools I <em>Love</em></h2>
+<p>I believe in using the right tool for the job. Below is the
+stack I reach for most often — tried, tested, and trusted across dozens
+of projects.</p>
+<p>I pick up new tools quickly. If your team uses something not
+listed here, I'm confident I'll be up to speed within days.</p>
+</div>
+<div class="featured-visual"><img
+src="https://i1-e.pinimg.com/1200x/4c/0d/e8/4c0de87aaf12417892672bad63c
+b86a9.jpg" alt="tools" width="100%"></div>
+</div>
+<div class="tools-section">
+<div class="tools-section-title">Design Tools</div>
+<div class="tools-grid">
+<div class="tool-item"><div class="tool-icon"><svg role="img"
+viewBox="0 0 24 24"
+xmlns="http://www.w3.org/2000/svg"><title>Figma</title><path d="M15.852
+8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49
+4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355
+3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476
+0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665
+0-3.019 1.355-3.019 3.019s1.354 3.02 3.019
+3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476
+0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148
+8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019
+3.019h3.117V8.981H8.148zM8.172 24c-2.489
+0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047
+4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665
+1.365 3.019 3.044 3.019 1.705 0 3.093-1.376
+3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476
+0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014
+4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019
+3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355
+3.019-3.019s-1.355-3.019-3.019-3.019h-.098z"/></svg></div>Figma</div>
+📐
+<div class="tool-item"><div class="tool-icon"> </div>Adobe
+XD</div>
+<div class="tool-item"><div
+🖼
+class="tool-icon"> </div>Photoshop</div>
+<div class="tool-item"><div class="tool-icon"><svg role="img"
+viewBox="0 0 24 24"
+xmlns="http://www.w3.org/2000/svg"><title>Behance</title><path
+d="M16.969 16.927a2.561 2.561 0 0 0 1.901.677 2.501 2.501 0 0 0
+1.531-.475c.362-.235.636-.584.779-.99h2.585a5.091 5.091 0 0 1-1.9 2.896
+5.292 5.292 0 0 1-3.091.88 5.839 5.839 0 0 1-2.284-.433 4.871 4.871 0 0
+1-1.723-1.211 5.657 5.657 0 0 1-1.08-1.874 7.057 7.057 0 0
+1-.383-2.393c-.005-.8.129-1.595.396-2.349a5.313 5.313 0 0 1 5.088-3.604
+4.87 4.87 0 0 1 2.376.563c.661.362 1.231.87 1.668 1.485a6.2 6.2 0 0 1
+.943 2.133c.194.821.263 1.666.205 2.508h-7.699c-.063.79.184 1.574.688
+2.187ZM6.947 4.084a8.065 8.065 0 0 1 1.928.198 4.29 4.29 0 0 1
+1.49.638c.418.303.748.711.958 1.182.241.579.357 1.203.341 1.83a3.506
+3.506 0 0 1-.506 1.961 3.726 3.726 0 0 1-1.503 1.287 3.588 3.588 0 0 1
+2.027 1.437c.464.747.697 1.615.67 2.494a4.593 4.593 0 0 1-.423 2.032
+3.945 3.945 0 0 1-1.163 1.413 5.114 5.114 0 0 1-1.683.807 7.135 7.135 0
+0 1-1.928.259H0V4.084h6.947Zm-.235 12.9c.308.004.616-.029.916-.099a2.18
+2.18 0 0 0
+.766-.332c.228-.158.411-.371.534-.619.142-.317.208-.663.191-1.009a2.08
+2.08 0 0 0-.642-1.715 2.618 2.618 0 0
+0-1.696-.505h-3.54v4.279h3.471Zm13.635-5.967a2.13 2.13 0 0 0-1.654-.619
+2.336 2.336 0 0 0-1.163.259 2.474 2.474 0 0 0-.738.62 2.359 2.359 0 0
+0-.396.792c-.074.239-.12.485-.137.734h4.769a3.239 3.239 0 0
+0-.679-1.785l-.002-.001Zm-13.813-.648a2.254 2.254 0 0 0
+1.423-.433c.399-.355.607-.88.56-1.413a1.916 1.916 0 0 0-.178-.891 1.298
+1.298 0 0 0-.495-.533 1.851 1.851 0 0 0-.711-.274 3.966 3.966 0 0
+0-.835-.073H3.241v3.631h3.293v-.014ZM21.62
+5.122h-5.976v1.527h5.976V5.122Z"/></svg></div>Behance</div>
+</div>
+</div>
+<div class="tools-section" style="margin-top:3rem">
+<div class="tools-section-title">Development Tools</div>
+<div class="tools-grid">
+<div class="tool-item"><div
+⚛
+class="tool-icon"> </div>React</div>
+<div class="tool-item"><div class="tool-icon">▲</div>Visual
+Studio Code</div>
+<div class="tool-item"><div class="tool-icon"><svg role="img"
+viewBox="0 0 24 24"
+xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12
+.297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205
+11.385.6.113.82-.258.82-.577
+0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07
+3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838
+1.236 1.838 1.236 1.07 1.835 2.809 1.305
+3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93
+0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322
+3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552
+3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23
+3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015
+2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24
+12.297c0-6.627-5.373-12-12-12"/></svg></div>GitHub</div>
+<div class="tool-item"><div
+🗄
+class="tool-icon"> </div>Supabase</div>
+<div class="tool-item"><div
+🚀
+class="tool-icon"> </div>Vercel</div>
+</div>
+</div>
+<div class="tools-section" style="margin-top:3rem">
+<div class="tools-section-title">Data Analysis Tools</div>
+<div class="tools-grid">
+<div class="tool-item"><div class="tool-icon"><svg
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000
+500"><defs><linearGradient id="linear-gradient" x1="800.29" y1="85.09"
+x2="921.64" y2="418.5" gradientUnits="userSpaceOnUse"><stop
+offset="0.01" stop-color="#e4a910"/><stop offset="0.32"
+stop-color="#dfa311"/><stop offset="0.63" stop-color="#d08c0c"/><stop
+offset="1" stop-color="#c17f06"/></linearGradient><linearGradient
+id="linear-gradient-2" x1="836.16" y1="454.56" x2="836.16" y2="147.27"
+gradientUnits="userSpaceOnUse"><stop offset="0"
+stop-color="#c17f06"/><stop offset="0.22" stop-color="#c17f06"
+stop-opacity="0.99"/><stop offset="0.37" stop-color="#c28006"
+stop-opacity="0.94"/><stop offset="0.5" stop-color="#c38107"
+stop-opacity="0.86"/><stop offset="0.61" stop-color="#c58207"
+stop-opacity="0.75"/><stop offset="0.72" stop-color="#c78408"
+stop-opacity="0.61"/><stop offset="0.82" stop-color="#ca8609"
+stop-opacity="0.43"/><stop offset="0.91" stop-color="#cd890b"
+stop-opacity="0.22"/><stop offset="1" stop-color="#d08c0c"
+stop-opacity="0"/></linearGradient><linearGradient
+id="linear-gradient-3" x1="730.33" y1="145.9" x2="820.89" y2="461.7"
+gradientUnits="userSpaceOnUse"><stop offset="0"
+stop-color="#f6d54e"/><stop offset="0.31" stop-color="#eec634"/><stop
+offset="0.57" stop-color="#e9b822"/><stop offset="1"
+stop-color="#e9b21c"/></linearGradient><linearGradient
+id="linear-gradient-4" x1="739.57" y1="454.56" x2="739.57" y2="248.96"
+gradientUnits="userSpaceOnUse"><stop offset="0"
+stop-color="#f7db5e"/><stop offset="0.2" stop-color="#f7da5d"
+stop-opacity="0.99"/><stop offset="0.34" stop-color="#f5d75a"
+stop-opacity="0.95"/><stop offset="0.45" stop-color="#f3d255"
+stop-opacity="0.89"/><stop offset="0.56" stop-color="#efcc4e"
+stop-opacity="0.8"/><stop offset="0.66" stop-color="#ebc345"
+stop-opacity="0.69"/><stop offset="0.75" stop-color="#e6b839"
+stop-opacity="0.55"/><stop offset="0.84" stop-color="#dfab2c"
+stop-opacity="0.39"/><stop offset="0.92" stop-color="#d89c1d"
+stop-opacity="0.21"/><stop offset="1" stop-color="#d08c0c"
+stop-opacity="0"/></linearGradient><linearGradient
+id="linear-gradient-5" x1="661.04" y1="243.09" x2="724.64" y2="464.92"
+gradientUnits="userSpaceOnUse"><stop offset="0"
+stop-color="#f8e386"/><stop offset="0.31" stop-color="#f6dc65"/><stop
+offset="0.57" stop-color="#f7db5e"/><stop offset="1"
+stop-color="#fad859"/></linearGradient></defs><g
+style="isolation:isolate"><g id="Layer_1" data-name="Layer 1"><path
+d="M911.06,454.56H795.72V65.19a19.75,19.75,0,0,1,19.75-19.75h95.59a19.7
+5,19.75,0,0,1,19.75,19.75V434.81A19.75,19.75,0,0,1,911.06,454.56Z"
+style="fill:url(#linear-gradient)"/><path
+d="M841.44,147.27H811.12V454.56h50.07V167A19.74,19.74,0,0,0,841.44,147.
+27Z"
+style="opacity:0.15;mix-blend-mode:multiply;fill:url(#linear-gradient-2
+)"/><path
+d="M845.79,454.56H708.63V167a19.74,19.74,0,0,1,19.75-19.74h97.67A19.74,
+19.74,0,0,1,845.79,167Z" style="fill:url(#linear-gradient-3)"/><path
+d="M745.9,249H713.5v205.6h52.14V268.71A19.74,19.74,0,0,0,745.9,249Z"
+style="opacity:0.15;mix-blend-mode:multiply;fill:url(#linear-gradient-4
+)"/><path
+d="M760.78,454.56H643.36a19.74,19.74,0,0,1-19.74-19.75V268.71A19.74,19.
+74,0,0,1,643.36,249H741a19.75,19.75,0,0,1,19.75,19.75Z"
+style="fill:url(#linear-gradient-5)"/><path
+d="M72.22,301.32a3.18,3.18,0,0,1-3-3.27V206.54c0-3.25,1.11-5.11,3-5.11H
+95.42c12.36,0,23.45,7.42,27.59,18.47a30.12,30.12,0,0,1-3.88,27.62c-5.46
+,7.87-13.89,12.57-22.56,12.57l-21.16.29v37.9a3.11,3.11,0,0,1-3.18,3Zm3.
+19-47.17H96.57c11.59-.14,22.14-11.75,22.14-24.36a22.16,22.16,0,0,0-22.1
+4-22.14H75.41Z" style="fill:#ca7f0d"/><path
+d="M168.36,303.4c-19.64,0-35.62-16.89-35.62-37.65s16-37.64,35.62-37.64S
+204,245,204,265.75,188,303.4,168.36,303.4Zm0-68.82c-16,0-29,14-29,31.17
+s13,31,29,31,29-13.91,29-31S184.35,234.58,168.36,234.58Z"
+style="fill:#ca7f0d"/><path
+d="M279,303.4a3.18,3.18,0,0,1-2.55-2l0-.11-.24-.23-18-58.77L240.26,301s
+0,0,0,0a.66.66,0,0,0-.17.45,3.3,3.3,0,0,1-2.85,1.92,4.38,4.38,0,0,1-1.2
+7-.29.54.54,0,0,1-.45-.21,2.62,2.62,0,0,1-1.47-1.57l-19.69-68A3.38,3.38
+,0,0,1,216,229a3.27,3.27,0,0,1,1.22-.24,3.16,3.16,0,0,1,3,2l16.81,61.32
+,18-58.7a3.61,3.61,0,0,1,6.52,0L279.48,292l19.3-61.24a3.42,3.42,0,0,1,3
+.11-2A2.66,2.66,0,0,1,303,229a3.32,3.32,0,0,1,1.81,4.28L282.67,301a3.91
+,3.91,0,0,1-1.26,1.67,2.86,2.86,0,0,1-1.61.69Z"
+style="fill:#ca7f0d"/><path
+d="M345.88,303.4c-19.22,0-32.64-15.42-32.64-37.49,0-22.61,12.42-37.65,3
+1.94-37.8,25.46-.21,28.68,17.74,28.68,35v.59a3.1,3.1,0,0,1-3.31,3h-50.7
+l0,.43c.85,18.23,10.08,28.74,26,29.6.57,0,1.12.05,1.68.05a27.18,27.18,0
+,0,0,17-5.63c1.12-1.18,2-1.72,2.93-1.72A3.08,3.08,0,0,1,369,290a3.52,3.
+52,0,0,1,1.09,4.72C366.93,298.88,358.89,303.4,345.88,303.4Zm-.46-68.67c
+-13.24,0-23.44,7.22-25.08,25l-.09.49h47.34C367.59,249.18,366.29,234.73,
+345.42,234.73Z" style="fill:#ca7f0d"/><path
+d="M395.84,303.4a3.33,3.33,0,0,1-3.47-3.31V231.58a3.33,3.33,0,0,1,3.47-
+3.32,3.25,3.25,0,0,1,3.16,3.32v8.47l.79.18a26.68,26.68,0,0,1,21.93-11.4
+1c1.87,0,4.51.84,4.51,2.7s-.66,3.22-4,3.23c-9.73.06-13.7,2.81-16.54,5.7
+8-6.55,6.85-6.73,17.74-6.73,17.85v41.71A3.24,3.24,0,0,1,395.84,303.4Z"
+style="fill:#ca7f0d"/><path
+d="M479.1,301.32a3,3,0,0,1-3.08-3.08V203.32a3.12,3.12,0,0,1,3.08-3.08h2
+4.79A25,25,0,0,1,528.8,225.3c0,7.59-6,17-13.7,21.52l-.78.46.86.3c11.5,3
+.93,17.58,12.59,17.58,25a28.73,28.73,0,0,1-28.7,28.7Zm3.22-6.3h21.74a22
+.35,22.35,0,0,0,22.4-22.39c-.14-11.79-9.56-20.33-22.4-20.33H482.32Zm0-4
+9.17h19.49c10.25,0,20.69-10.37,20.69-20.55a18.7,18.7,0,0,0-18.61-18.75H
+482.32Z" style="fill:#ca7f0d"/><path
+d="M558.49,301.32a3.12,3.12,0,0,1-3.08-3.08V203.32a3.15,3.15,0,0,1,6.3,
+0v94.92A3.15,3.15,0,0,1,558.49,301.32Z"
+style="fill:#ca7f0d"/></g></g></svg></div>Power BI</div>
+<div class="tool-item"><div
+class="tool-icon">▲</div>PostgreSQL</div>
+<div class="tool-item"><div class="tool-icon"><svg
+xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+height="100" viewBox="0 0 50 50">
+<path d="M 28.8125 0.03125 L 0.8125 5.34375 C 0.339844 5.433594 0
+5.863281 0 6.34375 L 0 43.65625 C 0 44.136719 0.339844 44.566406 0.8125
+44.65625 L 28.8125 49.96875 C 28.875 49.980469 28.9375 50 29 50 C
+29.230469 50 29.445313 49.929688 29.625 49.78125 C 29.855469 49.589844
+30 49.296875 30 49 L 30 1 C 30 0.703125 29.855469 0.410156 29.625
+0.21875 C 29.394531 0.0273438 29.105469 -0.0234375 28.8125 0.03125 Z M
+32 6 L 32 13 L 34 13 L 34 15 L 32 15 L 32 20 L 34 20 L 34 22 L 32 22 L
+32 27 L 34 27 L 34 29 L 32 29 L 32 35 L 34 35 L 34 37 L 32 37 L 32 44 L
+47 44 C 48.101563 44 49 43.101563 49 42 L 49 8 C 49 6.898438 48.101563
+6 47 6 Z M 36 13 L 44 13 L 44 15 L 36 15 Z M 6.6875 15.6875 L 11.8125
+15.6875 L 14.5 21.28125 C 14.710938 21.722656 14.898438 22.265625
+15.0625 22.875 L 15.09375 22.875 C 15.199219 22.511719 15.402344
+21.941406 15.6875 21.21875 L 18.65625 15.6875 L 23.34375 15.6875 L
+17.75 24.9375 L 23.5 34.375 L 18.53125 34.375 L 15.28125 28.28125 C
+15.160156 28.054688 15.035156 27.636719 14.90625 27.03125 L 14.875
+27.03125 C 14.8125 27.316406 14.664063 27.761719 14.4375 28.34375 L
+11.1875 34.375 L 6.1875 34.375 L 12.15625 25.03125 Z M 36 20 L 44 20 L
+44 22 L 36 22 Z M 36 27 L 44 27 L 44 29 L 36 29 Z M 36 35 L 44 35 L 44
+37 L 36 37 Z"></path>
+</svg></div>Excel</div>
+</div>
+</div>
+<div class="tools-section" style="margin-top:3rem">
+<div class="tools-section-title">Productivity &
+Collaboration</div>
+<div class="tools-grid">
+<div class="tool-item"><div class="tool-icon"><svg role="img"
+viewBox="0 0 24 24"
+xmlns="http://www.w3.org/2000/svg"><title>Claude</title><path
+d="m4.7144 15.9555
+4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3
+375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.68
+6.0608 1.5179.1032 2.2767.1578 1.6514.0972
+2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973
+9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6
+557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893
+1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2
+.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1
+335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543
+3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947
+.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.
+4433-.2853 1.8517-.5586 2.9021-.3643
+1.9429h.2125l.2429-.2429.9835-1.3053
+1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34
+1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893
+1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794
+1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.436
+4.8136-.0425.0304.0486.0607
+1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.
+2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929
+1.0686 2.0035 1.8092 2.5075
+2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.
+621h-.1275v.17l.4432.6496 2.3436 3.5214.1214
+1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38
+17.959l-1.1414-1.9428-.1397.079-.674
+7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1
+.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328
+1.9672-2.1796 2.9446-1.7243
+1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357
+1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385
+4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429
+1.9064-1.3114Z"/></svg></div>Claude AI</div>
+<div class="tool-item"><div class="tool-icon"><svg
+xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0
+0 128 128" fill="none"><rect width="128" height="128" rx="32"
+fill="white"/><path d="M99.9616 56.4829C100.671 54.3804 101.032 52.1791
+101.033 49.9633C101.032 46.2968 100.043 42.6964 98.1649 39.5324C94.392
+33.0524 87.3931 29.0517 79.8185 29.0517C78.3262 29.0517 76.8381 29.2073
+75.3789 29.5157C73.4163 27.3339 71.0072 25.5873 68.3105 24.3913C65.6139
+23.1952 62.6909 22.5767 59.7343 22.5767H59.6015L59.5517 22.5769C50.3774
+22.5769 42.2414 28.418 39.4212 37.0291C36.5018 37.619 33.7439 38.8175
+31.332 40.5443C28.9201 42.2711 26.9099 44.4863 25.436 47.0418C23.564
+50.2248 22.5776 53.8394 22.5764 57.5195C22.5771 62.6915 24.5229 67.6793
+28.0369 71.517C27.3276 73.6194 26.9658 75.8207 26.9655 78.0366C26.9659
+81.7031 27.9557 85.3034 29.8333 88.4675C32.0661 92.3033 35.4758 95.3402
+39.5709 97.1405C43.6659 98.9407 48.2346 99.4111 52.6181 98.4839C54.581
+100.666 56.9903 102.412 59.6871 103.608C62.384 104.805 65.3072 105.423
+68.2639 105.423H68.3967L68.4507 105.423C77.6299 105.423 85.7632 99.5816
+88.5835 90.9627C91.5028 90.3725 94.2607 89.1739 96.6727 87.4471C99.0846
+85.7203 101.095 83.5051 102.569 80.9497C104.439 77.7695 105.423 74.1579
+105.423 70.4812C105.422 65.3093 103.476 60.3216 99.9624 56.4841L99.9616
+56.4829ZM68.402 100.007H68.3803C64.7073 100.006 61.1509 98.7344 58.3296
+96.4139C58.4971 96.3249 58.6627 96.2323 58.8261 96.1362L75.5442
+86.608C75.9614 86.3737 76.3084 86.0346 76.5497 85.6251C76.7911 85.2157
+76.9183 84.7505 76.9185 84.2768V61.0054L83.9848 65.0312C84.0219 65.0494
+84.0538 65.0764 84.0778 65.1098C84.1018 65.1431 84.1171 65.1818 84.1223
+65.2224V84.4813C84.1126 93.0437 77.0806 99.9897 68.402 100.007ZM34.595
+85.7603C33.214 83.4043 32.4865 80.731 32.4856 78.0094C32.4856 77.1217
+32.5641 76.2318 32.7171 75.3571C32.8414 75.4306 33.0584 75.5613 33.214
+75.6495L49.9321 85.1777C50.3489 85.4178 50.8229 85.5443 51.3055
+85.5442C51.7882 85.5441 52.2621 85.4174 52.6788 85.1772L73.0898
+73.5485V81.6005L73.0901 81.6144C73.0901 81.6532 73.081 81.6914 73.0634
+81.7261C73.0459 81.7608 73.0204 81.791 72.989 81.8143L56.0885
+91.4423C53.6972 92.8002 50.9866 93.5153 48.2275 93.5161C45.4655 93.5157
+42.7521 92.7988 40.3594 91.4374C37.9667 90.076 35.9788 88.1179 34.595
+85.7594V85.7603ZM30.1968 49.749C32.0329 46.6021 34.9322 44.1926 38.3873
+42.9422C38.3873 43.0842 38.3791 43.3358 38.3791 43.5105V62.5672L38.3788
+62.5828C38.3788 63.056 38.5058 63.5207 38.7468 63.9298C38.9878 64.3389
+39.3343 64.6778 39.7509 64.912L60.162 76.5389L53.0959 80.5648C53.0611
+80.5874 53.0211 80.6013 52.9795 80.605C52.9379 80.6087 52.896 80.6023
+52.8576 80.5862L35.9554 70.9501C33.566 69.5843 31.5824 67.6229 30.2034
+65.2625C28.8243 62.902 28.0982 60.2253 28.0979 57.5007C28.099 54.7804
+28.823 52.1079 30.1976 49.7498L30.1968 49.749ZM88.2537 63.0795L67.8427
+51.4511L74.909 47.4267C74.9439 47.404 74.9839 47.3902 75.0255
+47.3865C75.067 47.3827 75.1089 47.3892 75.1473 47.4053L92.0492
+57.0333C94.4406 58.3969 96.4263 60.3573 97.807 62.7175C99.1878 65.0778
+99.9149 67.7549 99.9155 70.4801C99.9155 76.9846 95.802 82.8049 89.6168
+85.0514V65.4248C89.6177 65.4176 89.6177 65.4101 89.6177 65.4029C89.6176
+64.9314 89.4914 64.4684 89.2519 64.0604C89.0124 63.6525 88.6681 63.3141
+88.2537 63.0795ZM95.2869 52.6349C95.1226 52.5356 94.9571 52.4382
+94.7904 52.3428L78.0722 42.8143C77.6554 42.5747 77.1816 42.4483 76.6992
+42.4481C76.2168 42.4483 75.743 42.5747 75.3262 42.8143L54.9148
+54.4429V46.391L54.9145 46.3771C54.9145 46.2984 54.9524 46.2244 55.016
+46.1772L71.9164 36.5573C74.3069 35.1975 77.0178 34.4816 79.7771
+34.4815C88.4668 34.4815 95.5138 41.4347 95.5138 50.0087C95.5134 50.8886
+95.4375 51.7668 95.2869 52.6341V52.6349ZM51.073 66.9861L44.0052
+62.9603C43.9681 62.942 43.9362 62.915 43.9122 62.8817C43.8882 62.8483
+43.8729 62.8097 43.8677 62.7691V43.5099C43.8715 34.9405 50.9185 27.9931
+59.6044 27.9931C63.2832 27.9939 66.8455 29.2654 69.6733 31.5871C69.5461
+31.6557 69.3242 31.7766 69.1768 31.8648L52.4586 41.393C52.0415 41.6272
+51.6947 41.9662 51.4533 42.3755C51.212 42.7848 51.0848 43.2498 51.0847
+43.7234V43.7387L51.073 66.9861ZM54.9116 58.8202L64.0023 53.6395L73.093
+58.8167V69.1748L64.0023 74.3523L54.9116 69.1748V58.8202Z"
+fill="black"/></svg></div>Chatgpt</div>
+<div class="tool-item"><div
+📊
+class="tool-icon"> </div>Clickup</div>
+<div class="tool-item"><div
+💬
+class="tool-icon"> </div>Slack</div>
+<div class="tool-item"><div class="tool-icon"><svg role="img"
+viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Google
+Gemini</title><path d="M11.04 19.32Q12 21.51 12
+24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49
+0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49
+12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49
+12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55
+3.81"/></svg></div>Gemini</div>
+📈
+<div class="tool-item"><div class="tool-icon"> </div>Microsoft
+Project</div>
+🔍
+<div class="tool-item"><div class="tool-icon"> </div>Google
+workspace</div>
+📉
+<div class="tool-item"><div class="tool-icon"> </div>Microsoft
+office</div>
+</div>
+</div>
+</div>
+</div><!-- /skills-content -->
 <!-- CURRENTLY LEARNING -->
-<section class="learning-section">
-  <div style="max-width:900px">
-    <span class="section-tag">Always growing</span>
-    <h2 class="section-title">Currently <em>deepening</em>.</h2>
-    <p class="section-body" style="max-width:520px">The areas I'm actively investing in right now, sharpening the data and engineering sides of my toolkit.</p>
-  </div>
-  <div class="learning-grid">
-    <div class="learning-card" data-progress="85">
-      <div class="progress-ring-wrap"><svg class="progress-ring" width="44" height="44" viewBox="0 0 44 44"><circle class="progress-bg" cx="22" cy="22" r="18"/><circle class="progress-fill" cx="22" cy="22" r="18" stroke-dasharray="113" stroke-dashoffset="113"/></svg></div>
-      <h3>Frontend Development</h3><p>Building more of my designs as responsive, production-ready interfaces.</p><div class="learning-pct">85% there</div>
-    </div>
-    <div class="learning-card" data-progress="75">
-      <div class="progress-ring-wrap"><svg class="progress-ring" width="44" height="44" viewBox="0 0 44 44"><circle class="progress-bg" cx="22" cy="22" r="18"/><circle class="progress-fill" cx="22" cy="22" r="18" stroke-dasharray="113" stroke-dashoffset="113"/></svg></div>
-      <h3>SQL &amp; Data</h3><p>Deepening querying, modelling and analytics on real datasets.</p><div class="learning-pct">75% there</div>
-    </div>
-    <div class="learning-card" data-progress="70">
-      <div class="progress-ring-wrap"><svg class="progress-ring" width="44" height="44" viewBox="0 0 44 44"><circle class="progress-bg" cx="22" cy="22" r="18"/><circle class="progress-fill" cx="22" cy="22" r="18" stroke-dasharray="113" stroke-dashoffset="113"/></svg></div>
-      <h3>Power BI</h3><p>Advanced dashboarding and data storytelling for decision-makers.</p><div class="learning-pct">70% there</div>
-    </div>
-  </div>
-</section>
-
+<div class="learning-section">
+<svg width="0" height="0">
+<defs>
+<linearGradient id="progressGrad" x1="0%" y1="0%" x2="100%"
+y2="100%">
+<stop offset="0%" style="stop-color:#c8a97e"/>
+<stop offset="100%" style="stop-color:#e8d5b0"/>
+</linearGradient>
+</defs>
+</svg>
+<div style="max-width:900px">
+<div
+style="font-size:.75rem;font-weight:500;letter-spacing:.14em;text-trans
+form:uppercase;color:var(--accent);margin-bottom:.8rem;display:flex;ali
+gn-items:center;gap:.5rem"><span
+style="width:20px;height:1px;background:var(--accent);display:inline-bl
+ock"></span>Always Growing</div>
+<h2 style="font-family:'Playfair
+Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);margin-bottom:.5rem">
+Currently <em
+style="font-style:italic;background:var(--gradient);-webkit-background-
+clip:text;-webkit-text-fill-color:transparent">Learning</em></h2>
+<p style="color:var(--muted);font-size:.95rem;max-width:520px">I'm
+always adding new tools to my kit. Here's what I'm actively studying
+right now.</p>
+</div>
+<div class="learning-grid">
+<div class="learning-card" data-progress="90">
+<div class="progress-ring-wrap">
+<svg class="progress-ring" width="44" height="44" viewBox="0 0
+44 44">
+<circle class="progress-bg" cx="22" cy="22" r="18"/>
+<circle class="progress-fill" cx="22" cy="22" r="18"
+stroke-dasharray="113" stroke-dashoffset="113"/>
+</svg>
+</div>
+<h3>Frontend Development</h3>
+<p>building responsive and interactive user interfaces with
+modern web technologies.</p>
+<div class="learning-pct">90% complete</div>
+</div>
+<div class="learning-card" data-progress="70">
+<div class="progress-ring-wrap">
+<svg class="progress-ring" width="44" height="44" viewBox="0 0
+44 44">
+<circle class="progress-bg" cx="22" cy="22" r="18"/>
+<circle class="progress-fill" cx="22" cy="22" r="18"
+stroke-dasharray="113" stroke-dashoffset="113"/>
+</svg>
+</div>
+<h3>Data Analysis</h3>
+<p>Learning to extract insights from complex datasets using
+SQL.</p>
+<div class="learning-pct">70% complete</div>
+</div>
+<div class="learning-card" data-progress="40">
+<div class="progress-ring-wrap">
+<svg class="progress-ring" width="44" height="44" viewBox="0 0
+44 44">
+<circle class="progress-bg" cx="22" cy="22" r="18"/>
+<circle class="progress-fill" cx="22" cy="22" r="18"
+stroke-dasharray="113" stroke-dashoffset="113"/>
+</svg>
+</div>
+<h3>AI Integration</h3>
+<p>Integrating LLM APIs and AI-powered features into product
+interfaces.</p>
+<div class="learning-pct">40% complete</div>
+</div>
+</div>
+</div>
 <!-- CTA -->
-<section class="skills-cta">
-  <h2>Let's build something <em>together</em>.</h2>
-  <p>Looking for a designer-developer hybrid who can take a project from zero to shipped? Let's talk.</p>
-  <div class="cta-btns">
-    <a href="projects.html" class="btn-primary">See my work</a>
-    <a href="contact.html" class="btn-ghost">Get in touch</a>
-  </div>
-</section>
-
+<div class="skills-cta">
+<h2>Let's build something <em>together</em></h2>
+<p>Looking for a designer-developer hybrid who can take a project
+from zero to shipped? Let's talk.</p>
+<div class="cta-btns">
+<a href="projects.html" class="btn-primary">See My Work</a>
+<a href="contact.html" class="btn-ghost">Get in Touch</a>
+</div>
+</div>
 <footer>
-  <span class="footer-copy">© 2026 Alex O. Akinjiola. All rights reserved.</span>
-  <div class="footer-socials">
-    <a href="https://www.linkedin.com/in/alexakinjiola/" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://github.com/alexakinjiola" target="_blank" rel="noopener">GitHub</a>
-    <a href="mailto:tayoalex7@gmail.com">Email</a>
-    <a href="https://alexakinjiola-portfolio.vercel.app/" target="_blank" rel="noopener">Portfolio</a>
-  </div>
+<div class="footer-copy">© 2026 Alexa Kinjiola. All rights
+reserved.</div>
+<div class="footer-socials">
+<a href="https://github.com/alexakinjiola"
+target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/alexakinjiola/"
+target="_blank">LinkedIn</a>
+<a href="https://x.com/alex_akinjiola"
+target="_blank"><strong>X</strong></a>
+<a href="https://www.behance.net/alexuidesigns"
+target="_blank">Behance</a>
+</div>
 </footer>
 
 <script src="main.js" defer></script>

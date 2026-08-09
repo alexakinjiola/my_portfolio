@@ -1,193 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Projects — Alex O. Akinjiola</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>Alex O. Akinjiola | UI/UX & Product Designer</title>
+<link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin
+/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/x-icon" href="../images/OCHL9530.jpg"
+alt="my" />
 </head>
 <body>
+<!-- Custom cursor -->
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
-
+<!-- NAV -->
 <nav id="nav">
-  <a href="index.html" class="nav-logo">Alex O. Akinjiola</a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="skills.html">Skills</a></li>
-    <li><a href="projects.html" class="active">Projects</a></li>
-    <li><a href="resume.html">Resume</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
+<div class="nav-logo">Alex O. Akinjiola</div>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="skills.html">Skills</a></li>
+<li><a href="projects.html" class="active">Projects</a></li>
+<li><a href="resume.html">Resume</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<div class="hamburger" id="hamburger">
+<span></span><span></span><span></span>
+</div>
 </nav>
-
 <!-- PAGE HERO -->
-<header class="page-hero">
-  <div class="page-hero-bg"></div>
-  <div class="page-hero-grid"></div>
-  <span class="page-hero-tag">Projects</span>
-  <h1>Work I've <em>designed &amp; shipped</em>.</h1>
-  <p>A selection of product design, frontend, and data-analytics work — from no-backend web apps to interactive dashboards.</p>
-</header>
-
-<!-- FILTER -->
+<div class="page-hero">
+<div class="page-hero-bg"></div>
+<div class="page-hero-grid"></div>
+<div class="page-hero-tag">Selected Work</div>
+<h1 style="animation:fadeUp .7s .2s both">Things I've
+<em>Built</em></h1>
+<p style="animation:fadeUp .7s .4s both">A curated selection of
+projects spanning product design, web development, data analysis, and
+digital strategy — each one a story of a real problem solved.</p>
+</div>
+<!-- FILTER BAR -->
 <div class="filter-bar">
-  <span class="filter-label">Filter</span>
-  <button class="filter-btn active" data-filter="all">All</button>
-  <button class="filter-btn" data-filter="design">Design &amp; Frontend</button>
-  <button class="filter-btn" data-filter="data">Data Analytics</button>
+<span class="filter-label">Filter:</span>
+<button class="filter-btn active" data-filter="all">All</button>
+<button class="filter-btn" data-filter="design">Design</button>
+<button class="filter-btn" data-filter="frontend">Frontend</button>
+<button class="filter-btn" data-filter="product">Product</button>
+<button class="filter-btn" data-filter="data">Data Analysis</button>
 </div>
 
-<!-- GRID -->
+<!-- PROJECTS -->
 <section class="projects-outer">
-  <div class="results-count"><span>4</span> projects</div>
-  <div class="projects-grid">
-
-    <article class="project-card reveal" data-category="design" data-modal="ledger">
-      <div class="card-thumb"><span class="card-badge">Design &amp; Frontend</span><div class="card-thumb-inner" style="background:linear-gradient(135deg,#1d1a14,#2a2418)">🧾</div></div>
-      <div class="card-body">
-        <div class="card-meta"><span class="card-type">Fintech · Frontend</span><span class="card-sep"></span><span class="card-year">2025</span></div>
-        <h3>Ledger Studio</h3>
-        <p>A luxury, no-backend invoice generator using client-side state for a fast, install-free experience.</p>
-        <div class="card-tags"><span class="card-tag">UI/UX</span><span class="card-tag">JavaScript</span><span class="card-tag">localStorage</span></div>
-        <div class="card-footer"><span class="card-link">View case study →</span><span class="card-role">Design &amp; Build</span></div>
-      </div>
-    </article>
-
-    <article class="project-card reveal" data-category="design" data-modal="annyshub">
-      <div class="card-thumb"><span class="card-badge">Design &amp; Frontend</span><div class="card-thumb-inner" style="background:linear-gradient(135deg,#181818,#242424)">🛍️</div></div>
-      <div class="card-body">
-        <div class="card-meta"><span class="card-type">E-commerce · Frontend</span><span class="card-sep"></span><span class="card-year">2024</span></div>
-        <h3>AnnysHub</h3>
-        <p>A retail showroom website built around two interfaces — a customer storefront and an owner admin console.</p>
-        <div class="card-tags"><span class="card-tag">UI/UX</span><span class="card-tag">Responsive</span><span class="card-tag">Admin UI</span></div>
-        <div class="card-footer"><span class="card-link">View case study →</span><span class="card-role">Design &amp; Build</span></div>
-      </div>
-    </article>
-
-    <article class="project-card reveal" data-category="data" data-modal="analytics">
-      <div class="card-thumb"><span class="card-badge">Data Analytics</span><div class="card-thumb-inner" style="background:linear-gradient(135deg,#141a17,#1c2a22)">📊</div></div>
-      <div class="card-body">
-        <div class="card-meta"><span class="card-type">Retail · Admissions</span><span class="card-sep"></span><span class="card-year">2025</span></div>
-        <h3>Retail &amp; Admissions Analytics</h3>
-        <p>End-to-end analytics pipelines: cleaned and modelled data, wrote SQL, and delivered interactive Power BI dashboards.</p>
-        <div class="card-tags"><span class="card-tag">SQL</span><span class="card-tag">Power BI</span><span class="card-tag">Excel</span></div>
-        <div class="card-footer"><span class="card-link">View case study →</span><span class="card-role">Data Analyst</span></div>
-      </div>
-    </article>
-
-    <article class="project-card reveal" data-category="design" data-modal="portfolio">
-      <div class="card-thumb"><span class="card-badge">Design &amp; Frontend</span><div class="card-thumb-inner" style="background:linear-gradient(135deg,#1a1622,#241c2e)">🎯</div></div>
-      <div class="card-body">
-        <div class="card-meta"><span class="card-type">Personal · Frontend</span><span class="card-sep"></span><span class="card-year">2026</span></div>
-        <h3>Portfolio</h3>
-        <p>A no-backend personal portfolio built to carry my design and frontend work across every job application.</p>
-        <div class="card-tags"><span class="card-tag">UI/UX</span><span class="card-tag">HTML/CSS/JS</span><span class="card-tag">Responsive</span></div>
-        <div class="card-footer"><span class="card-link">View case study →</span><span class="card-role">Design &amp; Build</span></div>
-      </div>
-    </article>
-
+<div class="results-count"><span>11</span> projects</div>
+<div class="projects-grid">
+<div class="project-card" data-cat="design product">
+  <div class="card-thumb" style="background:linear-gradient(135deg,#1a1208 0%,#2a1e0d 100%)">
+    <div class="card-thumb-inner"><img src="../images/patrackr.png" alt="Paytrackr" width="100%" onerror="this.remove()"></div>
+    <div class="card-badge">Product Designer</div>
   </div>
+  <div class="card-body">
+    <div class="card-meta"><span class="card-type">FinTech</span><div class="card-sep"></div><span class="card-year">2025</span></div>
+    <h3>Paytrackr</h3>
+    <p>Invoice management system for small businesses — a UX redesign that streamlines invoicing, payment tracking and reporting.</p>
+    <div class="card-tags"><span class="card-tag">Figma</span><span class="card-tag">User Research</span><span class="card-tag">UI/UX</span></div>
+    <div class="card-footer"><a class="card-link" href="https://bit.ly/Paytrackr" target="_blank" rel="noopener">View Project <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="card-role">Lead Designer</span></div>
+  </div>
+</div>
+<div class="project-card" data-cat="design product">
+  <div class="card-thumb" style="background:linear-gradient(135deg,#141a17 0%,#1c2a22 100%)">
+    <div class="card-thumb-inner"><img src="../images/Ajiroba cover.png" alt="Ajiroba" width="100%" onerror="this.remove()"></div>
+    <div class="card-badge">Product Designer</div>
+  </div>
+  <div class="card-body">
+    <div class="card-meta"><span class="card-type">E-commerce</span><div class="card-sep"></div><span class="card-year">2024</span></div>
+    <h3>Ajiroba</h3>
+    <p>A B2C e-commerce platform serving shoppers across web and mobile, with streamlined navigation and checkout.</p>
+    <div class="card-tags"><span class="card-tag">Figma</span><span class="card-tag">UX Audit</span><span class="card-tag">E-commerce</span></div>
+    <div class="card-footer"><a class="card-link" href="https://ajiroba.org/" target="_blank" rel="noopener">View Project <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="card-role">Product Designer</span></div>
+  </div>
+</div>
+<div class="project-card" data-cat="design product">
+  <div class="card-thumb" style="background:linear-gradient(135deg,#12161a 0%,#171f24 100%)">
+    <div class="card-thumb-inner"><img src="../images/krent.png" alt="Krent" width="100%" onerror="this.remove()"></div>
+    <div class="card-badge">Product Designer</div>
+  </div>
+  <div class="card-body">
+    <div class="card-meta"><span class="card-type">PropTech</span><div class="card-sep"></div><span class="card-year">2026</span></div>
+    <h3>Krent</h3>
+    <p>A property management platform for African real estate — listings, tenant onboarding and an offline-first flow.</p>
+    <div class="card-tags"><span class="card-tag">Figma</span><span class="card-tag">Prototyping</span><span class="card-tag">Offline-first</span></div>
+    <div class="card-footer"><a class="card-link" href="https://krent.space/" target="_blank" rel="noopener">View Project <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="card-role">Product Designer</span></div>
+  </div>
+</div>
+<div class="project-card" data-cat="design product">
+  <div class="card-thumb" style="background:linear-gradient(135deg,#1d1a14 0%,#2a2418 100%)">
+    <div class="card-thumb-inner"><img src="../images/Meal flex catalogue.png" alt="Meal Flex" width="100%" onerror="this.remove()"></div>
+    <div class="card-badge">Product Designer</div>
+  </div>
+  <div class="card-body">
+    <div class="card-meta"><span class="card-type">FoodTech</span><div class="card-sep"></div><span class="card-year">2023</span></div>
+    <h3>Meal Flex</h3>
+    <p>A mobile-first food ordering app for young Africans — restaurant discovery, real-time tracking and a smooth checkout.</p>
+    <div class="card-tags"><span class="card-tag">Mobile-first</span><span class="card-tag">Prototyping</span><span class="card-tag">UI/UX</span></div>
+    <div class="card-footer"><a class="card-link" href="https://www.behance.net/gallery/231847479/Meal-Flex" target="_blank" rel="noopener">View Project <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="card-role">Product Designer</span></div>
+  </div>
+</div>
+<div class="project-card" data-cat="design product">
+  <div class="card-thumb" style="background:linear-gradient(135deg,#1a1622 0%,#241c2e 100%)">
+    <div class="card-thumb-inner" style="font-size:3.4rem">👗</div>
+    <div class="card-badge">Product Designer</div>
+  </div>
+  <div class="card-body">
+    <div class="card-meta"><span class="card-type">Fashion</span><div class="card-sep"></div><span class="card-year">2022</span></div>
+    <h3>Creatifff</h3>
+    <p>A mobile-first fashion e-commerce app designed end-to-end from research to launch, on a scalable design system.</p>
+    <div class="card-tags"><span class="card-tag">Design System</span><span class="card-tag">User Research</span><span class="card-tag">Mobile-first</span></div>
+    <div class="card-footer"><a class="card-link" href="https://www.behance.net/alexuidesigns" target="_blank" rel="noopener">View Project <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="card-role">Product Designer</span></div>
+  </div>
+</div>
+<div class="project-card" data-cat="design">
+  <div class="card-thumb" style="background:linear-gradient(135deg,#171a12 0%,#242a17 100%)">
+    <div class="card-thumb-inner" style="font-size:3.4rem">🎯</div>
+    <div class="card-badge">Designer</div>
+  </div>
+  <div class="card-body">
+    <div class="card-meta"><span class="card-type">Personal</span><div class="card-sep"></div><span class="card-year">2026</span></div>
+    <h3>Portfolio Website</h3>
+    <p>My own portfolio — a no-backend, fully responsive multi-page site presenting my design and frontend work.</p>
+    <div class="card-tags"><span class="card-tag">UI/UX</span><span class="card-tag">Responsive</span><span class="card-tag">HTML/CSS/JS</span></div>
+    <div class="card-footer"><a class="card-link" href="https://alexakinjiola-portfolio.vercel.app/" target="_blank" rel="noopener">View Project <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="card-role">Designer & Build</span></div>
+  </div>
+</div>
+<div class="project-card" data-cat="frontend">
+  <div class="card-thumb" style="background:linear-gradient(135deg,#1a1214 0%,#2a1820 100%)">
+    <div class="card-thumb-inner" style="font-size:3.4rem">💼</div>
+    <div class="card-badge">Frontend Developer</div>
+  </div>
+  <div class="card-body">
+    <div class="card-meta"><span class="card-type">Portfolio · Frontend</span><div class="card-sep"></div><span class="card-year">2025</span></div>
+    <h3>Portfolio Website — Oluwakemi</h3>
+    <p>A quiet-luxury editorial portfolio site for a virtual assistant, built front-to-back with a full animation layer.</p>
+    <div class="card-tags"><span class="card-tag">HTML/CSS/JS</span><span class="card-tag">Animation</span><span class="card-tag">Responsive</span></div>
+    <div class="card-footer"><a class="card-link" href="#">View Project <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="card-role">Frontend Developer</span></div>
+  </div>
+</div>
+<div class="project-card" data-cat="frontend">
+  <div class="card-thumb" style="background:linear-gradient(135deg,#181818 0%,#242424 100%)">
+    <div class="card-thumb-inner" style="font-size:3.4rem">🛍️</div>
+    <div class="card-badge">Frontend Developer</div>
+  </div>
+  <div class="card-body">
+    <div class="card-meta"><span class="card-type">E-commerce · Frontend</span><div class="card-sep"></div><span class="card-year">2024</span></div>
+    <h3>AnnysHub Store</h3>
+    <p>A retail showroom store with two interfaces — a customer storefront and an admin console for the owner.</p>
+    <div class="card-tags"><span class="card-tag">Storefront</span><span class="card-tag">Admin UI</span><span class="card-tag">Responsive</span></div>
+    <div class="card-footer"><a class="card-link" href="#">View Project <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="card-role">Frontend Developer</span></div>
+  </div>
+</div>
+<div class="project-card" data-cat="frontend">
+  <div class="card-thumb" style="background:linear-gradient(135deg,#1d1a14 0%,#2a2418 100%)">
+    <div class="card-thumb-inner" style="font-size:3.4rem">🧾</div>
+    <div class="card-badge">Frontend Developer</div>
+  </div>
+  <div class="card-body">
+    <div class="card-meta"><span class="card-type">FinTech · Frontend</span><div class="card-sep"></div><span class="card-year">2025</span></div>
+    <h3>Ledger Studio</h3>
+    <p>A luxury invoice generator suite — no backend, with client-side state via localStorage and URL-encoded data.</p>
+    <div class="card-tags"><span class="card-tag">JavaScript</span><span class="card-tag">localStorage</span><span class="card-tag">UI</span></div>
+    <div class="card-footer"><a class="card-link" href="#">View Project <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="card-role">Frontend Developer</span></div>
+  </div>
+</div>
+<div class="project-card" data-cat="frontend">
+  <div class="card-thumb" style="background:linear-gradient(135deg,#161616 0%,#221c22 100%)">
+    <div class="card-thumb-inner" style="font-size:3.4rem">✦</div>
+    <div class="card-badge">Frontend Developer</div>
+  </div>
+  <div class="card-body">
+    <div class="card-meta"><span class="card-type">Luxury Brand · Frontend</span><div class="card-sep"></div><span class="card-year">2025</span></div>
+    <h3>Folu Atelier</h3>
+    <p>A luxury brand site with a two-part architecture — a customer-facing House and an owner-facing Studio.</p>
+    <div class="card-tags"><span class="card-tag">Two-site</span><span class="card-tag">localStorage</span><span class="card-tag">Responsive</span></div>
+    <div class="card-footer"><a class="card-link" href="#">View Project <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="card-role">Frontend Developer</span></div>
+  </div>
+</div>
+<div class="project-card" data-cat="data">
+  <div class="card-thumb" style="background:linear-gradient(135deg,#121a16 0%,#17241d 100%)">
+    <div class="card-thumb-inner" style="font-size:3.4rem">📊</div>
+    <div class="card-badge">Data Analyst</div>
+  </div>
+  <div class="card-body">
+    <div class="card-meta"><span class="card-type">Retail · Admissions</span><div class="card-sep"></div><span class="card-year">2025</span></div>
+    <h3>Retail &amp; Admissions Analytics</h3>
+    <p>End-to-end analytics pipelines — cleaned and modelled real datasets, wrote SQL, and delivered interactive Power BI dashboards.</p>
+    <div class="card-tags"><span class="card-tag">Excel</span><span class="card-tag">SQL</span><span class="card-tag">Power BI</span></div>
+    <div class="card-footer"><a class="card-link" href="#">View Project <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="card-role">Data Analyst</span></div>
+  </div>
+</div>
+</div>
 </section>
 
-<!-- MODALS -->
-<div class="modal-overlay" id="modal-ledger">
-  <div class="modal">
-    <button class="modal-close" data-close aria-label="Close">✕</button>
-    <div class="modal-hero" style="background:linear-gradient(135deg,#1d1a14,#2a2418)">🧾</div>
-    <div class="modal-body">
-      <div class="modal-meta">
-        <div class="modal-meta-item"><span class="modal-meta-label">Role</span><span class="modal-meta-value">Design &amp; Frontend</span></div>
-        <div class="modal-meta-item"><span class="modal-meta-label">Year</span><span class="modal-meta-value">2025</span></div>
-        <div class="modal-meta-item"><span class="modal-meta-label">Stack</span><span class="modal-meta-value">HTML · CSS · JS</span></div>
-      </div>
-      <h2>Ledger <em>Studio</em></h2>
-      <h4>Overview</h4>
-      <p>A luxury invoice generator suite designed and built with no backend. All state lives client-side (localStorage and URL-encoded data), so it loads instantly and needs no install or account.</p>
-      <h4>What I did</h4>
-      <p>Designed the full interface and visual system, then built it in vanilla HTML, CSS and JavaScript — including the invoice editor, live preview, and shareable URL-encoded documents.</p>
-      <div class="modal-tags"><span class="modal-tag">UI/UX</span><span class="modal-tag">Design System</span><span class="modal-tag">JavaScript</span><span class="modal-tag">localStorage</span></div>
-      <div class="modal-cta"><a href="contact.html" class="btn-primary">Discuss a project</a></div>
-    </div>
-  </div>
-</div>
-
-<div class="modal-overlay" id="modal-annyshub">
-  <div class="modal">
-    <button class="modal-close" data-close aria-label="Close">✕</button>
-    <div class="modal-hero" style="background:linear-gradient(135deg,#181818,#242424)">🛍️</div>
-    <div class="modal-body">
-      <div class="modal-meta">
-        <div class="modal-meta-item"><span class="modal-meta-label">Role</span><span class="modal-meta-value">Design &amp; Frontend</span></div>
-        <div class="modal-meta-item"><span class="modal-meta-label">Year</span><span class="modal-meta-value">2024</span></div>
-        <div class="modal-meta-item"><span class="modal-meta-label">Type</span><span class="modal-meta-value">E-commerce</span></div>
-      </div>
-      <h2>Anny<em>sHub</em></h2>
-      <h4>Overview</h4>
-      <p>A retail showroom website for AnnysHub, built around two distinct interfaces: a customer-facing storefront and an admin console for the owner to manage the catalogue.</p>
-      <h4>What I did</h4>
-      <p>Designed and developed both interfaces, keeping a consistent visual system across the customer and admin experiences and a responsive layout across devices.</p>
-      <div class="modal-tags"><span class="modal-tag">UI/UX</span><span class="modal-tag">Admin UI</span><span class="modal-tag">Responsive</span></div>
-      <div class="modal-cta"><a href="contact.html" class="btn-primary">Discuss a project</a></div>
-    </div>
-  </div>
-</div>
-
-<div class="modal-overlay" id="modal-analytics">
-  <div class="modal">
-    <button class="modal-close" data-close aria-label="Close">✕</button>
-    <div class="modal-hero" style="background:linear-gradient(135deg,#141a17,#1c2a22)">📊</div>
-    <div class="modal-body">
-      <div class="modal-meta">
-        <div class="modal-meta-item"><span class="modal-meta-label">Role</span><span class="modal-meta-value">Data Analyst</span></div>
-        <div class="modal-meta-item"><span class="modal-meta-label">Year</span><span class="modal-meta-value">2025</span></div>
-        <div class="modal-meta-item"><span class="modal-meta-label">Stack</span><span class="modal-meta-value">Excel · SQL · Power BI</span></div>
-      </div>
-      <h2>Retail &amp; Admissions <em>Analytics</em></h2>
-      <h4>Overview</h4>
-      <p>End-to-end analytics pipelines built on real retail and admissions datasets to support decision-making.</p>
-      <h4>What I did</h4>
-      <p>Cleaned and modelled the raw data, wrote SQL queries to extract and transform it, and delivered interactive Power BI dashboards that turned the numbers into clear, actionable stories.</p>
-      <div class="modal-tags"><span class="modal-tag">Data Cleaning</span><span class="modal-tag">SQL</span><span class="modal-tag">Power BI</span><span class="modal-tag">Dashboards</span></div>
-      <div class="modal-cta"><a href="contact.html" class="btn-primary">Discuss a project</a></div>
-    </div>
-  </div>
-</div>
-
-<div class="modal-overlay" id="modal-portfolio">
-  <div class="modal">
-    <button class="modal-close" data-close aria-label="Close">✕</button>
-    <div class="modal-hero" style="background:linear-gradient(135deg,#1a1622,#241c2e)">🎯</div>
-    <div class="modal-body">
-      <div class="modal-meta">
-        <div class="modal-meta-item"><span class="modal-meta-label">Role</span><span class="modal-meta-value">Design &amp; Frontend</span></div>
-        <div class="modal-meta-item"><span class="modal-meta-label">Year</span><span class="modal-meta-value">2026</span></div>
-        <div class="modal-meta-item"><span class="modal-meta-label">Stack</span><span class="modal-meta-value">HTML · CSS · JS</span></div>
-      </div>
-      <h2>My <em>Portfolio</em></h2>
-      <h4>Overview</h4>
-      <p>The site you're on now — a no-backend personal portfolio designed and built to present my design and frontend work across every job application.</p>
-      <h4>What I did</h4>
-      <p>Designed a cohesive dark, editorial visual system and built it as a fast, fully responsive multi-page site with a shared stylesheet and a single JavaScript file.</p>
-      <div class="modal-tags"><span class="modal-tag">UI/UX</span><span class="modal-tag">HTML/CSS/JS</span><span class="modal-tag">Responsive</span></div>
-      <div class="modal-cta"><a href="contact.html" class="btn-primary">Discuss a project</a></div>
-    </div>
-  </div>
-</div>
-
 <footer>
-  <span class="footer-copy">© 2026 Alex O. Akinjiola. All rights reserved.</span>
-  <div class="footer-socials">
-    <a href="https://www.linkedin.com/in/alexakinjiola/" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://github.com/alexakinjiola" target="_blank" rel="noopener">GitHub</a>
-    <a href="mailto:tayoalex7@gmail.com">Email</a>
-    <a href="https://alexakinjiola-portfolio.vercel.app/" target="_blank" rel="noopener">Portfolio</a>
-  </div>
+<div class="footer-copy">© 2025 Alexa Kinjiola. All rights
+reserved.</div>
+<div class="footer-socials">
+<a href="#">GitHub</a><a href="#">LinkedIn</a><a
+href="#">Twitter</a><a href="#">Dribbble</a>
+</div>
 </footer>
 
 <script src="main.js" defer></script>

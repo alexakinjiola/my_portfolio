@@ -1066,9 +1066,12 @@ body.menu-open { overflow: hidden; }
 
 /* ---------- <= 900px : tablet — nav becomes a drawer here ---------- */
 @media (max-width: 900px) {
+  /* Drop backdrop-filter on mobile: it makes <nav> the containing block
+     for the fixed drawer, which clips it. Solid bg instead. */
+  nav { -webkit-backdrop-filter: none; backdrop-filter: none; background: rgba(13,13,13,0.97); }
   /* -- Unified mobile nav drawer (all pages) -- */
   .nav-links {
-    position: fixed; top: 0; right: 0; bottom: 0;
+    position: fixed; top: 0; right: 0; height: 100vh; height: 100dvh;
     width: min(75vw, 320px);
     flex-direction: column; align-items: flex-start; gap: 1.5rem;
     background: var(--surface); border-left: 1px solid var(--border);
@@ -1207,3 +1210,15 @@ body.menu-open { overflow: hidden; }
 .hero-content > *, .hero-inner > *, .faq-inner > * { min-width: 0; }
 .timeline-company { flex-wrap: wrap; }
 @media (max-width: 480px) { .timeline-date { white-space: normal; } }
+
+/* ---- Extra small-phone safety for the contact sidebar (<=360px) ---- */
+.contact-sidebar, .contact-sidebar > *, .contact-card { min-width: 0; }
+.direct-link-meta { min-width: 0; overflow-wrap: anywhere; }
+.direct-link { flex-wrap: wrap; }
+
+/* ---- Certification rows: stack on very small phones so year/badge never overflow ---- */
+@media (max-width: 400px) {
+  .cert-item { flex-direction: column; align-items: flex-start; gap: 0.7rem; }
+  .cert-meta { flex-direction: row; align-items: center; gap: 0.6rem; }
+  .cert-info { min-width: 0; }
+}
