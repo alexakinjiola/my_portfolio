@@ -359,12 +359,19 @@
     var successBox = $('#formSuccess');
     var errorBox = $('#formError');
 
+    function showError(msg) {
+      if (!errorBox) { return; }
+      errorBox.textContent = msg || ('Something went wrong sending your message. Please email me directly at ' + OWNER_EMAIL + ' or try again.');
+      errorBox.style.display = 'block';
+    }
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (errorBox) { errorBox.style.display = 'none'; }
       if (btn) { btn.classList.add('loading'); btn.disabled = true; }
 
-      fetch('https://formsubmit.co/ajax/' + encodeURIComponent(OWNER_EMAIL), {
+      /* NOTE: raw email in the URL — FormSubmit does NOT want it percent-encoded */
+      fetch('https://formsubmit.co/ajax/' + OWNER_EMAIL, {
         method: 'POST',
         headers: { 'Accept': 'application/json' },
         body: new FormData(form)
@@ -372,16 +379,15 @@
       .then(function (res) { return res.json().catch(function () { return {}; }).then(function (d) { return { ok: res.ok, d: d }; }); })
       .then(function (r) {
         var ok = r.ok && (r.d.success === true || r.d.success === 'true');
-        if (!ok) { throw new Error(r.d.message || 'Submission failed'); }
-        form.reset();
-        if (successBox) { form.style.display = 'none'; successBox.style.display = 'block'; successBox.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
-      })
-      .catch(function () {
-        if (errorBox) {
-          errorBox.textContent = 'Something went wrong sending your message. Please email me directly at ' + OWNER_EMAIL + ' or try again.';
-          errorBox.style.display = 'block';
+        if (ok) {
+          form.reset();
+          if (successBox) { form.style.display = 'none'; successBox.style.display = 'block'; successBox.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+        } else {
+          /* Show FormSubmit's own message when present (e.g. activation required) */
+          showError(r.d && r.d.message ? r.d.message : null);
         }
       })
+      .catch(function () { showError(null); })
       .then(function () { if (btn) { btn.classList.remove('loading'); btn.disabled = false; } });
     });
 
