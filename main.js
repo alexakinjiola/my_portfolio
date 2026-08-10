@@ -310,6 +310,7 @@
   /* -------------------- Resume sidebar scrollspy + anchor offset -------- */
   function initScrollSpy() {
     var links = $$('.sidebar-link');
+    links.forEach(function (l) { l.removeAttribute('onclick'); });
     var sections = $$('.exp-section');
     if (!links.length || !sections.length) { return; }
     /* Smooth in-page scroll with fixed-nav offset (replaces fragile scrollTo) */
@@ -318,21 +319,28 @@
         l.classList.toggle('active', (l.dataset.target || l.getAttribute('data-section')) === id);
       });
     }
+    var navH = 84;                      /* fixed-nav clearance */
+    var lockUntil = 0;                  /* suppress spy briefly after a click */
     links.forEach(function (link) {
       link.addEventListener('click', function () {
         var id = link.dataset.target || link.getAttribute('data-section');
         var target = id ? document.getElementById(id) : null;
         if (target) {
-          setActive(id);   /* immediate feedback, don't wait for scroll */
-          target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+          setActive(id);                /* immediate feedback */
+          lockUntil = Date.now() + 1000; /* keep it active while smooth-scrolling */
+          var y = target.getBoundingClientRect().top + window.scrollY - navH;
+          window.scrollTo({ top: y, behavior: reduceMotion ? 'auto' : 'smooth' });
         }
       });
     });
     var ticking = false;
     function spy() {
-      var pos = window.scrollY + 140;
+      if (Date.now() < lockUntil) { return; }  /* don't fight a click-scroll */
+      var pos = window.scrollY + navH + 60;
       var current = sections[0];
-      sections.forEach(function (s) { if (s.offsetTop <= pos) { current = s; } });
+      sections.forEach(function (s) {
+        if (s.getBoundingClientRect().top + window.scrollY <= pos) { current = s; }
+      });
       /* If we've reached the bottom, the last section is the active one */
       if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) {
         current = sections[sections.length - 1];
