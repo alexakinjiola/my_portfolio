@@ -1222,3 +1222,18 @@ body.menu-open { overflow: hidden; }
   .cert-meta { flex-direction: row; align-items: center; gap: 0.6rem; }
   .cert-info { min-width: 0; }
 }
+
+/* ---- Project card: two CTAs (View Live Project / View Case Study) ---- */
+.card-footer { display: flex; gap: 0.6rem; padding-top: 1.2rem; border-top: 1px solid var(--border); flex-wrap: wrap; }
+.card-btn {
+  flex: 1 1 130px; display: inline-flex; align-items: center; justify-content: center;
+  min-height: 42px; padding: 0.55rem 0.8rem; text-align: center;
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  text-decoration: none; border-radius: 8px;
+  transition: opacity 0.2s, transform 0.2s, border-color 0.2s, color 0.2s;
+}
+.card-btn-primary { background: var(--gradient); color: #0d0d0d; border: 1px solid transparent; }
+.card-btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+.card-btn-ghost { background: transparent; color: var(--accent); border: 1px solid var(--border); }
+.card-btn-ghost:hover { border-color: var(--accent); transform: translateY(-1px); }
+@media (max-width: 640px) { .card-btn { flex: 1 1 100%; min-height: 44px; } }
